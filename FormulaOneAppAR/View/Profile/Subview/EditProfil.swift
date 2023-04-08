@@ -11,7 +11,7 @@ struct EditProfil: View {
    // var body: some View {
        // struct EditProfileView: View {
     let email=UserDefaults.standard.string(forKey: "email")
-    let username=UserDefaults.standard.string(forKey: "username")
+    let username=UserDefaults.standard.string(forKey: "name")
     @StateObject var vm = ViewModel()
           @State var UserName: String = ""
           @State var Email: String = ""
@@ -65,7 +65,7 @@ struct EditProfil: View {
                     }
                 
                 Spacer()
-                TextField(username!, text: $UserName)
+                    TextField(username!, text: $vm.user.name)
                     .padding()
                     
                 TextField(email!, text: $Email)
@@ -110,6 +110,7 @@ struct EditProfil: View {
                  }
             }
             .padding()
+            .navigationTitle("Edite Profile")
             .navigationViewStyle(StackNavigationViewStyle())
                     .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                         ImagePicker(image: $image)

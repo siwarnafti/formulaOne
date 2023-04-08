@@ -8,13 +8,24 @@
 
 
 import SwiftUI
+func getuser()->User?{
+       let defaults = UserDefaults.standard
+       if let savedUser = defaults.object(forKey: "user") as? Data {
+           let decoder = JSONDecoder()
+           if let loadedUser = try? decoder.decode(User.self, from: savedUser) {
+               // use loadedUser
+               return loadedUser
+           }
+       }
+       return nil
 
+   }
 struct ProfileView: View {
     //let defaults = UserDefaults.standard
     
     @StateObject var vm = ViewModel()
-    let email=UserDefaults.standard.string(forKey: "email")
-    let username=UserDefaults.standard.string(forKey: "username")
+    
+    let user=getuser()
     
     var body: some View {
         NavigationView(){
@@ -28,11 +39,11 @@ struct ProfileView: View {
                     .padding()
                 
                 // User's name and bio
-                Text(username! )
+                Text(user!.name )
                 .font(.title)
 //                VStack(){
                     Spacer()
-                Text(email!)
+                Text(user!.email)
                         .foregroundColor(.gray)
                 Spacer()
                     NavigationLink(
@@ -46,6 +57,7 @@ struct ProfileView: View {
                                 .frame( height: 70)
                             
                         })
+                    
 //                }
                 Spacer()
                 

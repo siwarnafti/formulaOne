@@ -27,7 +27,7 @@ struct ForgetView: View {// by default it's empty
                         Text("Enter your email address ")
 
                     
-                    TextField("Email address", text: $vm.email)
+                    TextField("Email address", text: $vm.user.email)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -63,6 +63,7 @@ struct ForgetView: View {// by default it's empty
                 .padding()
             }
             .transition(.offset(x: 0, y: 850))
+//        Text("lalalala")
         }
     }
 

@@ -131,6 +131,7 @@
 		7ACD0E9A29E0FADB00C67816 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7ACD0E9829E0FAAC00C67816 /* Services */,
 				7AFEC33D29E0FF45007EAA5D /* Team.swift */,
 				7AFEC33C29E0FF45007EAA5D /* User.swift */,
 			);
@@ -188,7 +189,6 @@
 				7ACD0E9B29E0FAF800C67816 /* ViewModel */,
 				7ACD0E9A29E0FADB00C67816 /* Model */,
 				7ACD0E9929E0FABF00C67816 /* Ulilities */,
-				7ACD0E9829E0FAAC00C67816 /* Services */,
 				7AD5C7DA29E0F78B00FAE06E /* FormulaOneAppARApp.swift */,
 				7AD5C7DC29E0F78B00FAE06E /* Persistence.swift */,
 				7AD5C7E129E0F78B00FAE06E /* ContentView.swift */,

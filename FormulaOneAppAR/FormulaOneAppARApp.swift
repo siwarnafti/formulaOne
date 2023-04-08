@@ -8,6 +8,7 @@ import SwiftUI
 
 @main
 struct FormulaOneAppARApp: App {
+    let user=User()
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
@@ -20,6 +21,7 @@ struct FormulaOneAppARApp: App {
 //            ProfileView()
 //            EditProfil()
             WelcomeScreenView()
+//                .environmentObject(user)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct SignInScreenView: View {
     
     @StateObject var vm = ViewModel()
+    
 //    @StateObject var user : User
     @State  var usernameError: String = ""
     @State  var passwordError: String = ""
@@ -41,7 +42,7 @@ struct SignInScreenView: View {
                         
                         
                         
-                        TextField("Email", text: $vm.email)
+                        TextField("Email", text: $vm.user.email)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -71,19 +72,16 @@ struct SignInScreenView: View {
                         
                         HStack {
                             Spacer()
-                            
-                            
+//                            Toggle("remember Me", isOn: $vm.authenticated)
+//                                        .padding()
                             NavigationLink(
                                 destination: ForgetView().navigationBarHidden(false),
                                 label: {
-                                    
                                     PrimaryButton2(title: "Forgot password")
                                         .tint(Color("PrimaryColor"))
                                     
                                 })
                             .navigationBarHidden(true)
-                            
-                            
                         }
                         
                         /*  HStack {
@@ -123,7 +121,7 @@ struct SignInScreenView: View {
                             
                             Spacer()
                             
-                        }.alert("Your username or password is incorrect", isPresented: $vm.invalidlogin) {
+                        }.alert("Your username or password is incorrect", isPresented: $vm.invalid) {
                             Button("Ok", action: vm.logPressed)
                         }
                         HStack {
