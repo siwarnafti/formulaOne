@@ -8,24 +8,20 @@ import PhotosUI
 import SwiftUI
 
 struct EditProfil: View {
-   // var body: some View {
-       // struct EditProfileView: View {
-    let email=UserDefaults.standard.string(forKey: "email")
-    let username=UserDefaults.standard.string(forKey: "name")
-    @StateObject var vm = ViewModel()
-          @State var UserName: String = ""
-          @State var Email: String = ""
-
-            @State private var avatarItem: PhotosPickerItem?
-            @State private var avatarImage: Image?
-            @State var shouldShowImagePicker = false
-            @State var image: UIImage?
-            @State private var isPresentingConfirm: Bool = false
-            @State private var isPresentingAlert: Bool = false
-   
-            
+    
+    @StateObject var editVM = EditProfileVM()
+    @State var username: String = ""
+    @State var email: String = ""
+    @State private var avatarItem: PhotosPickerItem?
+    @State private var avatarImage: Image?
+    @State var shouldShowImagePicker = false
+    @State var image: UIImage?
+    @State private var isPresentingConfirm: Bool = false
+    @State private var isPresentingAlert: Bool = false
+    @State var user=getuser()
+//    let username = getuser()?.name
+//    let email = getuser()?.email
     var body: some View {
-       // NavigationView{
                 VStack {
                     ZStack() {
                            Button {
@@ -54,7 +50,6 @@ struct EditProfil: View {
                                        
                                        Image(systemName:"camera.circle.fill")
                                               .foregroundColor(.black)
-                                              //.background(Material.ultraThinMaterial)
                                               .scaleEffect(2)
                                               .imageScale(.large)
                                               .offset(x:70,y: 70)
@@ -65,15 +60,11 @@ struct EditProfil: View {
                     }
                 
                 Spacer()
-                    TextField(username!, text: $vm.user.name)
+                    TextField(user?.name ?? "username", text: $username)
                     .padding()
                     
-                TextField(email!, text: $Email)
+                    TextField(user?.email ?? "email", text: $email)
                     .padding()
-                
-               // TextField("Phone", text: $phone)
-//                    .padding()
-                    
                     NavigationLink(
                         destination: ChangePassword(),
                         label: {
@@ -81,12 +72,9 @@ struct EditProfil: View {
                                 .foregroundColor(.red)
                                 .padding()
                                 })
-                        //.navigationBarHidden(true)
                         .padding(.vertical, 60)
                 Spacer()
                 Button(action: {
-                    // Action à effectuer lorsque l'utilisateur appuie sur le bouton "Save"
-                    
                     isPresentingConfirm = true
                 }) {
                     Text("Save")
@@ -99,13 +87,13 @@ struct EditProfil: View {
                 .confirmationDialog("Are you sure?",
                   isPresented: $isPresentingConfirm) {
                   Button("Save Updates ?", role: .destructive) {
-                      if(UserName.isEmpty){
-                          UserName=username!
+                      if(!(username.isEmpty)){
+                          user!.name=username
                       }
-                      if(Email.isEmpty){
-                          Email=email!
+                      if(!(email.isEmpty)){
+                          user?.email=email
                       }
-                      vm.updateprofil(email:Email ,username:UserName )
+                      editVM.updateprofil(user:user! )
                    }
                  }
             }
@@ -116,13 +104,6 @@ struct EditProfil: View {
                         ImagePicker(image: $image)
                             .ignoresSafeArea()
                     }
-            
-        }
-    //}
-            
-            func saveProfile() {
-                // Code pour enregistrer les modifications du profil
-                
             }
         }
 

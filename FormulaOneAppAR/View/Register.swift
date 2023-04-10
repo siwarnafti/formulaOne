@@ -10,10 +10,8 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @StateObject var vm = ViewModel()
-  
+    @StateObject var vm = ResgiterVM()
     var body: some View {
-        
         NavigationView {
             
             
@@ -42,7 +40,7 @@ struct RegisterView: View {
                             .cornerRadius(50.0)
                             .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                             .padding(.vertical)
-                        TextField("emailError",text: $vm.user.email)
+                        TextField("Email",text: $vm.user.email)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -50,7 +48,7 @@ struct RegisterView: View {
                             .cornerRadius(50.0)
                             .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                             .padding(.vertical)
-                        SecureField("Password", text: $vm.password)
+                        SecureField("Password", text: $vm.user.password)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -82,11 +80,7 @@ struct RegisterView: View {
                                 .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                                 .padding(.vertical)
                             Spacer()
-                        } //.alert("Sign Up Successfully! ✅", isPresented: $vm.invalid) {
-                            //Button("Ok", action: vm.logPressed)
-                    
-//                        }
-                        
+                        }
                         .alert(vm.message, isPresented: $vm.invalid) {
                             Button("Ok", action: vm.logPressed)
                         }
@@ -116,15 +110,8 @@ struct RegisterView: View {
             }
                 .transition(.offset(x: 0, y: 850))
             }
-//           Text("kjkjkj")
         }
     }
-            
-    
-  
-        
-           
-    
    struct RegisterView_Previews: PreviewProvider {
         static var previews: some View {
             RegisterView()

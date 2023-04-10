@@ -50,5 +50,28 @@ struct User: Codable{
     //var password: String=""
     var avatar: String=""
     var token: String=""
+    mutating func setname(_ name:String){
+        self.name=name
+    }
+    mutating func setemail(email:String){
+        self.email=email
+    }
+}
+struct LogedInUser: Codable{
+     var id:String=""
+    var name: String=""
+    var email: String=""
+//    var password: String=""
+    var avatar: String=""
+    var token: String=""
+    
+}
+struct SignInUser: Codable{
+    
+    var name: String=""
+    var email: String=""
+    var password: String=""
+//    var confirm: String=""
+    
     
 }

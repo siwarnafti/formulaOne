@@ -8,41 +8,29 @@
 import SwiftUI
 
 struct SignInScreenView: View {
-    
-    @StateObject var vm = ViewModel()
-    
-//    @StateObject var user : User
-    @State  var usernameError: String = ""
-    @State  var passwordError: String = ""
-    
+    @StateObject var loginVM = LogiVM()
+    @State var legedinVM=UserDefaults.standard.bool(forKey: "RememberMe")
     
     var body: some View {
         
         NavigationView {
-            if(vm.authenticated){
+            
+            if(UserDefaults.standard.bool(forKey: "RememberMe")||loginVM.loginbut){
                 mainScreen()
             }else{
                 // Show a login screen
                 ZStack {
                     Color.gray
                         .ignoresSafeArea()
-                    
-                    
                     VStack(alignment: .center, spacing: 10) {
                         Image("signin")
                             .resizable()
                             .frame(width: 500, height: 300 , alignment: .center)
-                        //.padding(.horizontal, 20)
-                        //.shadow(color: Color.red, radius: 5)
                             .offset(y:100)
-                        
                         Text("Sign in")
                             .foregroundColor(.black)
                             .font(.system(size: 40, weight: .medium, design: .rounded))
-                        
-                        
-                        
-                        TextField("Email", text: $vm.user.email)
+                        TextField("Email", text: $loginVM.email)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -51,14 +39,14 @@ struct SignInScreenView: View {
                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0.0, y: 16)
                             .padding(.vertical)
                         
-                        Text(usernameError)
+                        Text(loginVM.EmailError)
                             .multilineTextAlignment(.leading)
                             .foregroundColor(.red)
                             .padding(.horizontal, 20)
                             .padding(.top, 0)
                             .font(Font.system(size: 13))
                         
-                        SecureField("Password", text: $vm.password)
+                        SecureField("Password", text: $loginVM.password)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -66,14 +54,10 @@ struct SignInScreenView: View {
                             .cornerRadius(50.0)
                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                             .padding(.vertical)
-                            
-                        
-                        
-                        
                         HStack {
                             Spacer()
-//                            Toggle("remember Me", isOn: $vm.authenticated)
-//                                        .padding()
+                            CheckBox(isChecked:$loginVM.rememberMe)
+                            Text("Remember me").foregroundColor(.black )
                             NavigationLink(
                                 destination: ForgetView().navigationBarHidden(false),
                                 label: {
@@ -83,32 +67,12 @@ struct SignInScreenView: View {
                                 })
                             .navigationBarHidden(true)
                         }
-                        
-                        /*  HStack {
-                         Spacer()
-                         NavigationLink(
-                         destination: ForgetView().navigationBarHidden(true),
-                         label: {
-                         
-                         Button("Forgot password?", action: vm.logPressed)
-                         .tint(.red.opacity(0.80))
-                         })
-                         .navigationBarHidden(true)
-                         
-                         }*/
-                        
                         HStack {
                             Spacer()
                             
                             Spacer()
-                            //Button(action: vm.login, label: "Sign In")
-                            if(vm.invalid){
-                            }
-                            else
-                            {
-                                Button("Login") {
-                                
-                                vm.authenticate()
+                            Button("Login") {
+                                loginVM.authenticate()
                             }.font(.title3)
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
@@ -117,16 +81,15 @@ struct SignInScreenView: View {
                                     .background(Color("PrimaryColor"))
                                     .cornerRadius(50.0)
                                     .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
-                                .padding(.vertical)}
+                                .padding(.vertical)
                             
                             Spacer()
                             
-                        }.alert("Your username or password is incorrect", isPresented: $vm.invalid) {
-                            Button("Ok", action: vm.logPressed)
+                        }.alert("Your username or password is incorrect", isPresented: $loginVM.invalid) {
+                            Button("Ok", action: {})
                         }
                         HStack {
                             Spacer()
-                            
                             Spacer()
                             Text("Don't have an account")
                             NavigationLink(
@@ -135,38 +98,22 @@ struct SignInScreenView: View {
                                     
                                     PrimaryButton2(title: "Sign Up ")
                                         .tint(Color("PrimaryColor"))
-                                    
-                                    
                                 })
                             .navigationBarHidden(true)
                             Spacer()
-                            
-                            //Spacer()
-                            
                         }
-                        
-                        
-                        
                         Spacer()
                     }
-                    
                     .frame(width: 300)
                     .padding()
                 }
                 .transition(.offset(x: 0, y: 850))
-                .alert(vm.message, isPresented: $vm.invalid) {
-                    Button("Ok", action: vm.logPressed)}
-                
+                .alert(loginVM.message, isPresented: $loginVM.invalid) {
+                    Button("Ok", action: {})}
             }
         }
-        
     }
-    
-    
 }
-
-
-
 
 struct SignInScreenView_Previews: PreviewProvider {
     static var previews: some View {

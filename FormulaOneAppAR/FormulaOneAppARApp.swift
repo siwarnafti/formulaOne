@@ -20,7 +20,7 @@ struct FormulaOneAppARApp: App {
             //SignInScreenView()
 //            ProfileView()
 //            EditProfil()
-            WelcomeScreenView()
+            SplashScreen()
 //                .environmentObject(user)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

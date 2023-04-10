@@ -21,12 +21,9 @@ func getuser()->User?{
 
    }
 struct ProfileView: View {
-    //let defaults = UserDefaults.standard
-    
     @StateObject var vm = ViewModel()
-    
+    @StateObject var profileVM=ProfileVM()
     let user=getuser()
-    
     var body: some View {
         NavigationView(){
             VStack( spacing: 0) {
@@ -39,11 +36,11 @@ struct ProfileView: View {
                     .padding()
                 
                 // User's name and bio
-                Text(user!.name )
+                Text(user?.name ?? "username")
                 .font(.title)
 //                VStack(){
                     Spacer()
-                Text(user!.email)
+                Text(user?.email ?? "email")
                         .foregroundColor(.gray)
                 Spacer()
                     NavigationLink(
@@ -108,7 +105,7 @@ struct ProfileView: View {
             }
             .toolbar{
                 Button {
-                    vm.authenticated=false
+                    profileVM.signout()
                     AppEventsManager.shared.navigateFullScreen.send((true, FullScreenNavigationViewType.WelcomeView))
                 } label: {
                     Image(systemName: "rectangle.portrait.and.arrow.right")
