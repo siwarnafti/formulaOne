@@ -50,6 +50,10 @@
 		7AFEC38029E10C8D007EAA5D /* FullScreenNavigationViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */; };
 		7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC38229E10DAB007EAA5D /* AppEventsManager.swift */; };
 		7AFEC38529E10DF9007EAA5D /* SetReactiveMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */; };
+		B0DB6F6F29E60D02007CABC6 /* forgotVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */; };
+		B0DB6F7129E61139007CABC6 /* confirmForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7029E61139007CABC6 /* confirmForgotView.swift */; };
+		B0DB6F7329E61E3D007CABC6 /* verificationCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */; };
+		B0DB6F7529E61FAA007CABC6 /* VerificationCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7429E61FAA007CABC6 /* VerificationCodeRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,10 @@
 		7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenNavigationViewType.swift; sourceTree = "<group>"; };
 		7AFEC38229E10DAB007EAA5D /* AppEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventsManager.swift; sourceTree = "<group>"; };
 		7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReactiveMethods.swift; sourceTree = "<group>"; };
+		B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotVM.swift; sourceTree = "<group>"; };
+		B0DB6F7029E61139007CABC6 /* confirmForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmForgotView.swift; sourceTree = "<group>"; };
+		B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = verificationCodeResponse.swift; path = FormulaOneAppAR/View/verificationCodeResponse.swift; sourceTree = SOURCE_ROOT; };
+		B0DB6F7429E61FAA007CABC6 /* VerificationCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 				7A408F8129E2CBC5009B0304 /* ConfirmResquest.swift */,
 				7A408F7729E2C600009B0304 /* LoginRequestBody.swift */,
 				7A408F7929E2C61A009B0304 /* signupRequestBody.swift */,
+				B0DB6F7429E61FAA007CABC6 /* VerificationCodeRequest.swift */,
 			);
 			path = ResquestHandler;
 			sourceTree = "<group>";
@@ -168,6 +177,7 @@
 		7A408F7629E2C5A4009B0304 /* ResponseHandler */ = {
 			isa = PBXGroup;
 			children = (
+				B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */,
 			);
 			path = ResponseHandler;
 			sourceTree = "<group>";
@@ -230,6 +240,7 @@
 				7A408F8B29E2D8B9009B0304 /* ResgisterVM.swift */,
 				7A408F8D29E2D925009B0304 /* ProfileVM.swift */,
 				7A408F9129E34F8A009B0304 /* EditProfileVM.swift */,
+				B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 				7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */,
 				7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */,
 				7AA6998029E4CA85005FEA9F /* RegisterView.swift */,
+				B0DB6F7029E61139007CABC6 /* confirmForgotView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,7 +502,10 @@
 				7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */,
 				7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */,
 				7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */,
+				B0DB6F7529E61FAA007CABC6 /* VerificationCodeRequest.swift in Sources */,
 				7A408F8529E2CFD6009B0304 /* Consts.swift in Sources */,
+				B0DB6F7129E61139007CABC6 /* confirmForgotView.swift in Sources */,
+				B0DB6F6F29E60D02007CABC6 /* forgotVM.swift in Sources */,
 				7A408F7E29E2C671009B0304 /* ForgotRequest.swift in Sources */,
 				7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */,
 				7A408F8A29E2D8A6009B0304 /* LoginVM.swift in Sources */,
@@ -519,6 +534,7 @@
 				7A408F7A29E2C61A009B0304 /* signupRequestBody.swift in Sources */,
 				7A408F8829E2D5B0009B0304 /* CheckBox.swift in Sources */,
 				7AFEC34129E0FF5E007EAA5D /* Content-ViewModel.swift in Sources */,
+				B0DB6F7329E61E3D007CABC6 /* verificationCodeResponse.swift in Sources */,
 				7AD5C7E229E0F78B00FAE06E /* ContentView.swift in Sources */,
 				7A408F9029E2DC0E009B0304 /* SplashScreen.swift in Sources */,
 				7AFEC33E29E0FF45007EAA5D /* User.swift in Sources */,
