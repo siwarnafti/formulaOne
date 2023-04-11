@@ -8,10 +8,60 @@
 import Foundation
 class ResgiterVM:ObservableObject{
     @Published var user = SignInUser()
+    @Published var usernameError:String? = nil
+    @Published var emailError:String? = nil
+    @Published var passwordError:String? = nil
+    @Published var confirmPasswordError:String? = nil
     @Published var confirmPassword:String=""
     @Published var message:String=""
     @Published var invalid:Bool=false
+    @Published var isSnackbarShowing:Bool=false
+    
     init(){}
+    var isFormValid: Bool {
+        return usernameError == nil && emailError == nil && passwordError == nil
+    }
+
+    func validateUsername() {
+        if user.name.isEmpty {
+            usernameError = "Username is required"
+        } else {
+            usernameError = nil
+        }
+    }
+
+    func validateEmail() {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+
+        if user.email.isEmpty {
+            emailError = "Email is required"
+        } else if !emailPredicate.evaluate(with: user.email) {
+            emailError = "Email is invalid"
+        } else {
+            emailError = nil
+        }
+    }
+
+    func validatePassword() {
+        if user.password.isEmpty {
+            passwordError = "Password is required"
+        } else if user.password.count < 8 {
+            passwordError = "Password must be at least 8 characters"
+        } else {
+            passwordError = nil
+        }
+    }
+func validateConfirmPassword() {
+    if self.confirmPassword.isEmpty {
+        confirmPasswordError = "Password is required"
+    } else if user.password != self.confirmPassword {
+        confirmPasswordError = "Passwords must match"
+    } else {
+        confirmPasswordError = nil
+    }
+}
+
     func signup() {
         if(user.email.isEmpty||user.name.isEmpty||user.email.isEmpty||user.password.isEmpty||self.confirmPassword.isEmpty){
             self.message="all fields must be filled"
@@ -25,6 +75,7 @@ class ResgiterVM:ObservableObject{
             signupApi(user:user) { result in
                 switch result {
                 case .success(_):
+                    
                     DispatchQueue.main.async {
                         self.invalid=true
                         self.message="Sign Up Successfully! ✅"
@@ -32,11 +83,13 @@ class ResgiterVM:ObservableObject{
                             result in
                             print(result)
                         }
+                        
+                    }
                         self.user.email=""
                         self.user.name=""
                         self.user.password=""
                         self.confirmPassword=""
-                    }
+                    
                     
                 case .failure(let error):
                     DispatchQueue.main.async{

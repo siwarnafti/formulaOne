@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 class LogiVM:ObservableObject{
-    @Published  var EmailError: String = ""
-    @Published  var passwordError: String = ""
+    @Published  var EmailError: String? = nil
+    @Published  var passwordError: String? = nil
     
     @Published var email:String=""
     @Published var password:String=""
@@ -17,7 +17,12 @@ class LogiVM:ObservableObject{
     @Published var invalid: Bool = false
     @Published var rememberMe: Bool = false
     @Published var loginbut:Bool=false
+    @Published var isSnackbarShowing:Bool = false
+    
     init(){}
+    var isFormValid: Bool {
+        return  EmailError == nil && passwordError == nil
+    }
     func authenticate() {
         if(self.password.isEmpty||self.email.isEmpty){
                self.message="all fields must be filled"
@@ -29,6 +34,30 @@ class LogiVM:ObservableObject{
                login()
            }
     }
+    func validateEmail(){
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+
+        if email.isEmpty {
+            EmailError = "Email is required"
+//            return EmailError
+        } else if !emailPredicate.evaluate(with: email) {
+        
+            EmailError = "Email is invalid"
+//            return EmailError
+        } else {
+            EmailError = nil
+//            return EmailError
+        }
+    }
+
+    func validatePassword() {
+        if password.isEmpty {
+            passwordError = "Password is required"
+        } else {
+            passwordError = nil
+        }
+    }
     func login() {
         loginApi(email: self.email, password: self.password) { result in
             switch result {
@@ -39,6 +68,7 @@ class LogiVM:ObservableObject{
                     self.loginbut = true
 
                 }
+              
             case .failure(let error):
                 DispatchQueue.main.async {
                     self.invalid=true

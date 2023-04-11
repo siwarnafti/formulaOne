@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInScreenView: View {
     @StateObject var loginVM = LogiVM()
+    
     @State var legedinVM=UserDefaults.standard.bool(forKey: "RememberMe")
     
     var body: some View {
@@ -38,22 +39,35 @@ struct SignInScreenView: View {
                             .cornerRadius(50.0)
                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0.0, y: 16)
                             .padding(.vertical)
+                            .onChange(of: loginVM.email) { value in
+                                loginVM.validateEmail()
+                            }
                         
-                        Text(loginVM.EmailError)
-                            .multilineTextAlignment(.leading)
-                            .foregroundColor(.red)
-                            .padding(.horizontal, 20)
-                            .padding(.top, 0)
-                            .font(Font.system(size: 13))
+                        if let EmailError = loginVM.EmailError{
+                            Text(EmailError)
+                                .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
+                        }
+                        PasswordView(leftIcon : "lock", placeHolder:"Password", password: $loginVM.password)
+                            .onChange(of: loginVM.password) { value in
+                                loginVM.validatePassword()
+                            }
+//                        SecureField("Password", text: $loginVM.password)
+//                            .font(.title3)
+//                            .padding()
+//                            .frame(maxWidth: .infinity)
+//                            .background(Color.white)
+//                            .cornerRadius(50.0)
+//                            .shadow(color: Color.black.opacity(0.3), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
+//                            .padding(.vertical)
+
+                            .onChange(of: loginVM.password) { value in
+                                loginVM.validatePassword()
+                            }
                         
-                        SecureField("Password", text: $loginVM.password)
-                            .font(.title3)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.white)
-                            .cornerRadius(50.0)
-                            .shadow(color: Color.black.opacity(0.3), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-                            .padding(.vertical)
+                        if let passwordError = loginVM.passwordError{
+                            Text(passwordError)
+                                .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
+                        }
                         HStack {
                             Spacer()
                             CheckBox(isChecked:$loginVM.rememberMe)
@@ -106,6 +120,7 @@ struct SignInScreenView: View {
                     }
                     .frame(width: 300)
                     .padding()
+                    
                 }
                 .transition(.offset(x: 0, y: 850))
                 .alert(loginVM.message, isPresented: $loginVM.invalid) {
