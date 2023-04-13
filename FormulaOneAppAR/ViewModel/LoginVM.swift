@@ -101,7 +101,7 @@ class LogiVM:ObservableObject{
             }
             do {
                 if let data=data {
-                    let result = try JSONDecoder().decode(User.self, from: data)
+                    let result = try JSONDecoder().decode(LogedInUser.self, from: data)
                     if(self.rememberMe){
                         UserDefaults.standard.set(self.rememberMe, forKey: "RememberMe")
                         self.saveuser(user: result)
@@ -126,7 +126,7 @@ class LogiVM:ObservableObject{
         }
     }.resume()
 }
-    func saveuser(user:User){
+    func saveuser(user:LogedInUser){
            let defaults = UserDefaults.standard
            let encoder = JSONEncoder()
            if let encoded = try? encoder.encode(user) {

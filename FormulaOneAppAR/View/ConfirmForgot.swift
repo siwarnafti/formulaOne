@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct confirmForgotView: View {
-    @StateObject var vm:ForgotVM
+    @StateObject var vm=ForgotVM()
     
     var body: some View {
         ZStack {

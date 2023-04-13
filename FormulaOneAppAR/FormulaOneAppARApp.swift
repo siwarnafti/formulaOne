@@ -21,6 +21,7 @@ struct FormulaOneAppARApp: App {
 //            ProfileView()
 //            EditProfil()
             SplashScreen()
+//            confirmForgotView()
 //                .environmentObject(user)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

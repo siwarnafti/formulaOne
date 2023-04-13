@@ -22,9 +22,21 @@ class ForgotVM:ObservableObject{
     
     
     init(){
-        var isFormValid: Bool {
-            return  EmailError == nil && passwordError == nil
-        }
+        
+    }
+//    func getuser()->UserForgotPassword?{
+//           let defaults = UserDefaults.standard
+//           if let savedUser = defaults.object(forKey: "user") as? Data {
+//               let decoder = JSONDecoder()
+//               if let loadedUser = try? decoder.decode(UserForgotPassword.self, from: savedUser) {
+//                   // use loadedUser
+//                   return loadedUser
+//               }
+//           }
+//           return nil
+//       }
+    var isFormValid: Bool {
+        return  EmailError == nil && passwordError == nil
     }
     func validatePassword() {
         if password.isEmpty {
@@ -117,7 +129,7 @@ class ForgotVM:ObservableObject{
                 }
                 do {
                     if let data=data {
-                        let result = try JSONDecoder().decode(VerificationCodeResponse.self, from: data)
+                        //let result = try JSONDecoder().decode(VerificationCodeResponse.self, from: data)
                         
                         completion(.success("verification sent"))}
                     else{
@@ -142,5 +154,66 @@ class ForgotVM:ObservableObject{
            
        }
 
-       
+    func confirmForgotPwd() {
+        confirmForgetPasswordApi(codeForget:verificationcode,email:email,password:password){ result in
+                
+                switch result{
+                case .success(_):
+                    print(result)
+                    //self.saveuser(user:self.user)
+                    DispatchQueue.main.async {
+                        self.isSent = true
+
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.invalid=true
+                        self.message = error.localizedDescription
+                        print(error.localizedDescription)
+                    }
+                    
+                }
+                print(result)
+            }
+            self.message="check your email  ✅"
+            self.invalid=true
+        
+
+    }
+    
+    func confirmForgetPasswordApi(codeForget:String,email:String,password:String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
+           
+           guard let url = URL(string: baseUrl+"user/ChangePasswordForgot") else {
+               completion(.failure(.URLisnotcorrect))
+               return
+           }
+        
+           
+        let body = UserForgotPassword(codeForget:self.verificationcode,email: self.email,password: self.password)
+           var request = URLRequest(url: url)
+           request.httpMethod = "POST"
+           request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+           request.httpBody = try? JSONEncoder().encode(body)
+           
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let httpResponse = response as? HTTPURLResponse else {
+                    return
+                }
+            switch httpResponse.statusCode {
+            case 200...299:
+                completion(.success("verification sent"))
+            case 422:
+                completion(.failure(.ivalidlogin))
+            case 403...499:
+                completion(.failure(.ivalidlogin))
+                // Handle client error
+            case 500...599:
+                completion(.failure(.unknownError))
+                // Handle server error
+            default:
+                completion(.failure(.invalidCredentials))
+            }
+        }.resume()
+           
+       }
 }

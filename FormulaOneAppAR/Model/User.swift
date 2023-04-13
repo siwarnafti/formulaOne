@@ -64,7 +64,12 @@ struct LogedInUser: Codable{
 //    var password: String=""
     var avatar: String=""
     var token: String=""
-    
+    mutating func setname(_ name:String){
+        self.name=name
+    }
+    mutating func setemail(email:String){
+        self.email=email
+    }
 }
 struct SignInUser: Codable{
     
@@ -74,4 +79,12 @@ struct SignInUser: Codable{
 //    var confirm: String=""
     
     
+}
+struct UserChangePassword:Codable{
+    
+}
+struct UserForgotPassword:Codable{
+    var codeForget:String
+    var email:String
+    var password:String
 }
