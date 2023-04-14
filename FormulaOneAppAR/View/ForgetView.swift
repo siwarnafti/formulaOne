@@ -64,7 +64,7 @@ struct ForgetView: View {// by default it's empty
                     HStack {
                         
                         Spacer()
-                        Button("Confirm New passwod",role: .cancel, action: vm.forgotpwd)
+                        Button("Confirm New passwod",role: .cancel, action: vm.confirmForgotPwd)
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -112,7 +112,6 @@ struct ForgetView: View {// by default it's empty
                         Spacer()
                     }
                     HStack {
-                        
                         Spacer()
                         Button("Reset passwod",role: .cancel, action: vm.forgotpwd)
                             .font(.title3)
@@ -131,12 +130,10 @@ struct ForgetView: View {// by default it's empty
                     }
                     Spacer()
                 }
-                
                 .frame(width: 300)
                 .padding()
             }
             .transition(.offset(x: 0, y: 850))
-            //        Text("lalalala")
             .alert(vm.message, isPresented: $vm.invalid) {
                 Button("Ok", action: {})}
         }

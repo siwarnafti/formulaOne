@@ -61,17 +61,7 @@ struct RegisterView: View {
                             Text(emailError)
                                 .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                         }
-//                        SecureField("Password", text: $vm.user.password)
-//                            .font(.title3)
-//                            .padding()
-//                            .frame(maxWidth: .infinity)
-//                            .background(Color.white)
-//                            .cornerRadius(50.0)
-//                            .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-//                            .padding(.vertical)
-//                            .onChange(of: vm.user.password) { value in
-//                                vm.validatePassword()
-//                            }
+//
                         PasswordView(leftIcon : "lock", placeHolder:"Password", password: $vm.user.password)
                             .onChange(of: vm.user.password) { value in
                                 vm.validatePassword()
@@ -131,11 +121,7 @@ struct RegisterView: View {
                     .offset(y:-50)
                 }
                 
-            }
-//                .transition(.offset(x: 0, y: 850))
-            
-            
-            }
+            }            }
         }
     }
    struct RegisterView_Previews: PreviewProvider {

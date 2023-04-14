@@ -8,11 +8,11 @@
 
 
 import SwiftUI
-func getuser()->User?{
+func getuser()->LogedInUser?{
        let defaults = UserDefaults.standard
        if let savedUser = defaults.object(forKey: "user") as? Data {
            let decoder = JSONDecoder()
-           if let loadedUser = try? decoder.decode(User.self, from: savedUser) {
+           if let loadedUser = try? decoder.decode(LogedInUser.self, from: savedUser) {
                // use loadedUser
                return loadedUser
            }
@@ -22,8 +22,9 @@ func getuser()->User?{
    }
 struct ProfileView: View {
     @StateObject var vm = ViewModel()
-    @StateObject var profileVM=ProfileVM()
-    let user=getuser()
+    @StateObject var profileVM = ProfileVM()
+    @StateObject var editProfileVM = EditProfileVM()
+//    let user=getuser()
     var body: some View {
         NavigationView(){
             VStack( spacing: 0) {
@@ -36,15 +37,15 @@ struct ProfileView: View {
                     .padding()
                 
                 // User's name and bio
-                Text(user?.name ?? "username")
+                Text(profileVM.user.name )
                 .font(.title)
 //                VStack(){
                     Spacer()
-                Text(user?.email ?? "email")
+                Text(profileVM.user.email )
                         .foregroundColor(.gray)
                 Spacer()
                     NavigationLink(
-                        destination: EditProfil(),
+                        destination: EditProfil(editVM: editProfileVM, prfileVM: profileVM),
                         label: {
                             Text("Edit Profil")
                                 .foregroundColor(.white)

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EditProfil: View {
     
-    @StateObject var editVM = EditProfileVM()
+    @ObservedObject var editVM : EditProfileVM
+    @ObservedObject var prfileVM : ProfileVM
     @State var username: String = ""
     @State var email: String = ""
     @State private var avatarItem: PhotosPickerItem?
@@ -18,9 +19,51 @@ struct EditProfil: View {
     @State var image: UIImage?
     @State private var isPresentingConfirm: Bool = false
     @State private var isPresentingAlert: Bool = false
-    @State var user=getuser()
-//    let username = getuser()?.name
-//    let email = getuser()?.email
+    func uploadImage() {
+        guard let image = self.image else {
+               return
+           }
+
+           let boundary = UUID().uuidString
+
+           let config = URLSessionConfiguration.default
+           let session = URLSession(configuration: config)
+
+           guard let url = URL(string: "http://example.com/upload") else {
+               return
+           }
+
+           var request = URLRequest(url: url)
+           request.httpMethod = "POST"
+           request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+           let httpBody = NSMutableData()
+
+           httpBody.append("--\(boundary)\r\n".data(using: .utf8)!)
+           httpBody.append("Content-Disposition: form-data; name=\"file\"; filename=\"image.png\"\r\n".data(using: .utf8)!)
+           httpBody.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+           httpBody.append(image.pngData()!)
+           httpBody.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+
+           request.httpBody = httpBody as Data
+
+           let task = session.dataTask(with: request) { (data, response, error) in
+               if let error = error {
+                   print("Error: \(error.localizedDescription)")
+                   return
+               }
+
+               guard let data = data else {
+                   print("Error: No data received")
+                   return
+               }
+
+               // Process server response
+               print("Server response: \(String(data: data, encoding: .utf8) ?? "")")
+           }
+
+           task.resume()
+       }
     var body: some View {
                 VStack {
                     ZStack() {
@@ -60,10 +103,10 @@ struct EditProfil: View {
                     }
                 
                 Spacer()
-                    TextField(user?.name ?? "username", text: $username)
+                    TextField(prfileVM.user.name, text: $username)
                     .padding()
                     
-                    TextField(user?.email ?? "email", text: $email)
+                    TextField(prfileVM.user.email, text: $email)
                     .padding()
                     NavigationLink(
                         destination: ChangePassword(),
@@ -88,30 +131,42 @@ struct EditProfil: View {
                   isPresented: $isPresentingConfirm) {
                   Button("Save Updates ?", role: .destructive) {
                       if(!(username.isEmpty)){
-                          user!.name=username
+                          prfileVM.user.name=username
                       }
                       if(!(email.isEmpty)){
-                          user?.email=email
+                          prfileVM.user.email=email
                       }
-                      editVM.updateprofil(user:user! )
+                      editVM.updateprofil(user:prfileVM.user )
+                      
                    }
                  }
             }
+            
             .padding()
+        
+            .alert(isPresented: $editVM.profilehaschanged) {
+                            Alert(
+                                title: Text("done"),
+                                message: Text(editVM.message),
+                                primaryButton: .default(Text("OK")) {
+                                    // Dismiss the current view and return to the previous view
+                                    presentationMode.wrappedValue.dismiss()
+                                },
+                                secondaryButton: .cancel()
+                            )
+                        }
+                    
             .navigationTitle("Edite Profile")
-            .navigationViewStyle(StackNavigationViewStyle())
+//            .navigationViewStyle(StackNavigationViewStyle())
                     .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                         ImagePicker(image: $image)
                             .ignoresSafeArea()
                     }
             }
+    @Environment(\.presentationMode) var presentationMode
         }
 
-struct EditProfil_Previews: PreviewProvider {
-   static var previews: some View {
-       EditProfil()
-    }
-}
+
 struct ImagePicker: UIViewControllerRepresentable {
  
     @Binding var image: UIImage?

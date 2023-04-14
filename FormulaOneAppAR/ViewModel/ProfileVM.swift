@@ -8,7 +8,10 @@
 import Foundation
 class ProfileVM:ObservableObject{
     @Published var pro:String?
-    init(){}
+    @Published var user = LogedInUser()
+    init(){
+        user=getuser()!
+    }
     func signout() {
         
         self.removeuser()

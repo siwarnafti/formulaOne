@@ -37,7 +37,8 @@ class ViewModel: ObservableObject {
                }
            }
            return nil
-       }
+    }
+               
     func removeuser(){
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "user")

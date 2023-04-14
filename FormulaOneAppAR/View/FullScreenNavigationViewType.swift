@@ -17,7 +17,7 @@ enum FullScreenNavigationViewType {
         case .empty:
             return AnyView(EmptyView())
         case .editview:
-            return AnyView(EditProfil())
+            return AnyView(EditProfil(editVM: EditProfileVM(), prfileVM: ProfileVM()))
         case .WelcomeView:
             return AnyView(WelcomeScreenView())
         }

@@ -111,9 +111,9 @@
 		7AFEC33D29E0FF45007EAA5D /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		7AFEC34029E0FF5E007EAA5D /* Content-ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
 		7AFEC35D29E10102007EAA5D /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		7AFEC36229E105DC007EAA5D /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mainScreen.swift; path = FormulaOneAppAR/View/mainScreen.swift; sourceTree = SOURCE_ROOT; };
+		7AFEC36229E105DC007EAA5D /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mainScreen.swift; path = FormulaOneAppAR/View/mainScreen/mainScreen.swift; sourceTree = SOURCE_ROOT; };
 		7AFEC36729E1066B007EAA5D /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
-		7AFEC36E29E10722007EAA5D /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeScreenView.swift; path = FormulaOneAppAR/View/WelcomeScreenView.swift; sourceTree = SOURCE_ROOT; };
+		7AFEC36E29E10722007EAA5D /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeScreenView.swift; path = FormulaOneAppAR/View/WelcomeScreen/WelcomeScreenView.swift; sourceTree = SOURCE_ROOT; };
 		7AFEC37029E10858007EAA5D /* customViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customViews.swift; sourceTree = "<group>"; };
 		7AFEC37329E10A15007EAA5D /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		7AFEC37529E10A6E007EAA5D /* EditProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfil.swift; sourceTree = "<group>"; };
@@ -204,6 +204,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		7AA699A429E8E8CD005FEA9F /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7AFEC36E29E10722007EAA5D /* WelcomeScreenView.swift */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		7AA699A529E8E8F0005FEA9F /* mainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7AFEC36229E105DC007EAA5D /* mainScreen.swift */,
+			);
+			path = mainScreen;
+			sourceTree = "<group>";
+		};
 		7ACD0E9829E0FAAC00C67816 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +260,7 @@
 				7A408F9129E34F8A009B0304 /* EditProfileVM.swift */,
 				B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */,
 				7AA6998C29E75B75005FEA9F /* confirmForogt.swift */,
+				7ACD0E9929E0FABF00C67816 /* Ulilities */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -251,9 +268,9 @@
 		7ACD0E9C29E0FB1700C67816 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7AFEC36B29E106B2007EAA5D /* WelcomeScreen */,
+				7AA699A529E8E8F0005FEA9F /* mainScreen */,
+				7AA699A429E8E8CD005FEA9F /* WelcomeScreen */,
 				7AFEC36429E105FD007EAA5D /* Profile */,
-				7AFEC35F29E10529007EAA5D /* mainScreen */,
 				7AFEC36729E1066B007EAA5D /* SignInScreenView.swift */,
 				7AFEC37929E10BCF007EAA5D /* ForgetView.swift */,
 				7AFEC37D29E10C63007EAA5D /* FullScreenNavigationView.swift */,
@@ -292,7 +309,6 @@
 				7ACD0E9A29E0FADB00C67816 /* Model */,
 				7ACD0E9C29E0FB1700C67816 /* View */,
 				7ACD0E9B29E0FAF800C67816 /* ViewModel */,
-				7ACD0E9929E0FABF00C67816 /* Ulilities */,
 				7AD5C7DA29E0F78B00FAE06E /* FormulaOneAppARApp.swift */,
 				7AD5C7DC29E0F78B00FAE06E /* Persistence.swift */,
 				7AD5C7E129E0F78B00FAE06E /* ContentView.swift */,
@@ -329,14 +345,6 @@
 			path = FormulaOneAppARUITests;
 			sourceTree = "<group>";
 		};
-		7AFEC35F29E10529007EAA5D /* mainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				7AFEC36229E105DC007EAA5D /* mainScreen.swift */,
-			);
-			path = mainScreen;
-			sourceTree = "<group>";
-		};
 		7AFEC36429E105FD007EAA5D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,14 +352,6 @@
 				7AFEC37729E10B10007EAA5D /* Profile.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		7AFEC36B29E106B2007EAA5D /* WelcomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				7AFEC36E29E10722007EAA5D /* WelcomeScreenView.swift */,
-			);
-			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
 		7AFEC37229E109E0007EAA5D /* Subview */ = {

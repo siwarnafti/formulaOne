@@ -105,6 +105,7 @@ class LogiVM:ObservableObject{
                     if(self.rememberMe){
                         UserDefaults.standard.set(self.rememberMe, forKey: "RememberMe")
                         self.saveuser(user: result)
+                        print(result)
                     }
                     completion(.success(result.token))}
                 else{
