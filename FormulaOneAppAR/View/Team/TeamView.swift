@@ -9,7 +9,20 @@ import SwiftUI
 
 struct TeamView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            //.color(.gray)
+            Color.gray
+                .ignoresSafeArea()
+            HStack{
+                Text("1")
+                    .bold()
+                Divider()
+                    .frame(width: 1.0)
+                    .foregroundColor(.blue)
+                    
+            }
+        }.frame(height:100)
+        
     }
 }
 

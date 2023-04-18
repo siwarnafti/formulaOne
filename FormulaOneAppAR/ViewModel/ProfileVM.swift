@@ -10,7 +10,10 @@ class ProfileVM:ObservableObject{
     @Published var pro:String?
     @Published var user = LogedInUser()
     init(){
-        user=getuser()!
+        let loggedin = UserDefaults.standard.bool(forKey: "RememberMe")
+        if(loggedin){
+            user=getuser()
+        }
     }
     func signout() {
         

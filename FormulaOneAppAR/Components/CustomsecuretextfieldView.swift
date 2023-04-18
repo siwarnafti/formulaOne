@@ -40,9 +40,9 @@ struct PasswordView: View {
                         .padding()
                     //                        .frame(maxWidth: .infinity)
                         .background(Color.white)
-                        .cornerRadius(50.0)
+                        .cornerRadius(10.0)
                         .shadow(color: Color.black.opacity(0.3), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-                        .padding(.vertical)
+//                        .padding(.vertical)
                 }
                 
                 else{
@@ -51,9 +51,9 @@ struct PasswordView: View {
                         .padding()
                     //                        .frame(maxWidth: .infinity)
                         .background(Color.white)
-                        .cornerRadius(50.0)
+                        .cornerRadius(10.0)
                         .shadow(color: Color.black.opacity(0.3), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-                        .padding(.vertical)
+//                        .padding(.vertical)
                     
                         .focused($focusField, equals: .fieldName)
                     
@@ -66,6 +66,8 @@ struct PasswordView: View {
                         secured.toggle()
                     } label: {
                         Image(systemName: secured ? "eye.slash" : "eye")
+                            .foregroundColor(secured ? Color.red : Color.gray)
+
                     }
                     .buttonStyle(BorderlessButtonStyle())
                 }.padding()

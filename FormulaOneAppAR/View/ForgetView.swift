@@ -15,25 +15,22 @@ struct ForgetView: View {// by default it's empty
     var body: some View {
         if(vm.isSent){
             ZStack {
-                //Spacer()
-                
-                
+                Color.gray
+                    .opacity(0.8)
+                    .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
                     Text("New password")
                         .foregroundColor(.primary)
                         .font(.system(size: 30, design: .rounded))
-                    
-                    
-                    
                     TextField("verification code", text: $vm.verificationcode)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
-                        .cornerRadius(50.0)
+                        .cornerRadius(10.0)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
-                        .padding(.vertical)
+//                        .padding(.vertical)
                         .onChange(of: vm.verificationcode) { value in
                             vm.validateverificationcode()
                         }
@@ -76,36 +73,32 @@ struct ForgetView: View {// by default it's empty
                             .padding(.vertical)
                         Spacer()
                     }
-
-                    
-                   
+                    .alert(vm.message, isPresented: $vm.invalid) {
+                        Button("ok", action: vm.logPressed)
+                    }
                 }
                 .transition(.offset(x: 0, y: 850))
-                .frame(width: 300)
+                .frame(width: 350)
                 .padding()
             }
-            
         }else{
-            
-            // Show a login screen
             ZStack {
-                //Spacer()
-                
-                
+                Color.gray
+                    .opacity(0.8)
+                    .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
                     Text("Forgot your password?")
                         .foregroundColor(.primary)
                         .font(.system(size: 30, design: .rounded))
                     Text("Enter your email address ")
-                    
-                    
+                        .font(.system(size: 24, design: .rounded))
                     TextField("Email address", text: $vm.email)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
-                        .cornerRadius(50.0)
+                        .cornerRadius(10.0)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                         .padding(.vertical)
                     HStack {
@@ -130,9 +123,10 @@ struct ForgetView: View {// by default it's empty
                     }
                     Spacer()
                 }
-                .frame(width: 300)
+                .frame(width: 350)
                 .padding()
             }
+            
             .transition(.offset(x: 0, y: 850))
             .alert(vm.message, isPresented: $vm.invalid) {
                 Button("Ok", action: {})}

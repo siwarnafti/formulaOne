@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct team:Decodable,Identifiable{
+struct Team:Decodable,Identifiable{
     var id: Int
     var name: String
 }

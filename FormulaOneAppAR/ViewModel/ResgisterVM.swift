@@ -79,16 +79,16 @@ func validateConfirmPassword() {
                     DispatchQueue.main.async {
                         self.invalid=true
                         self.message="Sign Up Successfully! ✅"
-                        self.confirmPasswordApi(user:self.user){
-                            result in
-                            print(result)
-                        }
-                        
-                    }
                         self.user.email=""
                         self.user.name=""
                         self.user.password=""
                         self.confirmPassword=""
+                    }
+                    self.validateAccount(email:self.user.email){
+                        result in
+                        print(result)
+                    }
+                        
                     
                     
                 case .failure(let error):
@@ -145,7 +145,7 @@ func validateConfirmPassword() {
            }.resume()
            
        }
-    func confirmPasswordApi(user:SignInUser, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
+    func validateAccount(email:String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
            guard let url = URL(string: baseUrl+"user/SendConfirmEmail") else {
                completion(.failure(.URLisnotcorrect))
                return
@@ -153,7 +153,7 @@ func validateConfirmPassword() {
         var request = URLRequest(url: url)
            request.httpMethod = "POST"
            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-           request.httpBody = try? JSONEncoder().encode(ConfirmRequest(email: user.email))
+           request.httpBody = try? JSONEncoder().encode(ConfirmRequest(email: email))
            
            URLSession.shared.dataTask(with: request) { (data, response, error) in }.resume()
            

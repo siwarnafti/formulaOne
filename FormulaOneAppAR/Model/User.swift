@@ -58,7 +58,7 @@ struct User: Codable{
     }
 }
 struct LogedInUser: Codable{
-     var id:String=""
+    var id:String=""
     var name: String=""
     var email: String=""
 //    var password: String=""
@@ -81,6 +81,9 @@ struct SignInUser: Codable{
     
 }
 struct UserChangePassword:Codable{
+    var oldPassword:String=""
+    var newPassword:String=""
+    var email: String = ""
     
 }
 struct UserForgotPassword:Codable{

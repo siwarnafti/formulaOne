@@ -36,7 +36,7 @@ struct SignInScreenView: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.white)
-                            .cornerRadius(50.0)
+                            .cornerRadius(10.0)
                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0.0, y: 16)
                             .padding(.vertical)
                             .onChange(of: loginVM.email) { value in
@@ -50,7 +50,7 @@ struct SignInScreenView: View {
                         PasswordView(leftIcon : "lock", placeHolder:"Password", password: $loginVM.password)
                             .onChange(of: loginVM.password) { value in
                                 loginVM.validatePassword()
-                            }
+                            }.padding(.vertical)
 //                        SecureField("Password", text: $loginVM.password)
 //                            .font(.title3)
 //                            .padding()

@@ -8,7 +8,7 @@
 
 
 import SwiftUI
-func getuser()->LogedInUser?{
+func getuser()->LogedInUser{
        let defaults = UserDefaults.standard
        if let savedUser = defaults.object(forKey: "user") as? Data {
            let decoder = JSONDecoder()
@@ -17,7 +17,7 @@ func getuser()->LogedInUser?{
                return loadedUser
            }
        }
-       return nil
+       return LogedInUser()
 
    }
 struct ProfileView: View {
@@ -94,8 +94,8 @@ struct ProfileView: View {
                 // User's posts
                 ScrollView {
                     LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3), spacing: 2) {
-                        ForEach(0..<9) { _ in
-                            Image("post_image")
+                        ForEach(0..<24) { _ in
+                            Image("signup")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: UIScreen.main.bounds.width / 3 - 2, height: UIScreen.main.bounds.width / 3 - 2)

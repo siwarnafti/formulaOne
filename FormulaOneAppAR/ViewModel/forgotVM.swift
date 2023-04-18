@@ -175,7 +175,7 @@ class ForgotVM:ObservableObject{
                 }
                 print(result)
             }
-            self.message="check your email  ✅"
+            self.message="Password changed ✅"
             self.invalid=true
         
 

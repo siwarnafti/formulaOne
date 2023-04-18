@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
-
-struct ARView: View {
-    var body: some View {
-        CustomARViewRepresentable()
-            .ignoresSafeArea()
-    }
-}
-
-struct ARView_Previews: PreviewProvider {
-    static var previews: some View {
-        ARView()
-    }
-}
+//
+//struct ARView: View {
+//    var body: some View {
+//        CustomARViewRepresentable()
+//            .ignoresSafeArea()
+//    }
+//}
+//
+//struct ARView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ARView()
+//    }
+//}

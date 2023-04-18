@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChangePassword: View {
-    @StateObject var vm = EditProfileVM()
+    @ObservedObject var vm = EditProfileVM()
     @State private var isPresentingConfirm: Bool = false
     
     
@@ -31,8 +31,8 @@ struct ChangePassword: View {
                     Text(oldpasswordError)
                         .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                 }
-                PasswordView(leftIcon : "lock", placeHolder:"New Password", password: $vm.newPasswordd)
-                    .onChange(of: vm.newPasswordd) { value in
+                PasswordView(leftIcon : "lock", placeHolder:"New Password", password: $vm.newPassword)
+                    .onChange(of: vm.newPassword) { value in
                         vm.validatenewPassword()
                     }
                 
@@ -64,18 +64,18 @@ struct ChangePassword: View {
                 .confirmationDialog("Are you sure?",
                                     isPresented: $isPresentingConfirm) {
                     Button("Save Updates ?", role: .destructive) {
-                        vm.Changepasswordhandler()
+                        vm.changePasswordHandler()
                         print("performed")
                         vm.isPresentingUpdated = true
                         
                     }
                     
-                }.alert("Password has changed  ✅", isPresented: $vm.isPresentingUpdated) { Button("Ok", action: {})}
+                }.alert(vm.message, isPresented: $vm.invalid) { Button("Ok", action: {})}
                     
                         
                     }
                     
-                    //.frame(width: 300)
+                    .frame(width: 350)
                     .padding(50)
                 }
                 
