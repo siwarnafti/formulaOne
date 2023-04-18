@@ -51,6 +51,9 @@
 		7AFEC38029E10C8D007EAA5D /* FullScreenNavigationViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */; };
 		7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC38229E10DAB007EAA5D /* AppEventsManager.swift */; };
 		7AFEC38529E10DF9007EAA5D /* SetReactiveMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */; };
+		B0B5CE8529EE05C00073816B /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8429EE05C00073816B /* CustomARView.swift */; };
+		B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */; };
+		B0B5CE8929EE0DB50073816B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8829EE0DB50073816B /* ARView.swift */; };
 		B0DB6F6F29E60D02007CABC6 /* forgotVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */; };
 		B0DB6F7129E61139007CABC6 /* ConfirmForgot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7029E61139007CABC6 /* ConfirmForgot.swift */; };
 		B0DB6F7329E61E3D007CABC6 /* verificationCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */; };
@@ -123,6 +126,9 @@
 		7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenNavigationViewType.swift; sourceTree = "<group>"; };
 		7AFEC38229E10DAB007EAA5D /* AppEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventsManager.swift; sourceTree = "<group>"; };
 		7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReactiveMethods.swift; sourceTree = "<group>"; };
+		B0B5CE8429EE05C00073816B /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
+		B0B5CE8829EE0DB50073816B /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotVM.swift; sourceTree = "<group>"; };
 		B0DB6F7029E61139007CABC6 /* ConfirmForgot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmForgot.swift; sourceTree = "<group>"; };
 		B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = verificationCodeResponse.swift; path = FormulaOneAppAR/View/verificationCodeResponse.swift; sourceTree = SOURCE_ROOT; };
@@ -305,6 +311,7 @@
 		7AD5C7D929E0F78B00FAE06E /* FormulaOneAppAR */ = {
 			isa = PBXGroup;
 			children = (
+				B0B5CE8329EE02850073816B /* AR */,
 				7A408F8629E2D576009B0304 /* Components */,
 				7ACD0E9A29E0FADB00C67816 /* Model */,
 				7ACD0E9C29E0FB1700C67816 /* View */,
@@ -370,6 +377,16 @@
 				7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */,
 			);
 			path = ReactiveFlow;
+			sourceTree = "<group>";
+		};
+		B0B5CE8329EE02850073816B /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5CE8429EE05C00073816B /* CustomARView.swift */,
+				B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */,
+				B0B5CE8829EE0DB50073816B /* ARView.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +522,7 @@
 				7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */,
 				7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */,
 				7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */,
+				B0B5CE8929EE0DB50073816B /* ARView.swift in Sources */,
 				B0DB6F7529E61FAA007CABC6 /* VerificationCodeRequest.swift in Sources */,
 				7A408F8529E2CFD6009B0304 /* Consts.swift in Sources */,
 				B0DB6F7129E61139007CABC6 /* ConfirmForgot.swift in Sources */,
@@ -527,6 +545,7 @@
 				7AFEC37429E10A15007EAA5D /* ChangePassword.swift in Sources */,
 				7A408F8E29E2D925009B0304 /* ProfileVM.swift in Sources */,
 				7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */,
+				B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */,
 				7A408F8229E2CBC5009B0304 /* ConfirmResquest.swift in Sources */,
 				7A408F8029E2C68D009B0304 /* EditRequest.swift in Sources */,
 				7AFEC37129E10858007EAA5D /* customViews.swift in Sources */,
@@ -544,6 +563,7 @@
 				7AFEC33E29E0FF45007EAA5D /* User.swift in Sources */,
 				7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */,
 				7AFEC35E29E10102007EAA5D /* Services.swift in Sources */,
+				B0B5CE8529EE05C00073816B /* CustomARView.swift in Sources */,
 				7AD5C7DD29E0F78B00FAE06E /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +651,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -683,6 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -701,6 +723,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Neede to show the AR view";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -711,7 +734,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
@@ -719,7 +742,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -737,6 +762,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Neede to show the AR view";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -747,7 +773,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
@@ -755,7 +781,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
