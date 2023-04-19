@@ -11,22 +11,24 @@ struct Home: View {
         NavigationView{
             ZStack{
                 
+                
                                 VStack {
                                     ScrollView(.vertical, showsIndicators: false) {
-                                        Text("Movies")
+                                        Text("Formula 1 Fan")
                                             .font(.system(size: 35, design: .rounded).weight(.semibold))
                                             .fontWeight(.bold)
                                             .padding(.top, 20)
                                             .foregroundColor(.black)
                 
                                         ScrollView(.horizontal, showsIndicators: false) {
-                                            HStack(spacing: 20) {
-                
-//                                                                        ForEach(moviesViewModel.movies, id: \.self)
-                                                //Text("dooooo")
-//                                                movie in
-                                                                            RaceCardView()
-                                            }
+                                            HStack(spacing: 10) {
+                                                
+                                                ForEach(races, id: \.self){race in
+                                                    RaceCardView(race: race)
+                                                    
+                                                    //Text("dooooo")
+                                                    //                                                movie in
+                                                }    }                                                                    }
                                         }
                                         .padding(.horizontal, 20)
                                         .padding(.top, 10)
@@ -37,9 +39,14 @@ struct Home: View {
                                     }
                                     Spacer()
                                 }
-                            }
-                        }
-                        }
+            .navigationBarTitle("Home", displayMode: .inline)
+            .navigationBarHidden(true)
+        }
+    }
+
+//                            }
+//                        }
+//                        }
 /*
                         HStack {
                             Text("Horizontal List 1")
@@ -72,7 +79,30 @@ struct Home: View {
     }
 }*/
 
-
+//ScrollView(.vertical, showsIndicators: false) {
+//
+//                    Text("Movies")
+//                        .font(.system(size: 35, design: .rounded).weight(.semibold))
+//                        .fontWeight(.bold)
+//                        .padding(.top, 20)
+//                        .foregroundColor(.white)
+//
+//                    ScrollView(.horizontal, showsIndicators: false) {
+//                              HStack(spacing: 20) {
+//                                  ForEach(moviesViewModel.movies, id: \.self) { movie in
+//                                      BabyCardView(movie: movie)
+//
+//                                     }
+//                                  }
+//
+//                              .padding(.horizontal, 20)
+//                              .padding(.top, 10)
+//                              .onAppear {                                                  print("Movies in HomeView: \(moviesViewModel.movies)")}
+//
+//                          }
+//
+//                    Spacer()
+//      }
     struct home_Previews: PreviewProvider {
         static var previews: some View {
             Home()

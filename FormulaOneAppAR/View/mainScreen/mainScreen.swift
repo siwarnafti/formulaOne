@@ -20,7 +20,7 @@ struct mainScreen: View {
                //Spacer()
                TabView(selection: $tabSelected) {
                    
-                   Text("home")
+                   Home()
                        .tabItem {
                            Image(systemName: "house")
                        }

@@ -22,6 +22,8 @@
 		7A408F9029E2DC0E009B0304 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */; };
 		7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F9129E34F8A009B0304 /* EditProfileVM.swift */; };
 		7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */; };
+		7A96A64F29EF99CB0004B760 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64E29EF99CB0004B760 /* Race.swift */; };
+		7A96A65129EFBB2E0004B760 /* results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65029EFBB2E0004B760 /* results.swift */; };
 		7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6997E29E4C818005FEA9F /* Snackbar.swift */; };
 		7AA6998129E4CA85005FEA9F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6998029E4CA85005FEA9F /* RegisterView.swift */; };
 		7AA6998329E4D7A1005FEA9F /* CustomsecuretextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */; };
@@ -100,6 +102,8 @@
 		7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		7A408F9129E34F8A009B0304 /* EditProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVM.swift; sourceTree = "<group>"; };
 		7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCardView.swift; sourceTree = "<group>"; };
+		7A96A64E29EF99CB0004B760 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		7A96A65029EFBB2E0004B760 /* results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = results.swift; sourceTree = "<group>"; };
 		7AA6997E29E4C818005FEA9F /* Snackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
 		7AA6998029E4CA85005FEA9F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomsecuretextfieldView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		7A96A64D29EF999C0004B760 /* Ergast */ = {
+			isa = PBXGroup;
+			children = (
+				7A96A64E29EF99CB0004B760 /* Race.swift */,
+				7A96A65029EFBB2E0004B760 /* results.swift */,
+			);
+			path = Ergast;
+			sourceTree = "<group>";
+		};
 		7AA699A429E8E8CD005FEA9F /* WelcomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +286,7 @@
 		7ACD0E9A29E0FADB00C67816 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A96A64D29EF999C0004B760 /* Ergast */,
 				7A408F7629E2C5A4009B0304 /* ResponseHandler */,
 				7A408F7529E2C593009B0304 /* ResquestHandler */,
 				7ACD0E9829E0FAAC00C67816 /* Services */,
@@ -553,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A96A65129EFBB2E0004B760 /* results.swift in Sources */,
 				7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */,
 				7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */,
 				7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */,
@@ -598,6 +613,7 @@
 				B0DB6F7329E61E3D007CABC6 /* verificationCodeResponse.swift in Sources */,
 				7AD5C7E229E0F78B00FAE06E /* ContentView.swift in Sources */,
 				7A408F9029E2DC0E009B0304 /* SplashScreen.swift in Sources */,
+				7A96A64F29EF99CB0004B760 /* Race.swift in Sources */,
 				7AFEC33E29E0FF45007EAA5D /* User.swift in Sources */,
 				7AA699A729E94612005FEA9F /* APIServiceProtocol.swift in Sources */,
 				7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */,
