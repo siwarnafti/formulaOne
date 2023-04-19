@@ -21,6 +21,7 @@
 		7A408F8E29E2D925009B0304 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F8D29E2D925009B0304 /* ProfileVM.swift */; };
 		7A408F9029E2DC0E009B0304 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */; };
 		7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F9129E34F8A009B0304 /* EditProfileVM.swift */; };
+		7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */; };
 		7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6997E29E4C818005FEA9F /* Snackbar.swift */; };
 		7AA6998129E4CA85005FEA9F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6998029E4CA85005FEA9F /* RegisterView.swift */; };
 		7AA6998329E4D7A1005FEA9F /* CustomsecuretextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */; };
@@ -96,6 +97,7 @@
 		7A408F8D29E2D925009B0304 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		7A408F9129E34F8A009B0304 /* EditProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVM.swift; sourceTree = "<group>"; };
+		7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCardView.swift; sourceTree = "<group>"; };
 		7AA6997E29E4C818005FEA9F /* Snackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
 		7AA6998029E4CA85005FEA9F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomsecuretextfieldView.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				7AA6997E29E4C818005FEA9F /* Snackbar.swift */,
 				7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */,
 				7AA6998429E4D81C005FEA9F /* RoundedCorners.swift */,
+				7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			files = (
 				7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */,
 				7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */,
+				7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */,
 				7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */,
 				B0B5CE8929EE0DB50073816B /* ARView.swift in Sources */,
 				B0DB6F7529E61FAA007CABC6 /* VerificationCodeRequest.swift in Sources */,
