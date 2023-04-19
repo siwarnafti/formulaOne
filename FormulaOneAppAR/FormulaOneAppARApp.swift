@@ -22,7 +22,9 @@ struct FormulaOneAppARApp: App {
 //            EditProfil()
 //            ARView().ignoresSafeArea()
 //            confirmForgotView()
-            SplashScreen()
+   //         SplashScreen()
+            RealityKitView()
+                .ignoresSafeArea()
 //              .environmentObject(user)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

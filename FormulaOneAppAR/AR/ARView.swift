@@ -6,16 +6,12 @@
 //
 //
 import SwiftUI
+import ARKit
+import RealityKit
 
-//struct ARView: View {
-//    var body: some View {
-//        CustomARViewRepresentable()
-//            .ignoresSafeArea()
-//    }
-//}
-//
-//struct ARView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ARView()
-//    }
-//}
+struct FormulaARView: View {
+    var body: some View {
+        RealityKitView()
+    .ignoresSafeArea()
+    }
+}

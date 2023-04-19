@@ -60,6 +60,8 @@
 		B0B5CE8529EE05C00073816B /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8429EE05C00073816B /* CustomARView.swift */; };
 		B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */; };
 		B0B5CE8929EE0DB50073816B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8829EE0DB50073816B /* ARView.swift */; };
+		B0BFCEAB29EF9CAB00A7C129 /* RealityKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFCEAA29EF9CAB00A7C129 /* RealityKitView.swift */; };
+		B0BFCEAE29EFA92B00A7C129 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = B0BFCEAD29EFA92B00A7C129 /* FocusEntity */; };
 		B0DB6F6F29E60D02007CABC6 /* forgotVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */; };
 		B0DB6F7329E61E3D007CABC6 /* verificationCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */; };
 		B0DB6F7529E61FAA007CABC6 /* VerificationCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DB6F7429E61FAA007CABC6 /* VerificationCodeRequest.swift */; };
@@ -140,6 +142,7 @@
 		B0B5CE8429EE05C00073816B /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
 		B0B5CE8829EE0DB50073816B /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		B0BFCEAA29EF9CAB00A7C129 /* RealityKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitView.swift; sourceTree = "<group>"; };
 		B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotVM.swift; sourceTree = "<group>"; };
 		B0DB6F7229E61E3D007CABC6 /* verificationCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = verificationCodeResponse.swift; path = FormulaOneAppAR/View/verificationCodeResponse.swift; sourceTree = SOURCE_ROOT; };
 		B0DB6F7429E61FAA007CABC6 /* VerificationCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeRequest.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BFCEAE29EFA92B00A7C129 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +412,7 @@
 				B0B5CE8429EE05C00073816B /* CustomARView.swift */,
 				B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */,
 				B0B5CE8829EE0DB50073816B /* ARView.swift */,
+				B0BFCEAA29EF9CAB00A7C129 /* RealityKitView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -428,6 +433,9 @@
 			dependencies = (
 			);
 			name = FormulaOneAppAR;
+			packageProductDependencies = (
+				B0BFCEAD29EFA92B00A7C129 /* FocusEntity */,
+			);
 			productName = FormulaOneAppAR;
 			productReference = 7AD5C7D729E0F78B00FAE06E /* FormulaOneAppAR.app */;
 			productType = "com.apple.product-type.application";
@@ -500,6 +508,9 @@
 				Base,
 			);
 			mainGroup = 7AD5C7CE29E0F78A00FAE06E;
+			packageReferences = (
+				B0BFCEAC29EFA92B00A7C129 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 7AD5C7D829E0F78B00FAE06E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -546,6 +557,7 @@
 				7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */,
 				7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */,
 				7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */,
+				B0BFCEAB29EF9CAB00A7C129 /* RealityKitView.swift in Sources */,
 				B0B5CE8929EE0DB50073816B /* ARView.swift in Sources */,
 				B0DB6F7529E61FAA007CABC6 /* VerificationCodeRequest.swift in Sources */,
 				7A408F8529E2CFD6009B0304 /* Consts.swift in Sources */,
@@ -950,6 +962,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0BFCEAC29EFA92B00A7C129 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0BFCEAD29EFA92B00A7C129 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BFCEAC29EFA92B00A7C129 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7AD5C7DE29E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld */ = {
