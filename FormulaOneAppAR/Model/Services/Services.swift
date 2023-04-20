@@ -117,7 +117,7 @@ struct APIServices : APIServiceProtocol{
 
         task.resume()
     }
-    func fetchTeams(url: URL?, completion: @escaping(Result<[Team], APIError>) -> Void) {
+    func fetchTeams(url: URL?, completion: @escaping(Result<[ConstructorModel], APIError>) -> Void) {
         guard let url = url else {
             let error = APIError.badURL
             completion(Result.failure(error))
@@ -132,7 +132,7 @@ struct APIServices : APIServiceProtocol{
             }else if let data = data {
                 let decoder = JSONDecoder()
                 do {
-                    let teams = try decoder.decode([Team].self, from: data)
+                    let teams = try decoder.decode([ConstructorModel].self, from: data)
                     completion(Result.success(teams))
                     
                 }catch {

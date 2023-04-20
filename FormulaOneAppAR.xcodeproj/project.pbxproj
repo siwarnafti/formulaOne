@@ -24,6 +24,12 @@
 		7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */; };
 		7A96A64F29EF99CB0004B760 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64E29EF99CB0004B760 /* Race.swift */; };
 		7A96A65129EFBB2E0004B760 /* results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65029EFBB2E0004B760 /* results.swift */; };
+		7A96A65329EFD8BB0004B760 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65229EFD8BB0004B760 /* DriverModel.swift */; };
+		7A96A65529EFD93C0004B760 /* DriverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65429EFD93C0004B760 /* DriverImageModel.swift */; };
+		7A96A65729EFD9AD0004B760 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65629EFD9AD0004B760 /* CircuitModel.swift */; };
+		7A96A65929EFD9F00004B760 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65829EFD9F00004B760 /* LocationModel.swift */; };
+		7A96A65B29EFDA460004B760 /* DriverStandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65A29EFDA460004B760 /* DriverStandingsModel.swift */; };
+		7A96A65D29EFDBAC0004B760 /* DriverStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65C29EFDBAC0004B760 /* DriverStandings.swift */; };
 		7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6997E29E4C818005FEA9F /* Snackbar.swift */; };
 		7AA6998129E4CA85005FEA9F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6998029E4CA85005FEA9F /* RegisterView.swift */; };
 		7AA6998329E4D7A1005FEA9F /* CustomsecuretextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */; };
@@ -44,7 +50,7 @@
 		7AD5C7FC29E0F78D00FAE06E /* FormulaOneAppARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5C7FB29E0F78D00FAE06E /* FormulaOneAppARUITests.swift */; };
 		7AD5C7FE29E0F78D00FAE06E /* FormulaOneAppARUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5C7FD29E0F78D00FAE06E /* FormulaOneAppARUITestsLaunchTests.swift */; };
 		7AFEC33E29E0FF45007EAA5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC33C29E0FF45007EAA5D /* User.swift */; };
-		7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC33D29E0FF45007EAA5D /* Team.swift */; };
+		7AFEC33F29E0FF45007EAA5D /* ConstructorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC33D29E0FF45007EAA5D /* ConstructorModel.swift */; };
 		7AFEC34129E0FF5E007EAA5D /* Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC34029E0FF5E007EAA5D /* Content-ViewModel.swift */; };
 		7AFEC35E29E10102007EAA5D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC35D29E10102007EAA5D /* Services.swift */; };
 		7AFEC36329E105DC007EAA5D /* mainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC36229E105DC007EAA5D /* mainScreen.swift */; };
@@ -104,6 +110,12 @@
 		7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCardView.swift; sourceTree = "<group>"; };
 		7A96A64E29EF99CB0004B760 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		7A96A65029EFBB2E0004B760 /* results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = results.swift; sourceTree = "<group>"; };
+		7A96A65229EFD8BB0004B760 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
+		7A96A65429EFD93C0004B760 /* DriverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverImageModel.swift; sourceTree = "<group>"; };
+		7A96A65629EFD9AD0004B760 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
+		7A96A65829EFD9F00004B760 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		7A96A65A29EFDA460004B760 /* DriverStandingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStandingsModel.swift; sourceTree = "<group>"; };
+		7A96A65C29EFDBAC0004B760 /* DriverStandings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStandings.swift; sourceTree = "<group>"; };
 		7AA6997E29E4C818005FEA9F /* Snackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
 		7AA6998029E4CA85005FEA9F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomsecuretextfieldView.swift; sourceTree = "<group>"; };
@@ -128,7 +140,7 @@
 		7AD5C7FB29E0F78D00FAE06E /* FormulaOneAppARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneAppARUITests.swift; sourceTree = "<group>"; };
 		7AD5C7FD29E0F78D00FAE06E /* FormulaOneAppARUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneAppARUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AFEC33C29E0FF45007EAA5D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		7AFEC33D29E0FF45007EAA5D /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		7AFEC33D29E0FF45007EAA5D /* ConstructorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorModel.swift; sourceTree = "<group>"; };
 		7AFEC34029E0FF5E007EAA5D /* Content-ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
 		7AFEC35D29E10102007EAA5D /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		7AFEC36229E105DC007EAA5D /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mainScreen.swift; path = FormulaOneAppAR/View/mainScreen/mainScreen.swift; sourceTree = SOURCE_ROOT; };
@@ -225,6 +237,7 @@
 				7AA6998229E4D7A1005FEA9F /* CustomsecuretextfieldView.swift */,
 				7AA6998429E4D81C005FEA9F /* RoundedCorners.swift */,
 				7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */,
+				7A96A65C29EFDBAC0004B760 /* DriverStandings.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -232,8 +245,14 @@
 		7A96A64D29EF999C0004B760 /* Ergast */ = {
 			isa = PBXGroup;
 			children = (
+				7AFEC33D29E0FF45007EAA5D /* ConstructorModel.swift */,
 				7A96A64E29EF99CB0004B760 /* Race.swift */,
 				7A96A65029EFBB2E0004B760 /* results.swift */,
+				7A96A65229EFD8BB0004B760 /* DriverModel.swift */,
+				7A96A65429EFD93C0004B760 /* DriverImageModel.swift */,
+				7A96A65629EFD9AD0004B760 /* CircuitModel.swift */,
+				7A96A65829EFD9F00004B760 /* LocationModel.swift */,
+				7A96A65A29EFDA460004B760 /* DriverStandingsModel.swift */,
 			);
 			path = Ergast;
 			sourceTree = "<group>";
@@ -290,7 +309,6 @@
 				7A408F7629E2C5A4009B0304 /* ResponseHandler */,
 				7A408F7529E2C593009B0304 /* ResquestHandler */,
 				7ACD0E9829E0FAAC00C67816 /* Services */,
-				7AFEC33D29E0FF45007EAA5D /* Team.swift */,
 				7AFEC33C29E0FF45007EAA5D /* User.swift */,
 			);
 			path = Model;
@@ -569,7 +587,7 @@
 			files = (
 				7A96A65129EFBB2E0004B760 /* results.swift in Sources */,
 				7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */,
-				7AFEC33F29E0FF45007EAA5D /* Team.swift in Sources */,
+				7AFEC33F29E0FF45007EAA5D /* ConstructorModel.swift in Sources */,
 				7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */,
 				7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */,
 				B0BFCEAB29EF9CAB00A7C129 /* RealityKitView.swift in Sources */,
@@ -586,14 +604,17 @@
 				7AD5C7E029E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld in Sources */,
 				7AA6998129E4CA85005FEA9F /* RegisterView.swift in Sources */,
 				7AFEC37A29E10BCF007EAA5D /* ForgetView.swift in Sources */,
+				7A96A65D29EFDBAC0004B760 /* DriverStandings.swift in Sources */,
 				7A408F7C29E2C64E009B0304 /* LoginRequest.swift in Sources */,
 				7AA699AB29E947A6005FEA9F /* TeamsFetcher.swift in Sources */,
 				7AFEC38029E10C8D007EAA5D /* FullScreenNavigationViewType.swift in Sources */,
 				7AA6998329E4D7A1005FEA9F /* CustomsecuretextfieldView.swift in Sources */,
 				7A408F8C29E2D8B9009B0304 /* ResgisterVM.swift in Sources */,
+				7A96A65329EFD8BB0004B760 /* DriverModel.swift in Sources */,
 				7AFEC36829E1066B007EAA5D /* SignInScreenView.swift in Sources */,
 				7AA6998529E4D81C005FEA9F /* RoundedCorners.swift in Sources */,
 				7AFEC36329E105DC007EAA5D /* mainScreen.swift in Sources */,
+				7A96A65B29EFDA460004B760 /* DriverStandingsModel.swift in Sources */,
 				7AD5C7DB29E0F78B00FAE06E /* FormulaOneAppARApp.swift in Sources */,
 				7AFEC37429E10A15007EAA5D /* ChangePassword.swift in Sources */,
 				7A408F8E29E2D925009B0304 /* ProfileVM.swift in Sources */,
@@ -607,6 +628,9 @@
 				7AFEC37829E10B10007EAA5D /* Profile.swift in Sources */,
 				7AFEC36F29E10722007EAA5D /* WelcomeScreenView.swift in Sources */,
 				7AFEC38529E10DF9007EAA5D /* SetReactiveMethods.swift in Sources */,
+				7A96A65729EFD9AD0004B760 /* CircuitModel.swift in Sources */,
+				7A96A65929EFD9F00004B760 /* LocationModel.swift in Sources */,
+				7A96A65529EFD93C0004B760 /* DriverImageModel.swift in Sources */,
 				7A408F7A29E2C61A009B0304 /* signupRequestBody.swift in Sources */,
 				7A408F8829E2D5B0009B0304 /* CheckBox.swift in Sources */,
 				7AFEC34129E0FF5E007EAA5D /* Content-ViewModel.swift in Sources */,

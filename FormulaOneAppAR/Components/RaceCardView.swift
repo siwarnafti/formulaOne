@@ -18,7 +18,7 @@ struct RaceCardView: View {
                     .frame(width: 50, height: 50)
                     .clipShape(Circle())
             
-                    .padding()
+                    .padding(20)
                 
          
 //            Image("signup")

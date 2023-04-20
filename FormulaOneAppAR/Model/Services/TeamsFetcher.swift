@@ -8,7 +8,7 @@
 import Foundation
 class TeamsFetcher:ObservableObject{
     
-    @Published var teams = [Team]()
+    @Published var teams = [ConstructorModel]()
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
     

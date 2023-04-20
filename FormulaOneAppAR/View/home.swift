@@ -10,35 +10,35 @@ struct Home: View {
     var body: some View {
         NavigationView{
             ZStack{
-                
-                
-                                VStack {
-                                    ScrollView(.vertical, showsIndicators: false) {
-                                        Text("Formula 1 Fan")
-                                            .font(.system(size: 35, design: .rounded).weight(.semibold))
-                                            .fontWeight(.bold)
-                                            .padding(.top, 20)
-                                            .foregroundColor(.black)
-                
-                                        ScrollView(.horizontal, showsIndicators: false) {
-                                            HStack(spacing: 10) {
-                                                
-                                                ForEach(races, id: \.self){race in
-                                                    RaceCardView(race: race)
-                                                    
-                                                    //Text("dooooo")
-                                                    //                                                movie in
-                                                }    }                                                                    }
-                                        }
-                                        .padding(.horizontal, 20)
-                                        .padding(.top, 10)
-                                        .onAppear {
-//                                                             print("Movies in HomeView: \(moviesViewModel.movies)")
-                                                                }
-                                        }
-                                    }
-                                    Spacer()
+                VStack {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            Text("Formula 1 Fan")
+                                .font(.system(size: 35, design: .rounded).weight(.semibold))
+                                .fontWeight(.bold)
+                                .padding(.top, 20)
+                                .foregroundColor(.black)
+    
+                            ScrollView(.vertical, showsIndicators: false) {
+                                HStack() {
+                                    ForEach(races, id: \.self){ race in
+                                        RaceCardView(race: race) }    }                                                  }
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                
+                                    ForEach(0..<3) { constructor in
+                                        //RaceCardView(race: races[0])
+                                        DriverStandings()
+                                        
+                                    
                                 }
+                            }
+                            }
+                            .onAppear {}
+                            }
+                    }
+
+                    }
+//                    Spacer()
+                                
             .navigationBarTitle("Home", displayMode: .inline)
             .navigationBarHidden(true)
         }

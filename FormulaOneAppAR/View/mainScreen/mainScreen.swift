@@ -32,7 +32,7 @@ struct mainScreen: View {
                        }
                        .tag(1)
                    
-                   Text("home")
+                   RealityKitView()
                        .tabItem {
                            Image(systemName: "camera")
                               // .imageScale(2)

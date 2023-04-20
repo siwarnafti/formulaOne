@@ -7,5 +7,5 @@
 
 import Foundation
 protocol APIServiceProtocol {
-    func fetchTeams(url: URL?, completion: @escaping(Result<[Team], APIError>) -> Void)
+    func fetchTeams(url: URL?, completion: @escaping(Result<[ConstructorModel], APIError>) -> Void)
 }
