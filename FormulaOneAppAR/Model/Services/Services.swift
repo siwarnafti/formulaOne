@@ -1,91 +1,6 @@
-//
-//  Services.swift
-//  login
-//
-//  Created by Siwar Nafti on 6/4/2023.
-//
-
 import Foundation
 import Combine
-
-//enum AuthenticationError: Error {
-//    case invalidCredentials
-//    case ivalidlogin
-//    case nodata
-//    case URLisnotcorrect
-//    case unknownError
-//    var localizedDescription: String {
-//        switch self {
-//        case .invalidCredentials:
-//            return "invalidCredentials."
-//        case .ivalidlogin:
-//            return "username or passord incorrect."
-//        case .nodata:
-//            return "no Data."
-//        case .URLisnotcorrect :
-//            return "URL is not correct."
-//        case .unknownError:
-//            return "An unknown error occurred while registering the user."
-//        }
-//
-//    }
-//}
-//enum RegistrationResultError: Error {
-//    case emailAlreadyInUse
-//    case invalidPassword
-//    case lockedAccount
-//    case missingRequiredFields
-//    case networkError
-//    case unknownError
-//    case URLisnotcorrect
-//
-//    var localizedDescription: String {
-//        switch self {
-//        case .emailAlreadyInUse:
-//            return "The email address is already in use."
-//        case .invalidPassword:
-//            return "The password does not meet the required complexity rules."
-//        case .lockedAccount:
-//            return "The account has been locked due to suspicious activity."
-//        case .missingRequiredFields:
-//            return "One or more required fields are missing or incomplete."
-//        case .networkError:
-//            return "There was an error communicating with the registration service."
-//        case .unknownError:
-//            return "An unknown error occurred while registering the user."
-//        case .URLisnotcorrect:
-//            return "URL is not correct."
-//        }
-//    }
-//}
-//
-//enum NetworkError: Error {
-//    case invalidURL
-//    case noData
-//    case decodingError
-//}
-//
-//struct LoginRequestBody: Codable {
-//    let email: String
-//    let password: String
-//}
-//struct signupRequestBody: Codable {
-//    let username:String
-//    let email: String
-//    let password: String
-//}
-//struct LoginResponse: Codable {
-//    let token: String?
-//    let message: String?
-//    let success: Bool?
-//}
-//struct ForgotResponse: Codable {
-//    let email: String
-//}
-//struct EditResponse: Codable {
-//    let email: String
-//    let username: String
-//}
+import SwiftUI
 
 struct APIServices : APIServiceProtocol{
     //    @EnvironmentObject var user : User
@@ -146,5 +61,47 @@ struct APIServices : APIServiceProtocol{
         task.resume()
         
     }
+    func uploadAvatar(email: String, image: UIImage?) {
+            guard let image = image, let imageData = image.jpegData(compressionQuality: 0.8) else {
+                print("Error: Invalid image data")
+                return
+            }
+        
+            let boundary = UUID().uuidString
+            
+            var request = URLRequest(url: URL(string: baseUrl+"user/UploadAvatarUser")!)
+            request.httpMethod = "POST"
+            request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+            
+            let body = NSMutableData()
+            
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"email\"\r\n\r\n".data(using: .utf8)!)
+            body.append("\(email)\r\n".data(using: .utf8)!)
+            
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"image\"; filename=\"image.jpg\"\r\n".data(using: .utf8)!)
+            body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+            body.append(imageData)
+            body.append("\r\n".data(using: .utf8)!)
+            
+            body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+            
+            request.httpBody = body as Data
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let data = data, let responseString = String(data: data, encoding: .utf8) {
+                    print("Response: \(responseString)")
+                }
+            }.resume()
+        }
+    
 }
+
+
 

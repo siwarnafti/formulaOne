@@ -58,7 +58,8 @@ struct RealityKitView: UIViewRepresentable {
         var focusEntity: FocusEntity?
 
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-            guard let view = self.view else { return }
+            guard let view = self.view
+            else { return }
             debugPrint("Anchors added to the scene: ", anchors)
             self.focusEntity = FocusEntity(on: view, style: .classic(color: .yellow))
         }
@@ -71,16 +72,17 @@ struct RealityKitView: UIViewRepresentable {
 
             // Add a Box entity with a blue material
             // Add a dice entity
-            /*let diceEntity = try! ModelEntity.loadModel(named: "Dice")
-            //diceEntity.scale = [0.1, 0.1, 0.1]
-            diceEntity.position = focusEntity.position*/
+            let formula = try! ModelEntity.loadAnchor(named: "formula")
             
-            let box = MeshResource.generateBox(size: 0.5, cornerRadius: 0.05)
-                let material = SimpleMaterial(color: .blue, isMetallic: true)
-                let diceEntity = ModelEntity(mesh: box, materials: [material])
-                diceEntity.position = focusEntity.position
+            formula.scale = [0.5, 0.5, 0.5]
+            formula.position = focusEntity.position
+            
+//            let box = MeshResource.generateBox(size: 0.5, cornerRadius: 0.05)
+//                let material = SimpleMaterial(color: .blue, isMetallic: true)
+//                let diceEntity = ModelEntity(mesh: box, materials: [material])
+//                diceEntity.position = focusEntity.position
 
-            anchor.addChild(diceEntity)
+            anchor.addChild(formula)
         }
     }
     

@@ -7,15 +7,17 @@
 
 import Foundation
 struct ConstructorModel: Codable {
-    var constructorId: String
+    var constructorId: Int
     var name: String
-    var nationality: String
-    var drivers: [DriverModel]
+    var nationality: String?
+    var modelName :String?
+    var drivers: [DriverModel]?
     
     enum CodingKeys: String, CodingKey {
         case constructorId
         case name
         case nationality
+        case modelName
         case drivers
     }
     
@@ -24,7 +26,10 @@ struct ConstructorModel: Codable {
         try container.encode(constructorId, forKey: .constructorId)
         try container.encode(name, forKey: .name)
         try container.encode(nationality, forKey: .nationality)
+        try container.encode(modelName, forKey: .modelName)
         try container.encode(drivers, forKey: .drivers)
     }
 }
 
+var ConstructorModels = [ConstructorModel(constructorId:0,name: "Formula",modelName:"formulaOne.usdz"),
+              ConstructorModel(constructorId:1,name: "Dice",modelName:"Dice.usdz"),ConstructorModel(constructorId:2,name: "ssangyoung",modelName:"ssangyoung.usdc")]

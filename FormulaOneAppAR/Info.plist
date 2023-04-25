@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NovaSquare-Regular.ttf</string>
+		<string>KdamThmorPro-Regular.ttf</string>
+		<string>Sarpanch-Regular.ttf</string>
+		<string>Sarpanch-Meduim.ttf</string>
+		<string>Sarpanch-Bold.ttf</string>
+		<string>Sarpanch-ExtraBold.ttf</string>
+		<string>Sarpanch-Black.ttf</string>
+		<string>KumarOne-Regular.ttf</string>
+		<string>VastShadow-Regular.ttf</string>
+		<string>LondrinaShadow.ttf</string>
+	</array>
+</dict>
+</plist>

@@ -40,6 +40,28 @@
 		7AA699AE29E9500C005FEA9F /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA699AD29E9500C005FEA9F /* TeamView.swift */; };
 		7AA699B029EF44C8005FEA9F /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA699AF29EF44C8005FEA9F /* home.swift */; };
 		7AA699B629EF4521005FEA9F /* homeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA699B529EF4521005FEA9F /* homeVM.swift */; };
+		7ABEF71829F2BA9F000C4EDB /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71729F2BA9F000C4EDB /* CarView.swift */; };
+		7ABEF71A29F2C1D9000C4EDB /* TeamCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */; };
+		7ABEF71C29F2C36D000C4EDB /* TeamInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */; };
+		7ABEF71F29F2C4B5000C4EDB /* ConstructorInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71E29F2C4B5000C4EDB /* ConstructorInformations.swift */; };
+		7ABEF72429F4710D000C4EDB /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF72329F4710D000C4EDB /* SwiftUIView.swift */; };
+		7ABEF72F29F495CE000C4EDB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF72D29F49475000C4EDB /* Info.plist */; };
+		7ABEF73029F495E6000C4EDB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF72D29F49475000C4EDB /* Info.plist */; };
+		7ABEF73229F6C54C000C4EDB /* LondrinaShadow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73129F6C54C000C4EDB /* LondrinaShadow.ttf */; };
+		7ABEF73429F6C748000C4EDB /* VastShadow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73329F6C748000C4EDB /* VastShadow-Regular.ttf */; };
+		7ABEF73629F6D265000C4EDB /* KumarOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73529F6D264000C4EDB /* KumarOne-Regular.ttf */; };
+		7ABEF73829F6D85D000C4EDB /* KdamThmorPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73729F6D85D000C4EDB /* KdamThmorPro-Regular.ttf */; };
+		7ABEF73A29F6D869000C4EDB /* NovaSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73929F6D868000C4EDB /* NovaSquare-Regular.ttf */; };
+		7ABEF74129F6D878000C4EDB /* Sarpanch-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73B29F6D878000C4EDB /* Sarpanch-Black.ttf */; };
+		7ABEF74229F6D878000C4EDB /* Sarpanch-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73C29F6D878000C4EDB /* Sarpanch-Medium.ttf */; };
+		7ABEF74429F6D878000C4EDB /* Sarpanch-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73E29F6D878000C4EDB /* Sarpanch-Regular.ttf */; };
+		7ABEF74529F6D878000C4EDB /* Sarpanch-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF73F29F6D878000C4EDB /* Sarpanch-ExtraBold.ttf */; };
+		7ABEF74629F6D878000C4EDB /* Sarpanch-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF74029F6D878000C4EDB /* Sarpanch-SemiBold.ttf */; };
+		7ABEF74829F6D905000C4EDB /* Sarpanch-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF74729F6D905000C4EDB /* Sarpanch-Bold.ttf */; };
+		7ABEF74A29F74781000C4EDB /* uploadimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF74929F74781000C4EDB /* uploadimg.swift */; };
+		7ABEF74C29F7AD42000C4EDB /* downloadimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF74B29F7AD42000C4EDB /* downloadimage.swift */; };
+		7AC3A2BE29F1EE2300F2659A /* formula.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7AC3A2BD29F1EE2200F2659A /* formula.usdz */; };
+		7AC3A2C029F20BF400F2659A /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3A2BF29F20BF400F2659A /* test.swift */; };
 		7AD5C7DB29E0F78B00FAE06E /* FormulaOneAppARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5C7DA29E0F78B00FAE06E /* FormulaOneAppARApp.swift */; };
 		7AD5C7DD29E0F78B00FAE06E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5C7DC29E0F78B00FAE06E /* Persistence.swift */; };
 		7AD5C7E029E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5C7DE29E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld */; };
@@ -126,6 +148,27 @@
 		7AA699AD29E9500C005FEA9F /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		7AA699AF29EF44C8005FEA9F /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		7AA699B529EF4521005FEA9F /* homeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVM.swift; sourceTree = "<group>"; };
+		7ABEF71729F2BA9F000C4EDB /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
+		7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCardView.swift; sourceTree = "<group>"; };
+		7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInformationView.swift; sourceTree = "<group>"; };
+		7ABEF71E29F2C4B5000C4EDB /* ConstructorInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorInformations.swift; sourceTree = "<group>"; };
+		7ABEF72329F4710D000C4EDB /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		7ABEF72D29F49475000C4EDB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/siwarnafti/Desktop/formulaOne/FormulaOneAppAR/Info.plist; sourceTree = "<absolute>"; };
+		7ABEF73129F6C54C000C4EDB /* LondrinaShadow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LondrinaShadow.ttf; sourceTree = "<group>"; };
+		7ABEF73329F6C748000C4EDB /* VastShadow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VastShadow-Regular.ttf"; sourceTree = "<group>"; };
+		7ABEF73529F6D264000C4EDB /* KumarOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KumarOne-Regular.ttf"; sourceTree = "<group>"; };
+		7ABEF73729F6D85D000C4EDB /* KdamThmorPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KdamThmorPro-Regular.ttf"; sourceTree = "<group>"; };
+		7ABEF73929F6D868000C4EDB /* NovaSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NovaSquare-Regular.ttf"; sourceTree = "<group>"; };
+		7ABEF73B29F6D878000C4EDB /* Sarpanch-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarpanch-Black.ttf"; sourceTree = "<group>"; };
+		7ABEF73C29F6D878000C4EDB /* Sarpanch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarpanch-Medium.ttf"; sourceTree = "<group>"; };
+		7ABEF73E29F6D878000C4EDB /* Sarpanch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarpanch-Regular.ttf"; sourceTree = "<group>"; };
+		7ABEF73F29F6D878000C4EDB /* Sarpanch-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarpanch-ExtraBold.ttf"; sourceTree = "<group>"; };
+		7ABEF74029F6D878000C4EDB /* Sarpanch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarpanch-SemiBold.ttf"; sourceTree = "<group>"; };
+		7ABEF74729F6D905000C4EDB /* Sarpanch-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sarpanch-Bold.ttf"; sourceTree = "<group>"; };
+		7ABEF74929F74781000C4EDB /* uploadimg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadimg.swift; sourceTree = "<group>"; };
+		7ABEF74B29F7AD42000C4EDB /* downloadimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downloadimage.swift; sourceTree = "<group>"; };
+		7AC3A2BD29F1EE2200F2659A /* formula.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = formula.usdz; sourceTree = "<group>"; };
+		7AC3A2BF29F20BF400F2659A /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		7AD5C7D729E0F78B00FAE06E /* FormulaOneAppAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormulaOneAppAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD5C7DA29E0F78B00FAE06E /* FormulaOneAppARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOneAppARApp.swift; sourceTree = "<group>"; };
 		7AD5C7DC29E0F78B00FAE06E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -281,6 +324,42 @@
 			path = Team;
 			sourceTree = "<group>";
 		};
+		7ABEF71629F2BA65000C4EDB /* TeamView */ = {
+			isa = PBXGroup;
+			children = (
+				7ABEF71729F2BA9F000C4EDB /* CarView.swift */,
+				7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */,
+				7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */,
+			);
+			path = TeamView;
+			sourceTree = "<group>";
+		};
+		7ABEF71D29F2C3C4000C4EDB /* TeamViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7ABEF71E29F2C4B5000C4EDB /* ConstructorInformations.swift */,
+			);
+			path = TeamViewModel;
+			sourceTree = "<group>";
+		};
+		7ABEF72029F405D0000C4EDB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7ABEF74729F6D905000C4EDB /* Sarpanch-Bold.ttf */,
+				7ABEF73B29F6D878000C4EDB /* Sarpanch-Black.ttf */,
+				7ABEF73F29F6D878000C4EDB /* Sarpanch-ExtraBold.ttf */,
+				7ABEF73C29F6D878000C4EDB /* Sarpanch-Medium.ttf */,
+				7ABEF73E29F6D878000C4EDB /* Sarpanch-Regular.ttf */,
+				7ABEF74029F6D878000C4EDB /* Sarpanch-SemiBold.ttf */,
+				7ABEF73929F6D868000C4EDB /* NovaSquare-Regular.ttf */,
+				7ABEF73729F6D85D000C4EDB /* KdamThmorPro-Regular.ttf */,
+				7ABEF73529F6D264000C4EDB /* KumarOne-Regular.ttf */,
+				7ABEF73329F6C748000C4EDB /* VastShadow-Regular.ttf */,
+				7ABEF73129F6C54C000C4EDB /* LondrinaShadow.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7ACD0E9829E0FAAC00C67816 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +396,7 @@
 		7ACD0E9B29E0FAF800C67816 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7ABEF71D29F2C3C4000C4EDB /* TeamViewModel */,
 				7AA699B529EF4521005FEA9F /* homeVM.swift */,
 				7AFEC34029E0FF5E007EAA5D /* Content-ViewModel.swift */,
 				7A408F8929E2D8A6009B0304 /* LoginVM.swift */,
@@ -332,6 +412,7 @@
 		7ACD0E9C29E0FB1700C67816 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7ABEF71629F2BA65000C4EDB /* TeamView */,
 				7AA699AC29E94FD9005FEA9F /* Team */,
 				7AA699A529E8E8F0005FEA9F /* mainScreen */,
 				7AA699A429E8E8CD005FEA9F /* WelcomeScreen */,
@@ -343,6 +424,8 @@
 				7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */,
 				7AA6998029E4CA85005FEA9F /* RegisterView.swift */,
 				7AA699AF29EF44C8005FEA9F /* home.swift */,
+				7ABEF74929F74781000C4EDB /* uploadimg.swift */,
+				7ABEF74B29F7AD42000C4EDB /* downloadimage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +453,8 @@
 		7AD5C7D929E0F78B00FAE06E /* FormulaOneAppAR */ = {
 			isa = PBXGroup;
 			children = (
+				7ABEF72D29F49475000C4EDB /* Info.plist */,
+				7ABEF72029F405D0000C4EDB /* Font */,
 				B0B5CE8329EE02850073816B /* AR */,
 				7A408F8629E2D576009B0304 /* Components */,
 				7ACD0E9A29E0FADB00C67816 /* Model */,
@@ -378,10 +463,12 @@
 				7AD5C7DA29E0F78B00FAE06E /* FormulaOneAppARApp.swift */,
 				7AD5C7DC29E0F78B00FAE06E /* Persistence.swift */,
 				7AD5C7E129E0F78B00FAE06E /* ContentView.swift */,
+				7AC3A2BD29F1EE2200F2659A /* formula.usdz */,
 				7AD5C7E329E0F78D00FAE06E /* Assets.xcassets */,
 				7AD5C7E529E0F78D00FAE06E /* FormulaOneAppAR.entitlements */,
 				7AD5C7DE29E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld */,
 				7AD5C7E629E0F78D00FAE06E /* Preview Content */,
+				7ABEF72329F4710D000C4EDB /* SwiftUIView.swift */,
 			);
 			path = FormulaOneAppAR;
 			sourceTree = "<group>";
@@ -445,6 +532,7 @@
 				B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */,
 				B0B5CE8829EE0DB50073816B /* ARView.swift */,
 				B0BFCEAA29EF9CAB00A7C129 /* RealityKitView.swift */,
+				7AC3A2BF29F20BF400F2659A /* test.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -559,8 +647,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABEF74529F6D878000C4EDB /* Sarpanch-ExtraBold.ttf in Resources */,
+				7ABEF74829F6D905000C4EDB /* Sarpanch-Bold.ttf in Resources */,
+				7ABEF73429F6C748000C4EDB /* VastShadow-Regular.ttf in Resources */,
+				7ABEF73629F6D265000C4EDB /* KumarOne-Regular.ttf in Resources */,
+				7ABEF73829F6D85D000C4EDB /* KdamThmorPro-Regular.ttf in Resources */,
+				7ABEF74129F6D878000C4EDB /* Sarpanch-Black.ttf in Resources */,
 				7AD5C7E829E0F78D00FAE06E /* Preview Assets.xcassets in Resources */,
+				7ABEF74229F6D878000C4EDB /* Sarpanch-Medium.ttf in Resources */,
 				7AD5C7E429E0F78D00FAE06E /* Assets.xcassets in Resources */,
+				7AC3A2BE29F1EE2300F2659A /* formula.usdz in Resources */,
+				7ABEF73A29F6D869000C4EDB /* NovaSquare-Regular.ttf in Resources */,
+				7ABEF74629F6D878000C4EDB /* Sarpanch-SemiBold.ttf in Resources */,
+				7ABEF73229F6C54C000C4EDB /* LondrinaShadow.ttf in Resources */,
+				7ABEF74429F6D878000C4EDB /* Sarpanch-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +668,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABEF72F29F495CE000C4EDB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +676,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABEF73029F495E6000C4EDB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +689,7 @@
 			files = (
 				7A96A65129EFBB2E0004B760 /* results.swift in Sources */,
 				7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */,
+				7ABEF72429F4710D000C4EDB /* SwiftUIView.swift in Sources */,
 				7AFEC33F29E0FF45007EAA5D /* ConstructorModel.swift in Sources */,
 				7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */,
 				7AA6997F29E4C818005FEA9F /* Snackbar.swift in Sources */,
@@ -597,9 +700,11 @@
 				B0DB6F6F29E60D02007CABC6 /* forgotVM.swift in Sources */,
 				7A408F7E29E2C671009B0304 /* ForgotRequest.swift in Sources */,
 				7AA699A929E94710005FEA9F /* APIError.swift in Sources */,
+				7ABEF74C29F7AD42000C4EDB /* downloadimage.swift in Sources */,
 				7AA699AE29E9500C005FEA9F /* TeamView.swift in Sources */,
 				7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */,
 				7A408F8A29E2D8A6009B0304 /* LoginVM.swift in Sources */,
+				7ABEF71A29F2C1D9000C4EDB /* TeamCardView.swift in Sources */,
 				7AFEC37E29E10C63007EAA5D /* FullScreenNavigationView.swift in Sources */,
 				7AD5C7E029E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld in Sources */,
 				7AA6998129E4CA85005FEA9F /* RegisterView.swift in Sources */,
@@ -612,6 +717,7 @@
 				7A408F8C29E2D8B9009B0304 /* ResgisterVM.swift in Sources */,
 				7A96A65329EFD8BB0004B760 /* DriverModel.swift in Sources */,
 				7AFEC36829E1066B007EAA5D /* SignInScreenView.swift in Sources */,
+				7ABEF71C29F2C36D000C4EDB /* TeamInformationView.swift in Sources */,
 				7AA6998529E4D81C005FEA9F /* RoundedCorners.swift in Sources */,
 				7AFEC36329E105DC007EAA5D /* mainScreen.swift in Sources */,
 				7A96A65B29EFDA460004B760 /* DriverStandingsModel.swift in Sources */,
@@ -621,6 +727,7 @@
 				7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */,
 				B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */,
 				7A408F8229E2CBC5009B0304 /* ConfirmResquest.swift in Sources */,
+				7ABEF71F29F2C4B5000C4EDB /* ConstructorInformations.swift in Sources */,
 				7AA699B029EF44C8005FEA9F /* home.swift in Sources */,
 				7A408F8029E2C68D009B0304 /* EditRequest.swift in Sources */,
 				7AFEC37129E10858007EAA5D /* customViews.swift in Sources */,
@@ -636,9 +743,12 @@
 				7AFEC34129E0FF5E007EAA5D /* Content-ViewModel.swift in Sources */,
 				B0DB6F7329E61E3D007CABC6 /* verificationCodeResponse.swift in Sources */,
 				7AD5C7E229E0F78B00FAE06E /* ContentView.swift in Sources */,
+				7ABEF71829F2BA9F000C4EDB /* CarView.swift in Sources */,
+				7ABEF74A29F74781000C4EDB /* uploadimg.swift in Sources */,
 				7A408F9029E2DC0E009B0304 /* SplashScreen.swift in Sources */,
 				7A96A64F29EF99CB0004B760 /* Race.swift in Sources */,
 				7AFEC33E29E0FF45007EAA5D /* User.swift in Sources */,
+				7AC3A2C029F20BF400F2659A /* test.swift in Sources */,
 				7AA699A729E94612005FEA9F /* APIServiceProtocol.swift in Sources */,
 				7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */,
 				7AFEC35E29E10102007EAA5D /* Services.swift in Sources */,
@@ -801,9 +911,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = JLWNNCVZ35;
+				DEVELOPMENT_TEAM = 4X9HC5K4Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ForumlaOneAR;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Neede to show the AR view";
@@ -822,7 +933,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -843,9 +954,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = JLWNNCVZ35;
+				DEVELOPMENT_TEAM = 4X9HC5K4Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ForumlaOneAR;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Neede to show the AR view";
@@ -864,7 +976,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -890,7 +1002,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -912,7 +1026,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -933,7 +1049,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -954,7 +1072,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

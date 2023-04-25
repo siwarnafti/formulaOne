@@ -13,7 +13,7 @@ struct DriverStandingsModel {
     var constructors: [ConstructorModel]
     func getconstructor()->ConstructorModel?{
         for constructor in self.constructors {
-            for driver in constructor.drivers {
+            for driver in constructor.drivers! {
                 if self.driver.driverId == driver.driverId{
                     return constructor
                 }
