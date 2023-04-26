@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>RacingSansOne-Regular.ttf</string>
 		<string>NovaSquare-Regular.ttf</string>
 		<string>KdamThmorPro-Regular.ttf</string>
 		<string>Sarpanch-Regular.ttf</string>

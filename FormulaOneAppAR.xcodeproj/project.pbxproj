@@ -40,6 +40,7 @@
 		7AA699AE29E9500C005FEA9F /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA699AD29E9500C005FEA9F /* TeamView.swift */; };
 		7AA699B029EF44C8005FEA9F /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA699AF29EF44C8005FEA9F /* home.swift */; };
 		7AA699B629EF4521005FEA9F /* homeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA699B529EF4521005FEA9F /* homeVM.swift */; };
+		7AA83DA329F899A000E4A9A7 /* RacingSansOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AA83DA229F8999F00E4A9A7 /* RacingSansOne-Regular.ttf */; };
 		7ABEF71829F2BA9F000C4EDB /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71729F2BA9F000C4EDB /* CarView.swift */; };
 		7ABEF71A29F2C1D9000C4EDB /* TeamCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */; };
 		7ABEF71C29F2C36D000C4EDB /* TeamInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */; };
@@ -148,6 +149,7 @@
 		7AA699AD29E9500C005FEA9F /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		7AA699AF29EF44C8005FEA9F /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 		7AA699B529EF4521005FEA9F /* homeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVM.swift; sourceTree = "<group>"; };
+		7AA83DA229F8999F00E4A9A7 /* RacingSansOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RacingSansOne-Regular.ttf"; sourceTree = "<group>"; };
 		7ABEF71729F2BA9F000C4EDB /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCardView.swift; sourceTree = "<group>"; };
 		7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInformationView.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 		7ABEF72029F405D0000C4EDB /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				7AA83DA229F8999F00E4A9A7 /* RacingSansOne-Regular.ttf */,
 				7ABEF74729F6D905000C4EDB /* Sarpanch-Bold.ttf */,
 				7ABEF73B29F6D878000C4EDB /* Sarpanch-Black.ttf */,
 				7ABEF73F29F6D878000C4EDB /* Sarpanch-ExtraBold.ttf */,
@@ -656,6 +659,7 @@
 				7AD5C7E829E0F78D00FAE06E /* Preview Assets.xcassets in Resources */,
 				7ABEF74229F6D878000C4EDB /* Sarpanch-Medium.ttf in Resources */,
 				7AD5C7E429E0F78D00FAE06E /* Assets.xcassets in Resources */,
+				7AA83DA329F899A000E4A9A7 /* RacingSansOne-Regular.ttf in Resources */,
 				7AC3A2BE29F1EE2300F2659A /* formula.usdz in Resources */,
 				7ABEF73A29F6D869000C4EDB /* NovaSquare-Regular.ttf in Resources */,
 				7ABEF74629F6D878000C4EDB /* Sarpanch-SemiBold.ttf in Resources */,

@@ -13,37 +13,65 @@ struct TeamView: View {
             ZStack{
                 VStack{
                     ZStack{
-                        Image("TeamCard1")
+                        Image("Mercedes-Benzlogo")
                             .resizable()
                             .scaledToFit()
-                            .clipShape(RoundedCorners(tl:10,tr:10,bl: 10,br:10))
+                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
                             .padding(7)
-                        VStack{
-                            HStack{
-                                Image("Mercedes-Benzlogo")
-                                    .resizable()
-                                    .background(.red)
-                                    .clipShape(Circle()).frame(width: 100,height: 100)
+                        HStack{
+                            VStack{
+                                
+                                
+                                Text("1st")
+                                    .font(
+                                        .custom(
+                                            "RacingSansOne-Regular",
+                                            fixedSize: 24)
+                                        .weight(.black))
+                                    .foregroundColor(.white)
                                     .padding(7)
-                                Spacer()
-                            }
+                                Text("345pts")
+                                    .font(
+                                        .custom(
+                                            "RacingSansOne-Regular",
+                                            fixedSize: 24)
+                                        .weight(.black))
+                                    .foregroundColor(.white)
+                                
+                            }.padding()
                             Spacer()
-                        }.padding(7)
+                            
+                        }
                         
                     }
-                    Image("TeamCard2")
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(RoundedCorners(tl:10,tr:10,bl: 10,br:10))
-                        .padding(7)
+                        
+                        Image("Mercedes-Benzlogo")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
+                            .padding(7)
+                    
+                    
+                        Image("Mercedes-Benzlogo")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
+                            .padding(7)
+                        Image("Mercedes-Benzlogo")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
+                            .padding(7)
+                    }
+                    
                 }
-            }
-            
-        }}
-}
-
-struct TeamView_Previews: PreviewProvider {
-    static var previews: some View {
-        TeamView()
+                
+            }}
     }
-}
+    
+    struct TeamView_Previews: PreviewProvider {
+        static var previews: some View {
+            TeamView()
+        }
+    }
+

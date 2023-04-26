@@ -13,7 +13,7 @@ struct TeamCardView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.yellow
+                Color.gray
                     .ignoresSafeArea()
                     VStack{
                         Image("ferrari_consturctorlogo")
