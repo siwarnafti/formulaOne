@@ -13,6 +13,9 @@ struct Home: View {
     var body: some View {
         NavigationView{
             ZStack{
+               LinearGradient(gradient: Gradient(colors: [Color.white, Color.gray]), startPoint: .top, endPoint: .bottom)
+    
+                   .edgesIgnoringSafeArea(.all)
                 VStack {
                     Text("Formula 1 Fan")
                         .font(.system(size: 35, design: .rounded).weight(.semibold))
@@ -24,30 +27,15 @@ struct Home: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack() {
-                                    ForEach(0..<20) { constructor in
-                                        //RaceCardView(race: races[0])
-                                        DriverStandings()
-
-
-                                }
-                                    
-                                    
+                                    ForEach(0..<20) { constructor in DriverStandings()}
                                 }                                     }             }
                             ScrollView(.vertical, showsIndicators: false) {
-
-                                ForEach(constructors, id: \.self){ constructor in
-                                    carteamview(constructorModel: constructor) }
+                                ForEach(constructors, id: \.self){ constructor in carteamview(constructorModel: constructor) }
                             }
-                            }
-                            .onAppear {}
-                            }
-                    
-
+                        }.onAppear {}
                     }
-//                    Spacer()
-                                
-            .navigationBarTitle("Home", displayMode: .inline)
-            .navigationBarHidden(true)
+                    }.navigationBarTitle("Home", displayMode: .inline)
+                    .navigationBarHidden(true)
         }
     }
 

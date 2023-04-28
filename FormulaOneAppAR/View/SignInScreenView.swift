@@ -21,8 +21,11 @@ struct SignInScreenView: View {
             }else{
                 // Show a login screen
                 ZStack {
-                    Color.gray
-                        .ignoresSafeArea()
+//                    Color.gray
+                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.black]), startPoint: .top, endPoint: .bottom)
+         
+                        .edgesIgnoringSafeArea(.all)
+//                        .ignoresSafeArea()
                     VStack(alignment: .center, spacing: 10) {
                         Image("signin")
                             .resizable()

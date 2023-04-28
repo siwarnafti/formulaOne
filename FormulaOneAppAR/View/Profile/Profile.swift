@@ -27,6 +27,11 @@ struct ProfileView: View {
 //    let user=getuser()
     var body: some View {
         NavigationView(){
+            ZStack{
+                LinearGradient(gradient: Gradient(colors: [Color.white, Color.gray]), startPoint: .top, endPoint: .bottom)
+     
+                    .edgesIgnoringSafeArea(.all)
+           
             VStack( spacing: 0) {
                 
                 // User profile picture
@@ -104,6 +109,10 @@ struct ProfileView: View {
                     }
                 }
             }
+
+                    }
+                
+            }
             .toolbar{
                 Button {
                     profileVM.signout()
@@ -116,7 +125,6 @@ struct ProfileView: View {
             }
         }
     }
-}
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
