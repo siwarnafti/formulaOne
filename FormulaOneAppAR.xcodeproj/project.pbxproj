@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2239F41629FB554F00ACA779 /* carteamview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2239F41529FB554F00ACA779 /* carteamview.swift */; };
 		7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */; };
 		7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7729E2C600009B0304 /* LoginRequestBody.swift */; };
 		7A408F7A29E2C61A009B0304 /* signupRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7929E2C61A009B0304 /* signupRequestBody.swift */; };
@@ -117,6 +118,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2239F41529FB554F00ACA779 /* carteamview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteamview.swift; sourceTree = "<group>"; };
 		7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7A408F7729E2C600009B0304 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
 		7A408F7929E2C61A009B0304 /* signupRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupRequestBody.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				7ABEF71729F2BA9F000C4EDB /* CarView.swift */,
 				7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */,
 				7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */,
+				2239F41529FB554F00ACA779 /* carteamview.swift */,
 			);
 			path = TeamView;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				7AFEC38029E10C8D007EAA5D /* FullScreenNavigationViewType.swift in Sources */,
 				7AA6998329E4D7A1005FEA9F /* CustomsecuretextfieldView.swift in Sources */,
 				7A408F8C29E2D8B9009B0304 /* ResgisterVM.swift in Sources */,
+				2239F41629FB554F00ACA779 /* carteamview.swift in Sources */,
 				7A96A65329EFD8BB0004B760 /* DriverModel.swift in Sources */,
 				7AFEC36829E1066B007EAA5D /* SignInScreenView.swift in Sources */,
 				7ABEF71C29F2C36D000C4EDB /* TeamInformationView.swift in Sources */,
@@ -925,7 +929,10 @@
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ForumlaOneAR;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = heelooo;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Neede to show the AR view";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = hiiiii;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = hi;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -968,7 +975,10 @@
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ForumlaOneAR;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = heelooo;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Neede to show the AR view";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = hiiiii;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = hi;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

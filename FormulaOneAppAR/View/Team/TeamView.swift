@@ -10,63 +10,13 @@ import SwiftUI
 struct TeamView: View {
     var body: some View {
         ScrollView{
-            ZStack{
-                VStack{
-                    ZStack{
-                        Image("Mercedes-Benzlogo")
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
-                            .padding(7)
-                        HStack{
-                            VStack{
-                                
-                                
-                                Text("1st")
-                                    .font(
-                                        .custom(
-                                            "RacingSansOne-Regular",
-                                            fixedSize: 24)
-                                        .weight(.black))
-                                    .foregroundColor(.white)
-                                    .padding(7)
-                                Text("345pts")
-                                    .font(
-                                        .custom(
-                                            "RacingSansOne-Regular",
-                                            fixedSize: 24)
-                                        .weight(.black))
-                                    .foregroundColor(.white)
-                                
-                            }.padding()
-                            Spacer()
-                            
-                        }
-                        
-                    }
-                        
-                        Image("Mercedes-Benzlogo")
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
-                            .padding(7)
-                    
-                    
-                        Image("Mercedes-Benzlogo")
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
-                            .padding(7)
-                        Image("Mercedes-Benzlogo")
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedCorners(tl:30,tr:30,bl: 30,br:30))
-                            .padding(7)
-                    }
-                    
-                }
-                
-            }}
+            /*
+                    carteamview(logo: "logo_mercedes", carImage: "car_mercedes", rank: "1", point: "356", teamName: "Mercedes")
+            carteamview(logo: "logo_ferrari", carImage: "car_ferrari", rank: "2", point: "354", teamName: "ferrari")
+            carteamview(logo: "logo_toyota", carImage: "car_toyota", rank: "3", point: "340", teamName: "Toyota")
+                 */
+            }
+    }
     }
     
     struct TeamView_Previews: PreviewProvider {

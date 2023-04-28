@@ -11,7 +11,7 @@ struct DriverStandingsModel {
     var points: Double
     var driver: DriverModel
     var constructors: [ConstructorModel]
-    func getconstructor()->ConstructorModel?{
+    /*func getconstructor()->ConstructorModel?{
         for constructor in self.constructors {
             for driver in constructor.drivers! {
                 if self.driver.driverId == driver.driverId{
@@ -20,6 +20,6 @@ struct DriverStandingsModel {
             }
         }
         return nil
-    }
+    }*/
 }
 

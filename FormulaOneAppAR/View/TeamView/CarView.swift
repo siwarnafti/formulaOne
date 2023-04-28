@@ -9,7 +9,7 @@ import SwiftUI
 import SceneKit
 struct CarView: View {
     
-    @State var model : ConstructorModel
+   
     func getscene(scene : String)->SCNScene{
         var scene = SCNScene(named: scene)
         scene?.background.contents = UIImage(named: "ferrari_consturctorlogo")
@@ -19,7 +19,7 @@ struct CarView: View {
     var body: some View {
         ZStack{
             
-            SceneView(scene: getscene(scene: model.modelName!) , options: [.autoenablesDefaultLighting,.allowsCameraControl])
+            SceneView(scene: getscene(scene: "formula.usdz") , options: [.autoenablesDefaultLighting,.allowsCameraControl])
                         .padding()
             
         }.frame(width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height/2)
@@ -32,7 +32,7 @@ struct CarView: View {
 
 struct CarView_Previews: PreviewProvider {
     static var previews: some View {
-        CarView(model: ConstructorModel(constructorId:0,name: "Formula",modelName:"formula.usdz"))
+        CarView()
     }
 }
 /*View {
