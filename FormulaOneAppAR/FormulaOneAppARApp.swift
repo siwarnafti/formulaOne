@@ -28,7 +28,7 @@ struct FormulaOneAppARApp: App {
 //            confirmForgotView()
 //            SplashScreen()
 //            RealityKitView()
-            mainScreen()
+//            mainScreen()
 //            SwiftUIView()
 //            TeamView()
 //            TeamCardView()
