@@ -1,13 +1,13 @@
 //
-//  TeamCardView.swift
+//  RoundInformationView.swift
 //  FormulaOneAppAR
 //
-//  Created by Siwar Nafti on 21/4/2023.
+//  Created by Apple Esprit on 3/5/2023.
 //
 
 import SwiftUI
 
-struct TeamCardView: View {
+struct RoundInformationView: View {
     @State private var selection = 0
     
     var body: some View {
@@ -102,10 +102,8 @@ struct TeamCardView: View {
     }
 }
 
-
-
-struct TeamCardView_Previews: PreviewProvider {
+struct RoundInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamCardView()
+        RoundInformationView()
     }
 }

@@ -53,7 +53,7 @@ struct DriverStandings: View {
                 }
             }
             .padding(.horizontal, 20)
-            .background(Color.white)
+            .background(Color.gray)
             .cornerRadius(20)
             .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 4)
             

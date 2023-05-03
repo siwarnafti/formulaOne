@@ -35,7 +35,7 @@ struct Home: View {
                         }.onAppear {}
                     }
                     }.navigationBarTitle("Home", displayMode: .inline)
-                    .navigationBarHidden(true)
+            .navigationBarHidden(true)
         }
     }
 

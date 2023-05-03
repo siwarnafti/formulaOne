@@ -8,7 +8,7 @@
 import SwiftUI
 import SceneKit
 struct CarView: View {
-    
+    let modelname:String
    
     func getscene(scene : String)->SCNScene{
         var scene = SCNScene(named: scene)
@@ -19,20 +19,20 @@ struct CarView: View {
     var body: some View {
         ZStack{
             
-            SceneView(scene: getscene(scene: "formula.usdz") , options: [.autoenablesDefaultLighting,.allowsCameraControl])
+            SceneView(scene: getscene(scene: modelname) , options: [.autoenablesDefaultLighting,.allowsCameraControl])
                         .padding()
             
         }.frame(width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height/2)
             .cornerRadius(70)
             .shadow(radius: 2)
-            .padding()
+            .padding(.horizontal)
         
     }
 }
 
 struct CarView_Previews: PreviewProvider {
     static var previews: some View {
-        CarView()
+        CarView(modelname: "formulaEsprit.usdz")
     }
 }
 /*View {

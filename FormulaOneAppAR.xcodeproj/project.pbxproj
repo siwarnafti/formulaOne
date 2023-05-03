@@ -105,6 +105,9 @@
 		7AFEC38029E10C8D007EAA5D /* FullScreenNavigationViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */; };
 		7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC38229E10DAB007EAA5D /* AppEventsManager.swift */; };
 		7AFEC38529E10DF9007EAA5D /* SetReactiveMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */; };
+		B0069BFF2A031C77007CD96E /* RoundInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0069BFE2A031C77007CD96E /* RoundInformationView.swift */; };
+		B0069C002A031C77007CD96E /* RoundInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0069BFE2A031C77007CD96E /* RoundInformationView.swift */; };
+		B0069C022A031D37007CD96E /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0069C012A031D37007CD96E /* CarsView.swift */; };
 		B0B5CE8529EE05C00073816B /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8429EE05C00073816B /* CustomARView.swift */; };
 		B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */; };
 		B0B5CE8929EE0DB50073816B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CE8829EE0DB50073816B /* ARView.swift */; };
@@ -231,6 +234,8 @@
 		7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenNavigationViewType.swift; sourceTree = "<group>"; };
 		7AFEC38229E10DAB007EAA5D /* AppEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventsManager.swift; sourceTree = "<group>"; };
 		7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReactiveMethods.swift; sourceTree = "<group>"; };
+		B0069BFE2A031C77007CD96E /* RoundInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundInformationView.swift; sourceTree = "<group>"; };
+		B0069C012A031D37007CD96E /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
 		B0B5CE8429EE05C00073816B /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		B0B5CE8629EE0D200073816B /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
 		B0B5CE8829EE0DB50073816B /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
@@ -453,6 +458,7 @@
 		7ACD0E9C29E0FB1700C67816 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0069BFD2A031505007CD96E /* RoundView */,
 				7AD2B69429FD712300465EA2 /* Authentication */,
 				7ABEF71629F2BA65000C4EDB /* TeamView */,
 				7AA699AC29E94FD9005FEA9F /* Team */,
@@ -460,6 +466,7 @@
 				7AA699A429E8E8CD005FEA9F /* WelcomeScreen */,
 				7AFEC36429E105FD007EAA5D /* Profile */,
 				7AFEC37F29E10C8D007EAA5D /* FullScreenNavigationViewType.swift */,
+				B0069C012A031D37007CD96E /* CarsView.swift */,
 				7AFEC37D29E10C63007EAA5D /* FullScreenNavigationView.swift */,
 				7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */,
 				7AA699AF29EF44C8005FEA9F /* home.swift */,
@@ -595,6 +602,14 @@
 				7AFEC38429E10DF9007EAA5D /* SetReactiveMethods.swift */,
 			);
 			path = ReactiveFlow;
+			sourceTree = "<group>";
+		};
+		B0069BFD2A031505007CD96E /* RoundView */ = {
+			isa = PBXGroup;
+			children = (
+				B0069BFE2A031C77007CD96E /* RoundInformationView.swift */,
+			);
+			path = RoundView;
 			sourceTree = "<group>";
 		};
 		B0B5CE8329EE02850073816B /* AR */ = {
@@ -815,6 +830,7 @@
 				7AD2B6BD29FEFF9F00465EA2 /* localisationView.swift in Sources */,
 				B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */,
 				7A408F8229E2CBC5009B0304 /* ConfirmResquest.swift in Sources */,
+				B0069C022A031D37007CD96E /* CarsView.swift in Sources */,
 				7ABEF71F29F2C4B5000C4EDB /* ConstructorInformations.swift in Sources */,
 				7AA699B029EF44C8005FEA9F /* home.swift in Sources */,
 				7A408F8029E2C68D009B0304 /* EditRequest.swift in Sources */,
@@ -848,6 +864,7 @@
 				7AD2B69E29FEA85700465EA2 /* profileeView.swift in Sources */,
 				7AD2B69629FD717200465EA2 /* Authentication.swift in Sources */,
 				7AD5C7DD29E0F78B00FAE06E /* Persistence.swift in Sources */,
+				B0069BFF2A031C77007CD96E /* RoundInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +882,7 @@
 			files = (
 				7AD5C7FC29E0F78D00FAE06E /* FormulaOneAppARUITests.swift in Sources */,
 				7AD5C7FE29E0F78D00FAE06E /* FormulaOneAppARUITestsLaunchTests.swift in Sources */,
+				B0069C002A031C77007CD96E /* RoundInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
