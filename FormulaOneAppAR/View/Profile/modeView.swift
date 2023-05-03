@@ -14,7 +14,7 @@ struct modeView: View {
     let languages = [
         ("en", "English"),
         ("fr", "French")
-        
+   
     ]
     
     var body: some View {
@@ -31,27 +31,27 @@ struct modeView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
                 }
-                .onAppear {
-                    // Set the initial language on app launch
-                    let savedLanguage = UserDefaults.standard.string(forKey: "SelectedLanguage")
-                    self.selectedLanguage = savedLanguage ?? "en"
-                    Bundle.main.setLanguage(self.selectedLanguage)
-                }
-                .onChange(of: selectedLanguage) { newValue in
-                    print("SelectedLanguage: \(newValue)")
-                    // Update the selected language and save it to user defaults
-                    self.selectedLanguage = newValue
-                    UserDefaults.standard.set(self.selectedLanguage, forKey: "SelectedLanguage")
-                    UserDefaults.standard.synchronize()
-                    
-                    // Update the app's language
-                    Bundle.main.setLanguage(self.selectedLanguage)
-                    print("Bundle Language: \(Bundle.main.preferredLocalizations.first!)")
-                               
+//                .onAppear {
+//                    // Set the initial language on app launch
+//                    let savedLanguage = UserDefaults.standard.string(forKey: "SelectedLanguage")
+//                    self.selectedLanguage = savedLanguage ?? "en"
+//                    Bundle.main.setLanguage(self.selectedLanguage)
+//                }
+//                .onChange(of: selectedLanguage) { newValue in
+//                    print("SelectedLanguage: \(newValue)")
+//                    // Update the selected language and save it to user defaults
+//                    self.selectedLanguage = newValue
+//                    UserDefaults.standard.set(self.selectedLanguage, forKey: "SelectedLanguage")
+//                    UserDefaults.standard.synchronize()
+//
+//                    // Update the app's language
+//                    Bundle.main.setLanguage(self.selectedLanguage)
+//                    print("Bundle Language: \(Bundle.main.preferredLocalizations.first!)")
+//
 
                 }
             }
-        }
+//        }
 
 
 struct modeView_Previews: PreviewProvider {

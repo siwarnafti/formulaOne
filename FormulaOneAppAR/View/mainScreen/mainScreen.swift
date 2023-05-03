@@ -39,7 +39,7 @@ struct mainScreen: View {
                        }
                        .tag(2)
                    
-                   Text("home")
+                   SearchView()
                        .tabItem {
                            Image(systemName: "magnifyingglass.circle")
                        }

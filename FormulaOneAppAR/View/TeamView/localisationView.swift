@@ -32,11 +32,11 @@ struct localisationView: View {
     
     private func setRegion() {
               let geocoder = CLGeocoder()
-           geocoder.geocodeAddressString("kebili") { placemarks, error in
+           geocoder.geocodeAddressString("tunisie") { placemarks, error in
                   guard let placemark = placemarks?.first, let location = placemark.location else {
                       return
                   }
-                  region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+                  region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
               }
           }
 }

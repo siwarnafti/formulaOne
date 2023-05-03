@@ -1,93 +1,65 @@
-//
-//  SearchView.swift
-//  FormulaOneAppAR
-//
-//  Created by Siwar Nafti on 30/4/2023.
-//
-
 import SwiftUI
-/*
-struct User: Identifiable {
-    var id = UUID()
-    var name: String
+import SwiftUIX
+
+struct Equip: Identifiable {
+    let id = UUID()
+    let name: String
+    let team: String
+    let location: String
+    let round: Int
 }
 
 struct SearchView: View {
     @State private var searchText = ""
-    @State private var sortAscending = true
     
-    let users = [
-        User(name: "Alice"),
-        User(name: "Bob"),
-        User(name: "Charlie"),
-        User(name: "Dave"),
-        User(name: "Emily")
+    let equips = [
+        Equip(name: "Equip 1", team: "Team A", location: "Location X", round: 11),
+        Equip(name: "Equip 2", team: "Team B", location: "Location Y", round: 2),
+        Equip(name: "Equip 3", team: "Team C", location: "Location Z", round: 3),
     ]
     
-    var filteredUsers: [User] {
+    var filteredEquips: [Equip] {
         if searchText.isEmpty {
-            return users
+            return equips
         } else {
-            return users.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
-        }
-    }
-    z
-    var sortedUsers: [User] {
-        if sortAscending {
-            return filteredUsers.sorted { $0.name < $1.name }
-        } else {
-            return filteredUsers.sorted { $0.name > $1.name }
+            return equips.filter { equip in
+                equip.name.localizedCaseInsensitiveContains(searchText) || String(equip.round).localizedCaseInsensitiveContains(searchText)
+            }
         }
     }
     
     var body: some View {
         NavigationView {
-            VStack {
-                SearchBar(text: $searchText, placeholder: "Search Users")
+            ZStack{
                 
-                Toggle("Sort Ascending", isOn: $sortAscending)
+                Color .pink
+                    .edgesIgnoringSafeArea(.all)
                 
-                List(sortedUsers) { user in
-                    VStack(alignment: .leading) {
-                        Text(User.name)
-                            .font(.headline)
+                VStack( spacing: 0) {
+                    
+                    List(filteredEquips) { equip in
+                        VStack(alignment: .leading) {
+                            Text(equip.name)
+                                .font(.headline)
+                            Text(equip.team)
+                                .font(.subheadline)
+                            Text(equip.location)
+                                .font(.subheadline)
+                            Text("Round: \(equip.round)")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                              
+                        }
+                       
                     }
+                    .listStyle(.plain)
+                    .searchable(text: $searchText) // search bar
+                    .navigationTitle("Equips")
+                    
                 }
             }
-            .navigationTitle("Users")
-        }
-    }
-}
-
-struct SearchBar: UIViewRepresentable {
-    @Binding var text: String
-    var placeholder: String
-    
-    class Coordinator: NSObject, UISearchBarDelegate {
-        @Binding var text: String
-        
-        init(text: Binding<String>) {
-            _text = text
         }
         
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
-        }
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(text: $text)
-    }
-    
-    func makeUIView(context: Context) -> UISearchBar {
-        let searchBar = UISearchBar(frame: .zero)
-        searchBar.delegate = context.coordinator
-        searchBar.placeholder = placeholder
-        return searchBar
-    }
-    
-    func updateUIView(_ uiView: UISearchBar, context: Context) {
-        uiView.text = text
     }
 }
 
@@ -96,4 +68,3 @@ struct SearchView_Previews: PreviewProvider {
         SearchView()
     }
 }
-*/

@@ -22,6 +22,7 @@
 		7A408F8E29E2D925009B0304 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F8D29E2D925009B0304 /* ProfileVM.swift */; };
 		7A408F9029E2DC0E009B0304 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F8F29E2DC0E009B0304 /* SplashScreen.swift */; };
 		7A408F9229E34F8A009B0304 /* EditProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F9129E34F8A009B0304 /* EditProfileVM.swift */; };
+		7A6798DD2A02FBCE00AFA00B /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6798DC2A02FBCE00AFA00B /* SwiftUIX */; };
 		7A96A64C29EF7ABB0004B760 /* RaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64B29EF7ABB0004B760 /* RaceCardView.swift */; };
 		7A96A64F29EF99CB0004B760 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A64E29EF99CB0004B760 /* Race.swift */; };
 		7A96A65129EFBB2E0004B760 /* results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96A65029EFBB2E0004B760 /* results.swift */; };
@@ -250,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6798DD2A02FBCE00AFA00B /* SwiftUIX in Frameworks */,
 				7AD2B69329FD6E5000465EA2 /* SwiftKeychainWrapper in Frameworks */,
 				B0BFCEAE29EFA92B00A7C129 /* FocusEntity in Frameworks */,
 			);
@@ -644,6 +646,7 @@
 			packageProductDependencies = (
 				B0BFCEAD29EFA92B00A7C129 /* FocusEntity */,
 				7AD2B69229FD6E5000465EA2 /* SwiftKeychainWrapper */,
+				7A6798DC2A02FBCE00AFA00B /* SwiftUIX */,
 			);
 			productName = FormulaOneAppAR;
 			productReference = 7AD5C7D729E0F78B00FAE06E /* FormulaOneAppAR.app */;
@@ -721,6 +724,7 @@
 			packageReferences = (
 				B0BFCEAC29EFA92B00A7C129 /* XCRemoteSwiftPackageReference "FocusEntity" */,
 				7AD2B69129FD6E5000465EA2 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				7A6798DB2A02FBCE00AFA00B /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 7AD5C7D829E0F78B00FAE06E /* Products */;
 			projectDirPath = "";
@@ -1243,6 +1247,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7A6798DB2A02FBCE00AFA00B /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 		7AD2B69129FD6E5000465EA2 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
@@ -1262,6 +1274,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A6798DC2A02FBCE00AFA00B /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A6798DB2A02FBCE00AFA00B /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 		7AD2B69229FD6E5000465EA2 /* SwiftKeychainWrapper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7AD2B69129FD6E5000465EA2 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
