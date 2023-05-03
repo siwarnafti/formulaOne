@@ -57,6 +57,7 @@ struct carteamview: View {
                     Image(constructorModel.logo)
                         .resizable()
                         .scaledToFit()
+                        .clipShape(Circle())
                         .frame(width: 40)
                     VStack(alignment: .leading){
                         Text("TEAM")
@@ -124,5 +125,11 @@ struct carteamview: View {
         }.padding(7)
     }
 }
+struct constructorModel: PreviewProvider {
+    static var previews: some View {
+        carteamview(constructorModel: ConstructorModel(constructorId:1,logo: "alpha_logo", carImage: "Mclaren_car", rank: "2", point: "354", teamname: "ferrari"))
+    }
+}
+
 
 

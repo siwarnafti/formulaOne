@@ -16,7 +16,7 @@ struct TeamCardView: View {
                 Color.gray
                     .ignoresSafeArea()
                     VStack{
-                        Image("ferrari_consturctorlogo")
+                        Image("TeameDetailView")
                             .resizable()
                                                 .padding(10)
                             .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height/2.5)
@@ -79,6 +79,7 @@ struct TeamCardView: View {
                                 Text("Maranello").font(.custom("Sarpanch-Bold", size: 24))
                             }
                             Spacer()
+                           
                             Image("flag")
                                 .resizable()
                                 .frame(width: 100,height: 50)
@@ -93,7 +94,7 @@ struct TeamCardView: View {
                             }
                             Spacer()
                         }.padding(.horizontal)
-                        
+                      
                     }
                 
                 }

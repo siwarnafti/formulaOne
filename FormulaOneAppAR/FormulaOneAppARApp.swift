@@ -34,6 +34,7 @@ struct FormulaOneAppARApp: App {
 //            TeamCardView()
 //            ContentView2()
 //            downloadimage()
+            Home()
                 // .ignoresSafeArea()
 //              .environmentObject(user)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)

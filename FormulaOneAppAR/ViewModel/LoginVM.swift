@@ -10,7 +10,7 @@ import SwiftUI
 class LogiVM:ObservableObject{
     @Published  var EmailError: String? = nil
     @Published  var passwordError: String? = nil
-    
+    @Published var credentials = Credentials()
     @Published var email:String=""
     @Published var password:String=""
     @Published var message=""
@@ -18,16 +18,19 @@ class LogiVM:ObservableObject{
     @Published var rememberMe: Bool = false
     @Published var loginbut:Bool=false
     @Published var isSnackbarShowing:Bool = false
+    @Published var showProgressView = false
+    @Published var error: Authentication.AuthenticationError?
+    @Published var storeCredentialsNext = false
     
     init(){}
     var isFormValid: Bool {
         return  EmailError == nil && passwordError == nil
     }
     func authenticate() {
-        if(self.password.isEmpty||self.email.isEmpty){
+        if(self.credentials.password.isEmpty||self.credentials.email.isEmpty){
                self.message="all fields must be filled"
                self.invalid=true
-        }else if(!(self.email.isValidEmail)){
+        }else if(!(self.credentials.email.isValidEmail)){
                self.message="not valid email "
                self.invalid=true
            }else{
@@ -38,7 +41,7 @@ class LogiVM:ObservableObject{
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
 
-        if email.isEmpty {
+        if credentials.email.isEmpty {
             EmailError = "Email is required"
 //            return EmailError
         } else if !emailPredicate.evaluate(with: email) {
@@ -52,14 +55,14 @@ class LogiVM:ObservableObject{
     }
 
     func validatePassword() {
-        if password.isEmpty {
+        if credentials.password.isEmpty {
             passwordError = "Password is required"
         } else {
             passwordError = nil
         }
     }
     func login() {
-        loginApi(email: self.email, password: self.password) { result in
+        loginApi(credentials:credentials) { result in
             switch result {
             case .success(_):
                 print(result)
@@ -78,17 +81,17 @@ class LogiVM:ObservableObject{
             }
         }
     }
-    func loginApi(email: String, password:String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
+    func loginApi(credentials: Credentials, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
     
         guard let url = URL(string: baseUrl+"user/signin") else {
         completion(.failure(.URLisnotcorrect))
         return
     }
-    let body = LoginRequestBody(email: email, password: password)
+//        let body = LoginRequestBody(credentials: credentials)
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.httpBody = try? JSONEncoder().encode(body)
+    request.httpBody = try? JSONEncoder().encode(credentials)
     
     URLSession.shared.dataTask(with: request) { (data, response, error) in
                 guard let httpResponse = response as? HTTPURLResponse else {
@@ -106,6 +109,13 @@ class LogiVM:ObservableObject{
                         UserDefaults.standard.set(self.rememberMe, forKey: "RememberMe")
                         self.saveuser(user: result)
                         print(result)
+                    }
+                    if self.storeCredentialsNext {
+                        if KeychainStorage.saveCredentials(credentials) {
+                            DispatchQueue.main.async {
+                                self.storeCredentialsNext = false
+                            }
+                        }
                     }
                     completion(.success(result.token))}
                 else{
