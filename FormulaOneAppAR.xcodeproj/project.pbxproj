@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2239F41629FB554F00ACA779 /* carteamview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2239F41529FB554F00ACA779 /* carteamview.swift */; };
+		2271FE9D2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */; };
+		2271FE9E2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */; };
 		7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */; };
 		7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7729E2C600009B0304 /* LoginRequestBody.swift */; };
 		7A408F7A29E2C61A009B0304 /* signupRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7929E2C61A009B0304 /* signupRequestBody.swift */; };
@@ -138,6 +140,7 @@
 
 /* Begin PBXFileReference section */
 		2239F41529FB554F00ACA779 /* carteamview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteamview.swift; sourceTree = "<group>"; };
+		2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScreenshotView.swift; sourceTree = "<group>"; };
 		7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7A408F7729E2C600009B0304 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
 		7A408F7929E2C61A009B0304 /* signupRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupRequestBody.swift; sourceTree = "<group>"; };
@@ -623,6 +626,7 @@
 				B0BFCEAA29EF9CAB00A7C129 /* RealityKitView.swift */,
 				7AC3A2BF29F20BF400F2659A /* test.swift */,
 				7AA83DA429F92D4C00E4A9A7 /* ImportfARFile.swift */,
+				2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -809,6 +813,7 @@
 				7AD2B6A029FEC5A800465EA2 /* modeView.swift in Sources */,
 				7ABEF71A29F2C1D9000C4EDB /* TeamCardView.swift in Sources */,
 				7AFEC37E29E10C63007EAA5D /* FullScreenNavigationView.swift in Sources */,
+				2271FE9D2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */,
 				7AD5C7E029E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld in Sources */,
 				7AA6998129E4CA85005FEA9F /* RegisterView.swift in Sources */,
 				7AFEC37A29E10BCF007EAA5D /* ForgetView.swift in Sources */,
@@ -885,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD5C7FC29E0F78D00FAE06E /* FormulaOneAppARUITests.swift in Sources */,
+				2271FE9E2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */,
 				7AD5C7FE29E0F78D00FAE06E /* FormulaOneAppARUITestsLaunchTests.swift in Sources */,
 				B0069C002A031C77007CD96E /* RoundInformationView.swift in Sources */,
 			);
