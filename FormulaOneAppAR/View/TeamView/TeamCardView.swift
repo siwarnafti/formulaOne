@@ -9,14 +9,14 @@ import SwiftUI
 
 struct TeamCardView: View {
     @State private var selection = 0
-    
+let constructor : ConstructorModel
     var body: some View {
         NavigationView {
             ZStack{
                 Color.gray
                     .ignoresSafeArea()
                     VStack{
-                        Image("TeameDetailViewMercedess")
+                        Image(constructor.modelname!)
                             .resizable()
                                                 .padding(10)
                             .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height/2.5)
@@ -27,7 +27,7 @@ struct TeamCardView: View {
                         
                         Spacer()
                         HStack{
-                            Text("Ferrari").font(
+                            Text(constructor.teamname).font(
                                 .custom(
                                     "AmericanTypewriter",
                                     fixedSize: 34)
@@ -38,13 +38,13 @@ struct TeamCardView: View {
                                 .fontWeight(.bold)
                         }.padding([.top, .leading, .trailing])
                         HStack{
-                            Text("03")
+                            Text(constructor.rank)
                                 .font(.custom("VastShadow-Regular", size: 54))
                                 .fontWeight(.bold)
                                 .padding(.horizontal, 20)
                             Spacer()
                             HStack{
-                                Text("134").font(.custom("KumarOne-Regular", size: 40))
+                                Text(constructor.point).font(.custom("KumarOne-Regular", size: 40))
                                     .foregroundColor(.red)
                                     .fontWeight(.bold)
                                 
@@ -76,11 +76,11 @@ struct TeamCardView: View {
                         HStack{
                             VStack(alignment:.leading){
                                 Text("Base").font(.custom("Sarpanch-Regular", size: 24))
-                                Text("Maranello").font(.custom("Sarpanch-Bold", size: 24))
+                                Text(constructor.base).font(.custom("Sarpanch-Bold", size: 24))
                             }
                             Spacer()
                            
-                            Image("flag")
+                            Image(constructor.base)
                                 .resizable()
                                 .frame(width: 100,height: 50)
                                 .cornerRadius(20)
@@ -90,7 +90,7 @@ struct TeamCardView: View {
                         HStack{
                             VStack(alignment:.leading){
                                 Text("Team Principal").font(.custom("Sarpanch-Regular", size: 24))
-                                Text("Toto Wolff").font(.custom("Sarpanch-Bold", size: 24))
+                                Text(constructor.teamname).font(.custom("Sarpanch-Bold", size: 24))
                             }
                             Spacer()
                         }.padding(.horizontal)
@@ -104,8 +104,4 @@ struct TeamCardView: View {
 
 
 
-struct TeamCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        TeamCardView()
-    }
-}
+

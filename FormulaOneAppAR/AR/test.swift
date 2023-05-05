@@ -10,8 +10,8 @@ import SwiftUI
 struct test: View {
     var body: some View {
         ZStack{
-            RealityKitView()
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            RealityKitView(carname: "formulaEsprit")
+            
         }
     }
 }

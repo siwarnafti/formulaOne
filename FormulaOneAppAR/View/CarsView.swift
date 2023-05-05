@@ -16,10 +16,34 @@ struct CarsView: View {
             ZStack{
                 
                 ScrollView(.vertical, showsIndicators: false) {
-                    CarView(modelname: "formula.usdz")
-                    CarView(modelname: "formulared.usdz")
-                    CarView(modelname: "formulaEsprit.usdz")
-                    CarView(modelname: "formula 4.usdz")
+                    NavigationLink(
+                        destination: RealityKitView(carname: "formula"),
+                        label: {
+                            CarView(modelname: "formula.usdz")
+                            
+                        })
+                    NavigationLink(
+                        destination: RealityKitView(carname: "formulared"),
+                        label: {
+                            CarView(modelname: "formulared.usdz")
+                            
+                        })
+                    NavigationLink(
+                        destination: RealityKitView(carname: "formulaEsprit"),
+                        label: {
+                            CarView(modelname: "formulaEsprit.usdz")
+                            
+                        })
+                    NavigationLink(
+                        destination: RealityKitView(carname: "formula 4"),
+                        label: {
+                            CarView(modelname: "formula 4.usdz")
+                            
+                        })
+                   
+                    
+                    
+                    
                     
                     
                     

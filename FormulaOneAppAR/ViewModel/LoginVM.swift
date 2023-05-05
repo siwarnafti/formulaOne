@@ -23,7 +23,7 @@ class LogiVM:ObservableObject{
     @Published var storeCredentialsNext = false
     
     init(){}
-    var isFormValid: Bool {
+var isFormValid: Bool {
         return  EmailError == nil && passwordError == nil
     }
     func authenticate() {

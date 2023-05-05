@@ -13,7 +13,8 @@ struct localisationView: View {
         // other properties
     }
     @State private var region = MKCoordinateRegion()
-    var tt : [aa]
+    var tt = [aa]()
+    var base:String
     var body: some View {
         
         
@@ -32,7 +33,7 @@ struct localisationView: View {
     
     private func setRegion() {
               let geocoder = CLGeocoder()
-           geocoder.geocodeAddressString("tunisie") { placemarks, error in
+           geocoder.geocodeAddressString(base) { placemarks, error in
                   guard let placemark = placemarks?.first, let location = placemark.location else {
                       return
                   }
@@ -43,7 +44,7 @@ struct localisationView: View {
 
 struct localisationView_Previews: PreviewProvider {
     static var previews: some View {
-        localisationView(tt:[])
+        localisationView(tt:[], base: "Bahrain")
     }
 }
 

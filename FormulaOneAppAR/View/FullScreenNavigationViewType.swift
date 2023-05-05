@@ -11,6 +11,7 @@ enum FullScreenNavigationViewType {
     case empty
     case editview
     case WelcomeView
+    //case localisationView
     
     var view: AnyView {
         switch self {
@@ -20,6 +21,9 @@ enum FullScreenNavigationViewType {
             return AnyView(EditProfil(editVM: EditProfileVM(), prfileVM: ProfileVM()))
         case .WelcomeView:
             return AnyView(WelcomeScreenView())
+       // case .localisationView:
+        //    return AnyView(localisationView())
+            
         }
     }
 }

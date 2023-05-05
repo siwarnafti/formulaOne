@@ -4,6 +4,7 @@ import SwiftUI
 import FocusEntity
 
 struct RealityKitView: UIViewRepresentable {
+    let carname:String
     func makeUIView(context: Context) -> ARView {
         let view = ARView()
         // Start AR session
@@ -39,7 +40,7 @@ struct RealityKitView: UIViewRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(carname:carname)
     }
     
     func updateUIView(_ view: ARView, context: Context) {
@@ -50,11 +51,14 @@ struct RealityKitView: UIViewRepresentable {
     }
     
     class Coordinator: NSObject, ARSessionDelegate {
+        var carname:String
         weak var view: ARView?
         var focusEntity: FocusEntity?
         var selectedEntity: Entity?
         let anchor = AnchorEntity()
-
+        init(carname: String) {
+                self.carname = carname
+            }
         
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             guard let view = self.view
@@ -72,7 +76,7 @@ struct RealityKitView: UIViewRepresentable {
 //                view.scene.anchors.append(anchor)
                 
                 // Add a Formula entity
-                let formula = try! ModelEntity.load(named: "formula")
+                let formula = try! ModelEntity.load(named: carname)
                 formula.scale = [0.5, 0.5, 0.5]
                 formula.position = focusEntity.position
                 formula.name="ferrari"

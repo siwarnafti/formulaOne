@@ -10,6 +10,10 @@
 		2239F41629FB554F00ACA779 /* carteamview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2239F41529FB554F00ACA779 /* carteamview.swift */; };
 		2271FE9D2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */; };
 		2271FE9E2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */; };
+		2271FEA02A04B2F80027BF41 /* ergast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9F2A04B2F80027BF41 /* ergast.swift */; };
+		2271FEA12A04B2F80027BF41 /* ergast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9F2A04B2F80027BF41 /* ergast.swift */; };
+		2271FEA42A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
+		2271FEA52A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
 		7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */; };
 		7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7729E2C600009B0304 /* LoginRequestBody.swift */; };
 		7A408F7A29E2C61A009B0304 /* signupRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7929E2C61A009B0304 /* signupRequestBody.swift */; };
@@ -141,6 +145,8 @@
 /* Begin PBXFileReference section */
 		2239F41529FB554F00ACA779 /* carteamview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteamview.swift; sourceTree = "<group>"; };
 		2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScreenshotView.swift; sourceTree = "<group>"; };
+		2271FE9F2A04B2F80027BF41 /* ergast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ergast.swift; sourceTree = "<group>"; };
+		2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ergastViewModel.swift; sourceTree = "<group>"; };
 		7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7A408F7729E2C600009B0304 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
 		7A408F7929E2C61A009B0304 /* signupRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupRequestBody.swift; sourceTree = "<group>"; };
@@ -277,6 +283,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2271FEA22A04B3E00027BF41 /* ergast */ = {
+			isa = PBXGroup;
+			children = (
+				2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */,
+			);
+			path = ergast;
+			sourceTree = "<group>";
+		};
 		7A408F7229E2C4A1009B0304 /* ErrorHandler */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +354,7 @@
 				7A96A65629EFD9AD0004B760 /* CircuitModel.swift */,
 				7A96A65829EFD9F00004B760 /* LocationModel.swift */,
 				7A96A65A29EFDA460004B760 /* DriverStandingsModel.swift */,
+				2271FE9F2A04B2F80027BF41 /* ergast.swift */,
 			);
 			path = Ergast;
 			sourceTree = "<group>";
@@ -447,6 +462,7 @@
 		7ACD0E9B29E0FAF800C67816 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2271FEA22A04B3E00027BF41 /* ergast */,
 				7ABEF71D29F2C3C4000C4EDB /* TeamViewModel */,
 				7AA699B529EF4521005FEA9F /* homeVM.swift */,
 				7AFEC34029E0FF5E007EAA5D /* Content-ViewModel.swift */,
@@ -838,8 +854,10 @@
 				7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */,
 				7AD2B6BD29FEFF9F00465EA2 /* localisationView.swift in Sources */,
 				B0B5CE8729EE0D200073816B /* CustomARViewRepresentable.swift in Sources */,
+				2271FEA02A04B2F80027BF41 /* ergast.swift in Sources */,
 				7A408F8229E2CBC5009B0304 /* ConfirmResquest.swift in Sources */,
 				B0069C022A031D37007CD96E /* CarsView.swift in Sources */,
+				2271FEA42A04B3FB0027BF41 /* ergastViewModel.swift in Sources */,
 				7ABEF71F29F2C4B5000C4EDB /* ConstructorInformations.swift in Sources */,
 				7AA699B029EF44C8005FEA9F /* home.swift in Sources */,
 				7A408F8029E2C68D009B0304 /* EditRequest.swift in Sources */,
@@ -891,7 +909,9 @@
 			files = (
 				7AD5C7FC29E0F78D00FAE06E /* FormulaOneAppARUITests.swift in Sources */,
 				2271FE9E2A043C5B0027BF41 /* ARScreenshotView.swift in Sources */,
+				2271FEA12A04B2F80027BF41 /* ergast.swift in Sources */,
 				7AD5C7FE29E0F78D00FAE06E /* FormulaOneAppARUITestsLaunchTests.swift in Sources */,
+				2271FEA52A04B3FB0027BF41 /* ergastViewModel.swift in Sources */,
 				B0069C002A031C77007CD96E /* RoundInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1032,7 +1052,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = JLWNNCVZ35;
+				DEVELOPMENT_TEAM = 5728XC78XM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
@@ -1079,7 +1099,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = JLWNNCVZ35;
+				DEVELOPMENT_TEAM = 5728XC78XM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;

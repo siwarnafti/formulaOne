@@ -61,6 +61,37 @@ struct APIServices : APIServiceProtocol{
         task.resume()
         
     }
+    func fetchTeamsStandings(url: URL?, completion: @escaping(Result<Root, APIError>) -> Void) {
+        guard let url = url else {
+            let error = APIError.badURL
+            completion(Result.failure(error))
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) {(data , response, error) in
+            
+            if let error = error as? URLError {
+                completion(Result.failure(APIError.url(error)))
+            }else if  let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
+                completion(Result.failure(APIError.badResponse(statusCode: response.statusCode)))
+            }else if let data = data {
+                
+                let decoder = JSONDecoder()
+                do {
+                    let teams = try decoder.decode(Root.self, from: data)
+                    
+                    completion(Result.success(teams))
+                    
+                }catch {
+                    completion(Result.failure(APIError.parsing(error as? DecodingError)))
+                }
+                
+                
+            }
+        }
+
+        task.resume()
+        
+    }
     func uploadAvatar(email: String, image: UIImage?) {
             guard let image = image, let imageData = image.jpegData(compressionQuality: 0.8) else {
                 print("Error: Invalid image data")

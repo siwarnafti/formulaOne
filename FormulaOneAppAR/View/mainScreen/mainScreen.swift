@@ -10,7 +10,7 @@ import SwiftUI
 struct mainScreen: View {
     @StateObject private var currentReactives = SetReactiveMethods()
        @State var tabSelected = 0
-    
+    var v = ErgastViewModel()
        init(){
            UITabBar.appearance().backgroundColor = .white
        }
@@ -26,13 +26,13 @@ struct mainScreen: View {
                        }
                        .tag(0)
                    
-                   Text("Search")
+                   CarsView()
                        .tabItem {
-                           Image(systemName: "flag.checkered")
+                           Image(systemName: "car.2")
                        }
                        .tag(1)
                    
-                   RealityKitView()
+                   RealityKitView(carname: "formulaEsprit")
                        .tabItem {
                            Image(systemName: "camera")
                               // .imageScale(2)

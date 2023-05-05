@@ -13,9 +13,15 @@ struct SearchView: View {
     @State private var searchText = ""
     
     let equips = [
-        Equip(name: "Equip 1", team: "Team A", location: "Location X", round: 11),
-        Equip(name: "Equip 2", team: "Team B", location: "Location Y", round: 2),
-        Equip(name: "Equip 3", team: "Team C", location: "Location Z", round: 3),
+        Equip(name: "Ferrari", team: "Ferrari", location: "Italy", round: 11),
+        Equip(name: "Red Bull Racing", team: "Red Bull Racing", location: "Austria", round: 11),
+        Equip(name: "McLaren", team: "McLaren Racing", location: "United Kingdom", round: 11),
+        Equip(name: "Alpine", team: "Alpine F1 Team", location: "France", round: 11),
+        Equip(name: "AlphaTauri", team: "Scuderia AlphaTauri", location: "Italy", round: 11),
+        Equip(name: "Aston Martin", team: "Aston Martin Cognizant F1 Team", location: "United Kingdom", round: 11),
+        Equip(name: "Williams", team: "Williams Racing", location: "United Kingdom", round: 11),
+        Equip(name: "Alfa Romeo", team: "Alfa Romeo Racing", location: "Switzerland", round: 11),
+        Equip(name: "Haas", team: "Haas F1 Team", location: "United States", round: 11),
     ]
     
     var filteredEquips: [Equip] {
@@ -30,32 +36,36 @@ struct SearchView: View {
     
     var body: some View {
         NavigationView {
-            VStack( spacing: 0) {
-                List(filteredEquips) { equip in
-                    VStack(alignment: .leading) {
-                        Text(equip.name)
-                            .font(.headline)
-                            .foregroundColor(.red)
-                        Text(equip.team)
-                            .font(.subheadline)
-                            .foregroundColor(.red)
-                        Text(equip.location)
-                            .font(.subheadline)
-                            .foregroundColor(.red)
-                        Text("Round: \(equip.round)")
-                            .font(.subheadline)
-                            .foregroundColor(.red)
-                    }
-                    .listRowBackground(Color.white)
-                }
-                .listStyle(.plain)
-                .searchable(text: $searchText) // search bar
-                .navigationTitle("Equips")
-                LinearGradient(gradient: Gradient(colors: [Color.white, Color.gray]), startPoint: .top, endPoint: .bottom)
-     
+            ZStack{
+                
+                Color .pink
                     .edgesIgnoringSafeArea(.all)
+                
+                VStack( spacing: 0) {
+                    
+                    List(filteredEquips) { equip in
+                        VStack(alignment: .leading) {
+                            Text(equip.name)
+                                .font(.headline)
+                            Text(equip.team)
+                                .font(.subheadline)
+                            Text(equip.location)
+                                .font(.subheadline)
+                            Text("Round: \(equip.round)")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                              
+                        }
+                       
+                    }
+                    .listStyle(.plain)
+                    .searchable(text: $searchText) // search bar
+                    .navigationTitle("Equips")
+                    
+                }
             }
         }
+        
     }
 }
 

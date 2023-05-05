@@ -7,9 +7,8 @@
 import SwiftUI
 
 struct Home: View {
-    let constructors = [ConstructorModel(constructorId:0,logo: "logo_mercedes", carImage: "car_mercedes", rank: "1", point: "356", teamname: "Mercedes"),
-                        ConstructorModel(constructorId:1,logo: "ferrari_logo", carImage: "Mclaren_car", rank: "2", point: "354", teamname: "ferrari"),
-                        ConstructorModel(constructorId:2,logo: "logo_toyota", carImage: "car_toyota", rank: "3", point: "340", teamname: "Toyota")]
+   
+    @ObservedObject var evm = ErgastViewModel()
     var body: some View {
         NavigationView{
             ZStack{
@@ -27,10 +26,26 @@ struct Home: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack() {
-                                    ForEach(0..<20) { constructor in DriverStandings()}
+                                    ForEach(racess,id: \.self) { race in
+                                        NavigationLink(
+                                            destination: RoundInformationView(race: race),
+                                            label: {
+                                                DriverStandings(race: race)
+                                                
+                                            })
+                                        
+                                        
+                                    }
                                 }                                     }             }
                             ScrollView(.vertical, showsIndicators: false) {
-                                ForEach(constructors, id: \.self){ constructor in carteamview(constructorModel: constructor) }
+                                ForEach(constructors, id: \.self){ constructor in
+                                    NavigationLink(
+                                        destination: TeamCardView(constructor: constructor),
+                                        label: {
+                                            carteamview(constructorModel: constructor)
+                                            
+                                        })
+                                }
                             }
                         }.onAppear {}
                     }

@@ -14,6 +14,7 @@ struct ConstructorModel: Codable ,Hashable{
     var point: String
     var teamname: String
     var modelname: String?
+    var base : String="flag"
     
     enum CodingKeys: String, CodingKey {
         case constructorId
@@ -23,6 +24,7 @@ struct ConstructorModel: Codable ,Hashable{
         case point
         case teamname
         case modelname
+        case base
     }
     
     func encode(to encoder: Encoder) throws {
@@ -34,6 +36,8 @@ struct ConstructorModel: Codable ,Hashable{
         try container.encode(point, forKey: .point)
         try container.encode(teamname, forKey: .teamname)
         try container.encode(modelname, forKey: .modelname)
+        try container.encode(base, forKey: .base)
+
     }
 }
 
