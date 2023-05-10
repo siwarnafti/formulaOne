@@ -14,6 +14,7 @@
 		2271FEA12A04B2F80027BF41 /* ergast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9F2A04B2F80027BF41 /* ergast.swift */; };
 		2271FEA42A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
 		2271FEA52A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
+		7A2DFD842A08FF3D00CCE5C1 /* ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */; };
 		7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */; };
 		7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7729E2C600009B0304 /* LoginRequestBody.swift */; };
 		7A408F7A29E2C61A009B0304 /* signupRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7929E2C61A009B0304 /* signupRequestBody.swift */; };
@@ -147,6 +148,7 @@
 		2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScreenshotView.swift; sourceTree = "<group>"; };
 		2271FE9F2A04B2F80027BF41 /* ergast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ergast.swift; sourceTree = "<group>"; };
 		2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ergastViewModel.swift; sourceTree = "<group>"; };
+		7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferrari.usdz; sourceTree = "<group>"; };
 		7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7A408F7729E2C600009B0304 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
 		7A408F7929E2C61A009B0304 /* signupRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupRequestBody.swift; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 				7AD2B6C22A02EEAA00465EA2 /* formulared.usdz */,
 				7AD2B6C82A02EEB400465EA2 /* formulaEsprit.usdz */,
 				7AD2B6C02A02EEA100465EA2 /* formula 4.usdz */,
+				7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */,
 				7AD5C7E329E0F78D00FAE06E /* Assets.xcassets */,
 				7AD5C7E529E0F78D00FAE06E /* FormulaOneAppAR.entitlements */,
 				7AD5C7DE29E0F78B00FAE06E /* FormulaOneAppAR.xcdatamodeld */,
@@ -773,6 +776,7 @@
 				7ABEF74229F6D878000C4EDB /* Sarpanch-Medium.ttf in Resources */,
 				7AD5C7E429E0F78D00FAE06E /* Assets.xcassets in Resources */,
 				7AA83DA329F899A000E4A9A7 /* RacingSansOne-Regular.ttf in Resources */,
+				7A2DFD842A08FF3D00CCE5C1 /* ferrari.usdz in Resources */,
 				7AC3A2BE29F1EE2300F2659A /* formula.usdz in Resources */,
 				7ABEF73A29F6D869000C4EDB /* NovaSquare-Regular.ttf in Resources */,
 				7ABEF74629F6D878000C4EDB /* Sarpanch-SemiBold.ttf in Resources */,
@@ -1052,7 +1056,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = 5728XC78XM;
+				DEVELOPMENT_TEAM = JLWNNCVZ35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
@@ -1078,7 +1082,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1099,7 +1103,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = 5728XC78XM;
+				DEVELOPMENT_TEAM = JLWNNCVZ35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
@@ -1125,7 +1129,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esprit.FormulaOneAppAR2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
