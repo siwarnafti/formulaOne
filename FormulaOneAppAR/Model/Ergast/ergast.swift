@@ -92,7 +92,7 @@ struct Rrace : Codable,Hashable{
         try container.encode(country, forKey: .country)
     }
 }
-var racess=[Rrace(round: 1, date: "March 5", city: "Sakhir", country: "Bahrain"),
+var racess=[Rrace(round: 1, date: "March 5", city: "Sakhir,Bahrain", country: "Bahrain"),
     Rrace(round: 2, date: "March 19", city: "Jeddah", country: "Saudi Arabia"),
             Rrace(round: 6, date: "May 7", city: "Miami", country: "usa"),
             Rrace(round: 4, date: "April 16", city: "Shanghai", country: "China"),

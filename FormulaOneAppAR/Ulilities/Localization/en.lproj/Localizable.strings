@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  FormulaOneAppAR
+
+  Created by MacOS on 10/5/2023.
+  
+*/
+"Home"="Home";
+"RaceName"="RaceName";
+"Team"="Team";
+"ST"="st";
+"ND"="nd";
+"RD"="rd";
+"TH"="th";
+"Search"="Search";
+"Round"="Round";
+"Posts"="Posts";
+"Followers"="Followers";
+"Following"="Following";
+"EditProfile"="Edit Profile";
+
+
+
+"WelcomeToYour"="Welcome To Your";
+"Letstart"="Let's Start";
+
+
+
+
+"SignIn"= "Sing In";
+"SignUp"= "Sign Up";
+"AlreadyHaveanAccount"="Already Have an Account ?";
+"Email"="Email";
+"EmailAdress"="Email adress";
+"UserName"="Username";
+"YourUserNameOrPasswordIsIncorrect"="Your username or password is incorrect";
+
+"CredentialsNotSaved"="Credentials Not Saved";
+"InvalidLogin"="Invalid Login";
+
+"Password"="Password";
+"OldPassword"="Old Password";
+"NewPassword"="New Password";
+"ForgotPassword"="Forgot Password";
+"ResetPassord"="Reset password";
+"ConfirmPassword"="Confirm Password";
+"ConfirmNewPassword"="Confirm New Password";
+"ChangeYourPassword?"="ChangeYourPassword?";
+"ChangePassword"="Change Password ?" ;
+
+"VerificationCode"="Verification Code";
+"Save"="Save";
+
+
+"RememeberMe"="Rememeber Me";
+"Don'tHaveAnAccount"="Don't have an Account";
+"March"="March";
+
+
+////Login ViewMode
+"AllFieldsMustBeFilled"="All fields must be filled";
+"NotValidEmail "="Not valid Email";
+"EmailIsRequired"="Email is required";
+"EmailIsInvalid"="Email is invalid";
+"PasswordIsRequired"="Password is required";
+
+
+
+////Enum Authentications
+"InvalidCredentials"="invalidCredentials.";
+"UsernameOrPassordIncorrect"="Username or password incorrect.";
+"NoData"="No Data.";
+"URLIsNotCorrect"="URL is not correct.";
+"AnUnknownErrorOccurredWhileRegisteringTheUser"="An unknown error occurred while registering the user.";
+"TheEmailEddressIsAlreadyInUse."="TheEmailAddressIsAlreadyInUse.";
+"ThePasswordDoesNotMeetTheRequiredComplexityRules."="The password does not meet the required complexity rules.";
+"TheAccountHasBeenLockedDueToSuspiciousActivity."="The account has been locked due to suspicious activity.";
+
+

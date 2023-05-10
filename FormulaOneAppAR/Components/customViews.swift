@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PrimaryButton: View {
-    var title: String
+    var title: LocalizedStringKey
     var body: some View {
         Text(title)
             .font(.title3)
@@ -23,7 +23,7 @@ struct PrimaryButton: View {
     
 }
 struct PrimaryButton2: View {
-    var title: String
+    var title: LocalizedStringKey
     var body: some View {
         Text(title)
             

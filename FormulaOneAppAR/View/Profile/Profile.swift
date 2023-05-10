@@ -74,22 +74,10 @@ struct ProfileView: View {
                                 .padding(.horizontal, 5)
                                 .padding(.vertical, 10)
                                 .scaleEffect(1.5)
-                               
-    //                                    .overlay(
-    //                                        RoundedRectangle(cornerRadius: 20)
-    //                                            .stroke(Color.gray, lineWidth: 1)
-    //                                    )
                         }
                       
                     }
                     
-                   
-                
-//                .padding(.horizontal, 20)
-                    //                                    }
-//                    Spacer()
-                    
-                    // User's stats
                     HStack {
                         VStack {
                             Text("1,234")

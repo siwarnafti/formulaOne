@@ -13,30 +13,7 @@ struct FormulaOneAppARApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            //EditProfil()
-            //Profil()
-       //     mainScreen()
-            //SignInScreenView()
-          //  ProfileView()
-//            Profil()
-//            mainScreen()
-//            SignInScreenView()
-//            ProfileView()
-//            EditProfil()
-//            ARView().ignoresSafeArea()
-//            confirmForgotView()
             SplashScreen()
-//            RealityKitView()
-//            mainScreen()
-//            SwiftUIView()
-//            TeamView()
-//            TeamCardView()
-//            ContentView2()
-//            downloadimage()
-                //         Home()
-                // .ignoresSafeArea()
-//              .environmentObject(user)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

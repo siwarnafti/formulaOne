@@ -14,6 +14,8 @@
 		2271FEA12A04B2F80027BF41 /* ergast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FE9F2A04B2F80027BF41 /* ergast.swift */; };
 		2271FEA42A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
 		2271FEA52A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
+		22AD4BBC2A0C322C002CCF7D /* testnav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD4BBB2A0C322C002CCF7D /* testnav.swift */; };
+		22AD4BC02A0C4028002CCF7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22AD4BC22A0C4028002CCF7D /* Localizable.strings */; };
 		7A2DFD842A08FF3D00CCE5C1 /* ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */; };
 		7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */; };
 		7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7729E2C600009B0304 /* LoginRequestBody.swift */; };
@@ -80,7 +82,6 @@
 		7AD2B69C29FD72B400465EA2 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2B69B29FD72B400465EA2 /* UIApplication.swift */; };
 		7AD2B69E29FEA85700465EA2 /* profileeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2B69D29FEA85700465EA2 /* profileeView.swift */; };
 		7AD2B6A029FEC5A800465EA2 /* modeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2B69F29FEC5A800465EA2 /* modeView.swift */; };
-		7AD2B6BB29FEE5D200465EA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2B6BA29FEE5D200465EA2 /* Localizable.strings */; };
 		7AD2B6BD29FEFF9F00465EA2 /* localisationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2B6BC29FEFF9F00465EA2 /* localisationView.swift */; };
 		7AD2B6BF29FF114800465EA2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2B6BE29FF114800465EA2 /* SearchView.swift */; };
 		7AD2B6C12A02EEA100465EA2 /* formula 4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7AD2B6C02A02EEA100465EA2 /* formula 4.usdz */; };
@@ -148,6 +149,9 @@
 		2271FE9C2A043C5A0027BF41 /* ARScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScreenshotView.swift; sourceTree = "<group>"; };
 		2271FE9F2A04B2F80027BF41 /* ergast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ergast.swift; sourceTree = "<group>"; };
 		2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ergastViewModel.swift; sourceTree = "<group>"; };
+		22AD4BBB2A0C322C002CCF7D /* testnav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testnav.swift; sourceTree = "<group>"; };
+		22AD4BC12A0C4028002CCF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22AD4BC32A0C4060002CCF7D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferrari.usdz; sourceTree = "<group>"; };
 		7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7A408F7729E2C600009B0304 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
@@ -211,7 +215,6 @@
 		7AD2B69B29FD72B400465EA2 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		7AD2B69D29FEA85700465EA2 /* profileeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileeView.swift; sourceTree = "<group>"; };
 		7AD2B69F29FEC5A800465EA2 /* modeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeView.swift; sourceTree = "<group>"; };
-		7AD2B6BA29FEE5D200465EA2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7AD2B6BC29FEFF9F00465EA2 /* localisationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localisationView.swift; sourceTree = "<group>"; };
 		7AD2B6BE29FF114800465EA2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7AD2B6C02A02EEA100465EA2 /* formula 4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "formula 4.usdz"; sourceTree = "<group>"; };
@@ -291,6 +294,14 @@
 				2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */,
 			);
 			path = ergast;
+			sourceTree = "<group>";
+		};
+		22AD4BBD2A0C3FD3002CCF7D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				22AD4BC22A0C4028002CCF7D /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		7A408F7229E2C4A1009B0304 /* ErrorHandler */ = {
@@ -439,8 +450,7 @@
 		7ACD0E9929E0FABF00C67816 /* Ulilities */ = {
 			isa = PBXGroup;
 			children = (
-				7AD2B6B229FEE33100465EA2 /* fr.lproj */,
-				7AD2B6A729FEDB3F00465EA2 /* en.lproj */,
+				22AD4BBD2A0C3FD3002CCF7D /* Localization */,
 				7A408F8329E2CFBB009B0304 /* Consts */,
 				7A408F7229E2C4A1009B0304 /* ErrorHandler */,
 				7AFEC38129E10D5E007EAA5D /* ReactiveFlow */,
@@ -473,7 +483,6 @@
 				7A408F8D29E2D925009B0304 /* ProfileVM.swift */,
 				7A408F9129E34F8A009B0304 /* EditProfileVM.swift */,
 				B0DB6F6E29E60D02007CABC6 /* forgotVM.swift */,
-				7ACD0E9929E0FABF00C67816 /* Ulilities */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -510,21 +519,6 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		7AD2B6A729FEDB3F00465EA2 /* en.lproj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = en.lproj;
-			sourceTree = "<group>";
-		};
-		7AD2B6B229FEE33100465EA2 /* fr.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				7AD2B6BA29FEE5D200465EA2 /* Localizable.strings */,
-			);
-			path = fr.lproj;
-			sourceTree = "<group>";
-		};
 		7AD5C7CE29E0F78A00FAE06E = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +549,7 @@
 				7ACD0E9A29E0FADB00C67816 /* Model */,
 				7ACD0E9C29E0FB1700C67816 /* View */,
 				7ACD0E9B29E0FAF800C67816 /* ViewModel */,
+				7ACD0E9929E0FABF00C67816 /* Ulilities */,
 				7AD5C7DA29E0F78B00FAE06E /* FormulaOneAppARApp.swift */,
 				7AD5C7DC29E0F78B00FAE06E /* Persistence.swift */,
 				7AD5C7E129E0F78B00FAE06E /* ContentView.swift */,
@@ -632,6 +627,7 @@
 			isa = PBXGroup;
 			children = (
 				B0069BFE2A031C77007CD96E /* RoundInformationView.swift */,
+				22AD4BBB2A0C322C002CCF7D /* testnav.swift */,
 			);
 			path = RoundView;
 			sourceTree = "<group>";
@@ -775,6 +771,7 @@
 				7AD5C7E829E0F78D00FAE06E /* Preview Assets.xcassets in Resources */,
 				7ABEF74229F6D878000C4EDB /* Sarpanch-Medium.ttf in Resources */,
 				7AD5C7E429E0F78D00FAE06E /* Assets.xcassets in Resources */,
+				22AD4BC02A0C4028002CCF7D /* Localizable.strings in Resources */,
 				7AA83DA329F899A000E4A9A7 /* RacingSansOne-Regular.ttf in Resources */,
 				7A2DFD842A08FF3D00CCE5C1 /* ferrari.usdz in Resources */,
 				7AC3A2BE29F1EE2300F2659A /* formula.usdz in Resources */,
@@ -782,7 +779,6 @@
 				7ABEF74629F6D878000C4EDB /* Sarpanch-SemiBold.ttf in Resources */,
 				7AD2B6C32A02EEAA00465EA2 /* formulared.usdz in Resources */,
 				7AD2B6C92A02EEB400465EA2 /* formulaEsprit.usdz in Resources */,
-				7AD2B6BB29FEE5D200465EA2 /* Localizable.strings in Resources */,
 				7ABEF73229F6C54C000C4EDB /* LondrinaShadow.ttf in Resources */,
 				7ABEF74429F6D878000C4EDB /* Sarpanch-Regular.ttf in Resources */,
 			);
@@ -890,6 +886,7 @@
 				7AFEC38329E10DAB007EAA5D /* AppEventsManager.swift in Sources */,
 				7AD2B69829FD71DF00465EA2 /* Credentials.swift in Sources */,
 				7AFEC35E29E10102007EAA5D /* Services.swift in Sources */,
+				22AD4BBC2A0C322C002CCF7D /* testnav.swift in Sources */,
 				7AA699B629EF4521005FEA9F /* homeVM.swift in Sources */,
 				B0B5CE8529EE05C00073816B /* CustomARView.swift in Sources */,
 				7AD2B69E29FEA85700465EA2 /* profileeView.swift in Sources */,
@@ -935,11 +932,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		22AD4BC22A0C4028002CCF7D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22AD4BC12A0C4028002CCF7D /* en */,
+				22AD4BC32A0C4060002CCF7D /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		7AD5C7FF29E0F78D00FAE06E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -999,6 +1009,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1056,7 +1067,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = JLWNNCVZ35;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;
@@ -1103,7 +1114,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FormulaOneAppAR/Preview Content\"";
-				DEVELOPMENT_TEAM = JLWNNCVZ35;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FormulaOneAppAR/Info.plist;

@@ -31,10 +31,10 @@ struct SignInScreenView: View {
                             .resizable()
                             .frame(width: 500, height: 300 , alignment: .center)
                             .offset(y:100)
-                        Text("Sign in")
+                        Text(LocalizedStringKey("SignIn"))
                             .foregroundColor(.black)
                             .font(.system(size: 40, weight: .medium, design: .rounded))
-                        TextField("Email", text: $loginVM.credentials.email)
+                        TextField(LocalizedStringKey("Email"), text: $loginVM.credentials.email)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -51,7 +51,7 @@ struct SignInScreenView: View {
                             Text(EmailError)
                                 .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                         }
-                        PasswordView(leftIcon : "lock", placeHolder:"Password", password: $loginVM.credentials.password)
+                        PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("Password"), password: $loginVM.credentials.password)
                             .onChange(of: loginVM.credentials.password) { value in
                                 loginVM.validatePassword()
                             }.padding(.vertical)
@@ -65,11 +65,11 @@ struct SignInScreenView: View {
                         HStack {
                             Spacer()
                             CheckBox(isChecked:$loginVM.rememberMe)
-                            Text("Remember me").foregroundColor(.black )
+                            Text(LocalizedStringKey("RememeberMe")).foregroundColor(.black )
                             NavigationLink(
                                 destination: ForgetView().navigationBarHidden(false),
                                 label: {
-                                    PrimaryButton2(title: "Forgot password")
+                                    PrimaryButton2(title: LocalizedStringKey("ForgotPassword"))
                                         .tint(Color("PrimaryColor"))
                                     
                                 })
@@ -77,7 +77,7 @@ struct SignInScreenView: View {
                         }
                         HStack {
                             Spacer()
-                            Button("Login") {
+                            Button(LocalizedStringKey("SignIn")) {
                                 loginVM.authenticate()
                             }.font(.title3)
                                     .fontWeight(.bold)
@@ -110,18 +110,18 @@ struct SignInScreenView: View {
                             }
                             Spacer()
                             
-                        }.alert("Your username or password is incorrect", isPresented: $loginVM.invalid) {
+                        }.alert(LocalizedStringKey("YourUserNameOrPasswordIsIncorrect"), isPresented: $loginVM.invalid) {
                             Button("Ok", action: {})
                         }
                         HStack {
                             Spacer()
                             Spacer()
-                            Text("Don't have an account")
+                            Text(LocalizedStringKey("Don'tHaveAnAccount"))
                             NavigationLink(
                                 destination: RegisterView().navigationBarHidden(true),
                                 label: {
                                     
-                                    PrimaryButton2(title: "Sign Up ")
+                                    PrimaryButton2(title: LocalizedStringKey("SignUp"))
                                         .tint(Color("PrimaryColor"))
                                 })
                             .navigationBarHidden(true)
@@ -134,14 +134,14 @@ struct SignInScreenView: View {
                     .disabled(loginVM.showProgressView)
                     .alert(item: $loginVM.error) { error in
                         if error == .credentialsNotSaved {
-                            return Alert(title: Text("Credentials Not Saved"),
+                            return Alert(title: Text("CredentialsNotSaved"),
                                          message: Text(error.localizedDescription),
                                          primaryButton: .default(Text("OK"), action: {
                                             loginVM.storeCredentialsNext = true
                                          }),
                                          secondaryButton: .cancel())
                         } else {
-                            return Alert(title: Text("Invalid Login"), message: Text(error.localizedDescription))
+                            return Alert(title: Text(LocalizedStringKey("InvalidLogin")), message: Text(error.localizedDescription))
                         }
                     }
 

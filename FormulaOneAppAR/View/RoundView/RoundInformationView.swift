@@ -11,7 +11,6 @@ struct RoundInformationView: View {
     //@State private var selection = 0
     var race : Rrace
     var body: some View {
-        NavigationView {
             ZStack{
                 Color.gray
                     .ignoresSafeArea()
@@ -67,9 +66,11 @@ struct RoundInformationView: View {
                                         .shadow(radius: 10)
                                     
                                 })
-                           
                             
+                           
+                           
                         }.padding(.horizontal)
+                        
                         HStack{
                             VStack(alignment:.leading){
                                 Text("city").font(.custom("Sarpanch-Regular", size: 24))
@@ -78,9 +79,9 @@ struct RoundInformationView: View {
                             Spacer()
                         }.padding(.horizontal)
                       
-                    }
+                    
                 
-                }
+            }
         }
     }
 }

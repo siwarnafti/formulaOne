@@ -24,7 +24,7 @@ struct WelcomeScreenView: View {
                             .frame(width: 300, height: 300)
                             //.padding(.vertical, 10)
                         VStack{
-                            Text("Welcome To Your")
+                            Text(LocalizedStringKey("WelcomeToYour"))
                                 .font(.system(size: 36))
                                 .foregroundColor(Color.white)
                                 .offset(x:-30, y:60)
@@ -49,7 +49,7 @@ struct WelcomeScreenView: View {
                         destination: SignInScreenView().navigationBarHidden(true),
                         label: {
                             
-                            PrimaryButton(title: "Let's Start")
+                            PrimaryButton(title: LocalizedStringKey("Letstart"))
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.red)
