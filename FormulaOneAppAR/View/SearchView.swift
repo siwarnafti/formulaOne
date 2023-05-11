@@ -38,8 +38,8 @@ struct SearchView: View {
         NavigationView {
             ZStack{
                 
-                Color .pink
-                    .edgesIgnoringSafeArea(.all)
+//                Color .
+//                    .edgesIgnoringSafeArea(.all)
                 
                 VStack( spacing: 0) {
                     
@@ -58,9 +58,16 @@ struct SearchView: View {
                         }
                        
                     }
+                   
                     .listStyle(.plain)
                     .searchable(text: $searchText) // search bar
                     .navigationTitle("Equips")
+                    .background(Image("backgroundcolor4")
+                    .resizable()
+                    .frame(width: 450, height: 840)
+                    .offset(x:0,y:0)
+                    .ignoresSafeArea(.all)
+)
                     
                 }
             }

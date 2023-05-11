@@ -12,15 +12,15 @@ struct Home: View {
     var body: some View {
         NavigationView{
             ZStack{
-               LinearGradient(gradient: Gradient(colors: [Color.white, Color.gray]), startPoint: .top, endPoint: .bottom)
-    
-                   .edgesIgnoringSafeArea(.all)
+//               LinearGradient(gradient: Gradient(colors: [Color.white, Color.gray]), startPoint: .top, endPoint: .bottom)
+//
+//                   .edgesIgnoringSafeArea(.all)
                 VStack {
                     Text(LocalizedStringKey("Home"))
                         .font(.system(size: 35, design: .rounded).weight(.semibold))
                         .fontWeight(.bold)
                         .padding(.top, 20)
-                        .foregroundColor(.black)
+                        .foregroundColor(.red)
 
                         ScrollView(.horizontal, showsIndicators: false) {
                             
@@ -49,6 +49,10 @@ struct Home: View {
                             }
                         }.onAppear {}
                     }
+            .background(Image("backgroundcolor3")
+            .resizable()
+            .frame(width: 450, height: 940)
+            .offset(x:0,y:0))
                     }.navigationBarTitle("Home", displayMode: .inline)
             .navigationBarHidden(true)
         }

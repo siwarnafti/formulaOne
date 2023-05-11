@@ -30,8 +30,8 @@ struct ProfileView: View {
         NavigationView{
             ZStack{
 //                LinearGradient(gradient: Gradient(colors: [Color("backgroundcolor"), Color("backgroundcolor")]), startPoint: .top, endPoint: .bottom)
-                Color("backgroundcolor")
-                                    .edgesIgnoringSafeArea(.all)
+//                Color("backgroundcolor")
+//                                    .edgesIgnoringSafeArea(.all)
                 
                 VStack( spacing: 0) {
                     
@@ -68,14 +68,14 @@ struct ProfileView: View {
                         Button(action: {
                             // Handle action
                         }) {
-                            Image(systemName: "gearshape")
-                                .font(.headline)
-                                .foregroundColor(Color("PrimaryColor"))
-                                .padding(.horizontal, 5)
-                                .padding(.vertical, 10)
-                                .scaleEffect(1.5)
+//                            Image(systemName: "gearshape")
+//                                .font(.headline)
+//                                .foregroundColor(Color("PrimaryColor"))
+//                                .padding(.horizontal, 5)
+//                                .padding(.vertical, 10)
+//                                .scaleEffect(1.5)
                         }
-                      
+
                     }
                     
                     HStack {
@@ -123,6 +123,10 @@ struct ProfileView: View {
                 }
                 
             }
+            .background(Image("backgroundcolor2")
+            .resizable()
+            .frame(width: 450, height: 940)
+            .offset(x:0,y:0))
             .toolbar{
                 
                 Button {

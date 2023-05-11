@@ -78,7 +78,10 @@ struct ChangePassword: View {
                     .frame(width: 350)
                     .padding(50)
                 }
-                
+        .background(Image("backgroundcolor6")
+        .resizable()
+        .frame(width: 450, height: 940)
+        .offset(x:0,y:0))
             }
         }
     

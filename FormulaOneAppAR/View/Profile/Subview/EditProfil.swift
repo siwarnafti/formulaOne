@@ -155,8 +155,13 @@ struct EditProfil: View {
                                 secondaryButton: .cancel()
                             )
                         }
-                    
+      
             .navigationTitle(LocalizedStringKey("EditProfile"))
+            .background(Image("backgroundcolor6")
+            .resizable()
+            .frame(width: 450, height: 940)
+            .offset(x:0,y:0))
+            .navigationTitle("Edite Profile")
 //            .navigationViewStyle(StackNavigationViewStyle())
                     .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                         ImagePicker(image: $image)
@@ -165,7 +170,6 @@ struct EditProfil: View {
             }
     @Environment(\.presentationMode) var presentationMode
         }
-
 
 struct ImagePicker: UIViewControllerRepresentable {
  
@@ -206,3 +210,4 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
  
 }
+

@@ -22,8 +22,10 @@ struct SignInScreenView: View {
                 // Show a login screen
                 ZStack {
 //                    Color.gray
-                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.black]), startPoint: .top, endPoint: .bottom)
-         
+//                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.black]), startPoint: .top, endPoint: .bottom)
+//
+                    
+                    Color("backgroundcolor1")
                         .edgesIgnoringSafeArea(.all)
 //                        .ignoresSafeArea()
                     VStack(alignment: .center, spacing: 10) {
@@ -149,6 +151,7 @@ struct SignInScreenView: View {
                     
                     
                 }
+                
                 .transition(.offset(x: 0, y: 850))
                 .alert(loginVM.message, isPresented: $loginVM.invalid) {
                     Button("Ok", action: {})}
