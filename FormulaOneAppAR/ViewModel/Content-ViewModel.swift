@@ -9,7 +9,7 @@ class ViewModel: ObservableObject {
     @Published var password=""
     @Published var invalid: Bool = false
     @Published var confirmPassword:String = ""
-    @Published var message=""
+    @Published var message:LocalizedStringKey=""
     @Published var user=User()
     
     init() {
@@ -46,10 +46,10 @@ class ViewModel: ObservableObject {
 
     func forgotpwd() {
         if(self.user.email.isEmpty){
-            self.message="Put your email"
+            self.message = LocalizedStringKey("EmailIsRequired")
             self.invalid=true
         }else if(!(self.user.email.isValidEmail)){
-            self.message="not valid email "
+            self.message = LocalizedStringKey("EmailIsInvalid")
             self.invalid=true
         }
         else
@@ -59,7 +59,7 @@ class ViewModel: ObservableObject {
             
                 print(result)
             }
-            self.message="check your email  ✅"
+            self.message=LocalizedStringKey("CheckYourEmail")
             self.invalid=true
         }
 

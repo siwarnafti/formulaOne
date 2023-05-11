@@ -5,4 +5,97 @@
   Created by MacOS on 10/5/2023.
   
 */
-"Home"="Acceuil";
+"Home"="Accueil";
+"RaceName"="Nom de la course";
+"Team"="Équipe";
+"ST"="ere";
+"ND"="ème";
+"RD"="ème";
+"TH"="ème";
+"Search"="Recherche";
+"Round"="Tour";
+"Posts"="Publications";
+"Followers"="Abonnés";
+"Following"="Abonnements";
+"EditProfile"="Modifier le profil";
+
+"Wins"="Victoires";
+"Podiums"="Podiums";
+"Poles"="Pôles";
+"Base"="Base";
+"Team Principal"="Directeur d'équipe";
+
+
+"WelcomeToYour"="Bienvenue dans votre";
+"Letstart"="Commencer";
+
+////Forgotpwd
+"CheckYourEmail"="Vérifiez votre e-mail ✅";
+"VerificationCodeIsRequired"="Le code de vérification est requis";
+"PasswordChanged"="Mot de passe changé ✅";
+
+"SignIn"= "Se connecter";
+"SignUp"= "S'inscrire";
+"AlreadyHaveanAccount"="Vous avez déjà un compte ?";
+"Email"="E-mail";
+"EmailAdress"="Adresse e-mail";
+"UserName"="Nom d'utilisateur";
+"YourUserNameOrPasswordIsIncorrect"="Votre nom d'utilisateur ou mot de passe est incorrect";
+
+"CredentialsNotSaved"="Identifiants non enregistrés";
+"InvalidLogin"="Connexion invalide";
+////forgot/////
+"Password"="Mot de passe";
+"OldPassword"="Ancien mot de passe";
+"NewPassword"="Nouveau mot de passe";
+"ForgotPassword"="Mot de passe oublié";
+"ResetPassord"="Réinitialiser le mot de passe";
+"ConfirmPassword"="Confirmez le mot de passe";
+"ConfirmNewPassword"="Confirmer le nouveau mot de passe";
+"ChangeYourPassword"="Changer votre mot de passe ?";
+"ChangePassword"="Changer le mot de passe ?" ;
+"ForgotYourPassword"="Mot de passe oublié ?";
+"EnterYourEmailAddress"="Entrez votre adresse e-mail ";
+
+"VerificationCode"="Code de vérification";
+"Save"="Enregistrer";
+
+"RememeberMe"="Se souvenir de moi";
+"Don'tHaveAnAccount"="Vous n'avez pas de compte";
+"March"="Mars";
+
+////Login ViewMode
+"AllFieldsMustBeFilled"="Tous les champs doivent être remplis";
+"NotValidEmail "="E-mail non valide";
+"EmailIsRequired"="L'e-mail est requis";
+"EmailIsInvalid"="L'e-mail est invalide";
+"PasswordIsRequired"="Le mot de passe est requis";
+"PasswordHasChanged"="Le mot de passe a été changé ✅";
+"FailedPleaseTryAgain"="Échec, veuillez réessayer";
+"CheckYourEmail"="Vérifiez votre e-mail ✅";
+//profile
+"Bio"="Bio";
+"Posts"="Publications";
+"Followers"="Abonnés";
+"Following"="Abonnements";
+"EditProfile"="Modifier le profil";
+"AreYouSure"="Êtes-vous sûr ?";
+"SaveUpdates"="Enregistrer les mises à jour ?";
+
+//.ResgisterVM
+"UsernameIsRequired"="Le nom d'utilisateur est requis";
+"PasswordMustBeAtLeast8characters"="Le mot de passe doit comporter au moins 8 caractères";
+"PasswordsMustMatch"="Les mots de passe doivent correspondre";
+"SignUpSuccessfully"="Inscription réussie ! ✅";
+
+////Enum Authentications
+"InvalidCredentials"="Informations d'identification invalides.";
+"UsernameOrPassordIncorrect"="Nom d'utilisateur ou mot de passe incorrect.";
+"NoData"="Aucune donnée.";
+"URLIsNotCorrect"="URL n'est pas correct.";
+"AnUnknownErrorOccurredWhileRegisteringTheUser"="Une erreur inconnue s'est produite lors de l'enregistrement de l'utilisateur.";
+"TheEmailEddressIsAlreadyInUse"="L'adresse e-mail est déjà utilisée.";
+"ThePasswordDoesNotMeetTheRequiredComplexityRules"="Le mot de passe ne respecte pas les règles de complexité requises.";
+"TheAccountHasBeenLockedDueToSuspiciousActivity"="Le compte a été verrouillé en raison d'une activité suspecte.";
+"OneOrMoreRequiredFieldsAreMissingOrIncomplete"="Un ou plusieurs champs obligatoires sont manquants ou incomplets.";
+"ThereWasAnErrorCommunicatingWithTheRegistrationService"="Une erreur s'est produite lors de la communication avec le service d'enregistrement.";

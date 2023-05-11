@@ -6,18 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 class ForgotVM:ObservableObject{
     @Published var invalid: Bool = false
     @Published var isSent: Bool = false
     @Published var email:String = ""
-    @Published var EmailError:String?=""
-    @Published var message=""
+    @Published var EmailError:LocalizedStringKey?=""
+    @Published var message:LocalizedStringKey=""
     @Published var verificationcode:String=""
-    @Published var verificationcodeError:String?
+    @Published var verificationcodeError:LocalizedStringKey?
     @Published var password:String=""
-    @Published var passwordError:String?
+    @Published var passwordError:LocalizedStringKey?
     @Published var confirmPassword:String=""
-    @Published var confirmPasswordError:String?
+    @Published var confirmPasswordError:LocalizedStringKey?
    
     
     
@@ -40,26 +41,26 @@ class ForgotVM:ObservableObject{
     }
     func validatePassword() {
         if password.isEmpty {
-            passwordError = "Password is required"
+            passwordError = LocalizedStringKey("PasswordIsRequired")
         } else if password.count < 8 {
             
-            passwordError = "Password must be at least 8 characters"
+            passwordError = LocalizedStringKey("PasswordMustBeAtLeast8characters")
         } else {
             passwordError = nil
         }
     }
     func validateverificationcode() {
         if verificationcode.isEmpty {
-            verificationcodeError = "verificationcode is required"
+            verificationcodeError = LocalizedStringKey("VerificationCodeIsRequired")
         } else {
             verificationcodeError = nil
         }
     }
     func validateConfirmPassword() {
         if confirmPassword.isEmpty {
-            confirmPasswordError = "Password is required"
+            confirmPasswordError = LocalizedStringKey("PasswordIsRequired")
         } else if password != confirmPassword {
-            confirmPasswordError = "Passwords must match"
+            confirmPasswordError = LocalizedStringKey("PasswordsMustMatch")
         } else {
             confirmPasswordError = nil
         }
@@ -69,10 +70,10 @@ class ForgotVM:ObservableObject{
     }
     func forgotpwd() {
         if(self.email.isEmpty){
-            self.message="Put your email"
+            self.message = LocalizedStringKey("EmailIsRequired")
             self.invalid=true
         }else if(!(self.email.isValidEmail)){
-            self.message="not valid email "
+            self.message = LocalizedStringKey("EmailIsInvalid")
             self.invalid=true
         }
         else
@@ -98,7 +99,7 @@ class ForgotVM:ObservableObject{
                 }
                 print(result)
             }
-            self.message="check your email  ✅"
+            self.message = LocalizedStringKey("CheckYourEmail")
             self.invalid=true
         }
 
@@ -175,7 +176,7 @@ class ForgotVM:ObservableObject{
                 }
                 print(result)
             }
-            self.message="Password changed ✅"
+            self.message = LocalizedStringKey("PasswordChanged")
             self.invalid=true
         
 

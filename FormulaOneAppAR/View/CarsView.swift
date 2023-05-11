@@ -40,6 +40,12 @@ struct CarsView: View {
                             CarView(modelname: "formula 4.usdz")
                             
                         })
+                    NavigationLink(
+                        destination: RealityKitView(carname: "ferrari"),
+                        label: {
+                            CarView(modelname: "ferrari.usdz")
+                            
+                        })
                    
                     
                     
@@ -50,7 +56,7 @@ struct CarsView: View {
                 }.onAppear {}
             }
             
-        }.navigationBarTitle("Home", displayMode: .inline)
+        }.navigationBarTitle(LocalizedStringKey("Home"), displayMode: .inline)
             .navigationBarHidden(true)
          
     }

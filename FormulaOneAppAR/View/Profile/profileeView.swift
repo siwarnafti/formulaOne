@@ -21,7 +21,7 @@ struct profileeView: View {
                                 .clipShape(Circle())
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Username")
+                                Text(LocalizedStringKey("UserName"))
                                     .font(.title)
                                     .bold()
                                 Text("Bio")
@@ -62,7 +62,7 @@ struct profileeView: View {
                             Button(action: {
                                 // Handle action
                             }) {
-                                Text("Edit Profile")
+                                Text(LocalizedStringKey("EditProfile"))
                                     .font(.headline)
                                     .foregroundColor(.black)
                                     .padding(.horizontal, 20)

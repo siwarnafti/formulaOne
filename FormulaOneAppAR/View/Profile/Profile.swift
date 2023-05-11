@@ -57,7 +57,7 @@ struct ProfileView: View {
                         NavigationLink(
                             destination: EditProfil(editVM: editProfileVM, prfileVM: profileVM),
                             label: {
-                                Text("Edit Profil")
+                                Text(LocalizedStringKey("EditProfile"))
                                     .foregroundColor(.white)
                                     .padding(10)
                                     .background(Color(.red))
@@ -83,7 +83,7 @@ struct ProfileView: View {
                             Text("1,234")
                                 .font(.headline)
                             
-                            Text("Posts")
+                            Text(LocalizedStringKey("Posts"))
                                 .foregroundColor(.gray)
                         }
                         
@@ -93,7 +93,7 @@ struct ProfileView: View {
                             Text("4,567")
                                 .font(.headline)
                             
-                            Text("Followers")
+                            Text(LocalizedStringKey("Followers"))
                                 .foregroundColor(.gray)
                         }
                         
@@ -103,7 +103,7 @@ struct ProfileView: View {
                             Text("890")
                                 .font(.headline)
                             
-                            Text("Following")
+                            Text(LocalizedStringKey("Following"))
                                 .foregroundColor(.gray)
                         }
                     }

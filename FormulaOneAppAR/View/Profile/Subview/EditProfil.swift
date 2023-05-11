@@ -111,7 +111,7 @@ struct EditProfil: View {
                     NavigationLink(
                         destination: ChangePassword(),
                         label: {
-                            Text("Change Password ?")
+                            Text(LocalizedStringKey("ChangePassword"))
                                 .foregroundColor(.red)
                                 .padding()
                                 })
@@ -127,9 +127,9 @@ struct EditProfil: View {
                         .background(Color.red)
                         .cornerRadius(10)
                 }
-                .confirmationDialog("Are you sure?",
+                .confirmationDialog(LocalizedStringKey("AreYouSure"),
                   isPresented: $isPresentingConfirm) {
-                  Button("Save Updates ?", role: .destructive) {
+                  Button(LocalizedStringKey("SaveUpdates"), role: .destructive) {
                       if(!(username.isEmpty)){
                           prfileVM.user.name=username
                       }
@@ -156,7 +156,7 @@ struct EditProfil: View {
                             )
                         }
                     
-            .navigationTitle("Edite Profile")
+            .navigationTitle(LocalizedStringKey("EditProfile"))
 //            .navigationViewStyle(StackNavigationViewStyle())
                     .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                         ImagePicker(image: $image)

@@ -18,11 +18,11 @@ struct ChangePassword: View {
         ZStack {
             VStack(alignment: .leading, spacing: 20) {
 //                Spacer()
-                Text("Change your password?")
+                Text(LocalizedStringKey("ChangePassword"))
                     .foregroundColor(.primary)
                     .font(.system(size: 36, design: .rounded))
                 Spacer()
-                PasswordView(leftIcon : "lock", placeHolder:"Old Password", password: $vm.oldPassword)
+                PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("OldPassword"), password: $vm.oldPassword)
                     .onChange(of: vm.oldPassword) { value in
                         vm.validateoldPassword()
                     }
@@ -31,7 +31,7 @@ struct ChangePassword: View {
                     Text(oldpasswordError)
                         .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                 }
-                PasswordView(leftIcon : "lock", placeHolder:"New Password", password: $vm.newPassword)
+                PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("NewPassword"), password: $vm.newPassword)
                     .onChange(of: vm.newPassword) { value in
                         vm.validatenewPassword()
                     }
@@ -40,7 +40,7 @@ struct ChangePassword: View {
                     Text(newpasswordError)
                         .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                 }
-                PasswordView(leftIcon : "lock", placeHolder:"ConfirmPassword", password: $vm.ConfirmPassword)
+                PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("ConfirmPassword"), password: $vm.ConfirmPassword)
                     .onChange(of: vm.ConfirmPassword) { value in
                         vm.validateConfirmPassword()
                     }
@@ -54,16 +54,16 @@ struct ChangePassword: View {
                     // Action à effectuer lorsque l'utilisateur appuie sur le bouton "Save"
                     isPresentingConfirm = true
                 }) {
-                    Text("Change Password")
+                    Text(LocalizedStringKey("ChangePassword"))
                         .foregroundColor(.white)
                         .padding()
                         .frame(width: 300)
                         .background(Color("PrimaryColor"))
                         .cornerRadius(50)
                 }
-                .confirmationDialog("Are you sure?",
+                .confirmationDialog(LocalizedStringKey("AreYouSure"),
                                     isPresented: $isPresentingConfirm) {
-                    Button("Save Updates ?", role: .destructive) {
+                    Button(LocalizedStringKey("SaveUpdates"), role: .destructive) {
                         vm.changePasswordHandler()
                         print("performed")
                         vm.isPresentingUpdated = true

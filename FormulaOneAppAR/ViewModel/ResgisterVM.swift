@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 class ResgiterVM:ObservableObject{
     @Published var user = SignInUser()
-    @Published var usernameError:String? = nil
-    @Published var emailError:String? = nil
-    @Published var passwordError:String? = nil
-    @Published var confirmPasswordError:String? = nil
+    @Published var usernameError:LocalizedStringKey? = nil
+    @Published var emailError:LocalizedStringKey? = nil
+    @Published var passwordError:LocalizedStringKey? = nil
+    @Published var confirmPasswordError:LocalizedStringKey? = nil
     @Published var confirmPassword:String=""
-    @Published var message:String=""
+    @Published var message:LocalizedStringKey=""
     @Published var invalid:Bool=false
     @Published var isSnackbarShowing:Bool=false
     
@@ -24,7 +25,7 @@ class ResgiterVM:ObservableObject{
 
     func validateUsername() {
         if user.name.isEmpty {
-            usernameError = "Username is required"
+            usernameError = LocalizedStringKey("UsernameIsRequired")
         } else {
             usernameError = nil
         }
@@ -35,9 +36,9 @@ class ResgiterVM:ObservableObject{
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
 
         if user.email.isEmpty {
-            emailError = "Email is required"
+            emailError = LocalizedStringKey("EmailIsRequired")
         } else if !emailPredicate.evaluate(with: user.email) {
-            emailError = "Email is invalid"
+            emailError = LocalizedStringKey("EmailIsInvalid")
         } else {
             emailError = nil
         }
@@ -45,18 +46,18 @@ class ResgiterVM:ObservableObject{
 
     func validatePassword() {
         if user.password.isEmpty {
-            passwordError = "Password is required"
+            passwordError = LocalizedStringKey("PasswordIsRequired")
         } else if user.password.count < 8 {
-            passwordError = "Password must be at least 8 characters"
+            passwordError = LocalizedStringKey("PasswordMustBeAtLeast8characters")
         } else {
             passwordError = nil
         }
     }
 func validateConfirmPassword() {
     if self.confirmPassword.isEmpty {
-        confirmPasswordError = "Password is required"
+        confirmPasswordError = LocalizedStringKey("PasswordIsRequired")
     } else if user.password != self.confirmPassword {
-        confirmPasswordError = "Passwords must match"
+        confirmPasswordError = LocalizedStringKey("PasswordsMustMatch")
     } else {
         confirmPasswordError = nil
     }
@@ -64,10 +65,10 @@ func validateConfirmPassword() {
 
     func signup() {
         if(user.email.isEmpty||user.name.isEmpty||user.email.isEmpty||user.password.isEmpty||self.confirmPassword.isEmpty){
-            self.message="all fields must be filled"
+            self.message=LocalizedStringKey("PasswordMustBeAtLeast8characters")
             self.invalid=true
         }else if(user.password != self.confirmPassword){
-            self.message="password must match"
+            self.message=LocalizedStringKey("PasswordsMustMatch")
             self.invalid=true
         }
         else
@@ -78,7 +79,7 @@ func validateConfirmPassword() {
                     
                     DispatchQueue.main.async {
                         self.invalid=true
-                        self.message="Sign Up Successfully! ✅"
+                        self.message = LocalizedStringKey("Sign Up Successfully")
                         self.user.email=""
                         self.user.name=""
                         self.user.password=""

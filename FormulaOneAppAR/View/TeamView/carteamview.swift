@@ -60,7 +60,7 @@ struct carteamview: View {
                         .clipShape(Circle())
                         .frame(width: 40)
                     VStack(alignment: .leading){
-                        Text("TEAM")
+                        Text("Team")
                             .font(
                                 .custom(
                                     "RacingSansOne-Regular",
@@ -83,7 +83,7 @@ struct carteamview: View {
                 HStack{
                     VStack{
                         if constructorModel.rank == "1"{
-                            Text("1ST").font(
+                            Text("1"+"ST").font(
                                 .custom(
                                     "RacingSansOne-Regular",
                                     fixedSize: 24)
@@ -91,7 +91,7 @@ struct carteamview: View {
                             .foregroundColor(.white)
                         }
                         else if constructorModel.rank == "2"{
-                                Text("2ND").font(
+                                Text("2"+"ND").font(
                                     .custom(
                                         "RacingSansOne-Regular",
                                         fixedSize: 24)

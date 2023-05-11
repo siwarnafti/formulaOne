@@ -1,10 +1,4 @@
-/* 
-  Localizable.strings
-  FormulaOneAppAR
 
-  Created by MacOS on 10/5/2023.
-  
-*/
 "Home"="Home";
 "RaceName"="RaceName";
 "Team"="Team";
@@ -18,14 +12,20 @@
 "Followers"="Followers";
 "Following"="Following";
 "EditProfile"="Edit Profile";
-
+"Wins"="Wins";
+"Podiums"="Podiums";
+"Poles"="Poles";
+"Base"="Base";
+"Team Principal"="Team Principal";
 
 
 "WelcomeToYour"="Welcome To Your";
 "Letstart"="Let's Start";
 
-
-
+////Forgotpwd
+"CheckYourEmail"="check your email  ✅";
+"VerificationCodeIsRequired"="Verification code is required";
+"PasswordChanged"="Password changed ✅";
 
 "SignIn"= "Sing In";
 "SignUp"= "Sign Up";
@@ -37,7 +37,7 @@
 
 "CredentialsNotSaved"="Credentials Not Saved";
 "InvalidLogin"="Invalid Login";
-
+////forgot/////
 "Password"="Password";
 "OldPassword"="Old Password";
 "NewPassword"="New Password";
@@ -45,8 +45,10 @@
 "ResetPassord"="Reset password";
 "ConfirmPassword"="Confirm Password";
 "ConfirmNewPassword"="Confirm New Password";
-"ChangeYourPassword?"="ChangeYourPassword?";
+"ChangeYourPassword"="Change Your Password?";
 "ChangePassword"="Change Password ?" ;
+"ForgotYourPassword"="Forgot your password?";
+"EnterYourEmailAddress"="Enter your email address ";
 
 "VerificationCode"="Verification Code";
 "Save"="Save";
@@ -56,14 +58,29 @@
 "Don'tHaveAnAccount"="Don't have an Account";
 "March"="March";
 
-
 ////Login ViewMode
 "AllFieldsMustBeFilled"="All fields must be filled";
 "NotValidEmail "="Not valid Email";
 "EmailIsRequired"="Email is required";
 "EmailIsInvalid"="Email is invalid";
 "PasswordIsRequired"="Password is required";
+"PasswordHasChanged"="Password has changed ✅";
+"FailedPleaseTryAgain"="Failed, please try again";
+"CheckYourEmail"="Check your email  ✅";
+//profile
+"Bio"="Bio";
+"Posts"="Posts";
+"Followers"="Followers";
+"Following"="Following";
+"EditProfile"="Edit Profile";
+"AreYouSure"="Are you sure?";
+"SaveUpdates"="Save Updates ?";
 
+//.ResgisterVM
+"UsernameIsRequired"="Username is required";
+"PasswordMustBeAtLeast8characters"="Password must be at least 8 characters";
+"PasswordsMustMatch"="Passwords must match";
+"SignUpSuccessfully"="Sign Up Successfully! ✅";
 
 
 ////Enum Authentications
@@ -72,8 +89,10 @@
 "NoData"="No Data.";
 "URLIsNotCorrect"="URL is not correct.";
 "AnUnknownErrorOccurredWhileRegisteringTheUser"="An unknown error occurred while registering the user.";
-"TheEmailEddressIsAlreadyInUse."="TheEmailAddressIsAlreadyInUse.";
-"ThePasswordDoesNotMeetTheRequiredComplexityRules."="The password does not meet the required complexity rules.";
-"TheAccountHasBeenLockedDueToSuspiciousActivity."="The account has been locked due to suspicious activity.";
+"TheEmailEddressIsAlreadyInUse"="TheEmailAddressIsAlreadyInUse.";
+"ThePasswordDoesNotMeetTheRequiredComplexityRules"="The password does not meet the required complexity rules.";
+"TheAccountHasBeenLockedDueToSuspiciousActivity"="The account has been locked due to suspicious activity.";
+"OneOrMoreRequiredFieldsAreMissingOrIncomplete"="One or more required fields are missing or incomplete.";
+"ThereWasAnErrorCommunicatingWithTheRegistrationService"="There was an error communicating with the registration service.";
 
 

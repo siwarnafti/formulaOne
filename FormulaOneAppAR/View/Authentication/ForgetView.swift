@@ -20,13 +20,15 @@ struct ForgetView: View {// by default it's empty
                     .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
-                    Text("New password")
+                    Text(LocalizedStringKey("NewPassword"))
                         .foregroundColor(.primary)
                         .font(.system(size: 30, design: .rounded))
-                    TextField("verification code", text: $vm.verificationcode)
+                    TextField(LocalizedStringKey("VerificationCode"), text: $vm.verificationcode)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
+                    
+                    
                         .background(Color.white)
                         .cornerRadius(10.0)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
@@ -38,7 +40,7 @@ struct ForgetView: View {// by default it's empty
                         Text(verificationcodeError)
                             .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                     }
-                    PasswordView(leftIcon : "lock", placeHolder:"Password", password: $vm.password)
+                    PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("Password"), password: $vm.password)
                         .onChange(of: vm.password) { value in
                             vm.validatePassword()
                         }
@@ -47,7 +49,7 @@ struct ForgetView: View {// by default it's empty
                         Text(passwordError)
                             .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                     }
-                    PasswordView(leftIcon : "lock", placeHolder:"Confirm Password", password: $vm.confirmPassword)
+                    PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("ConfirmPassword"), password: $vm.confirmPassword)
                         .onChange(of: vm.confirmPassword) { value in
                             vm.validateConfirmPassword()
                         }
@@ -61,7 +63,7 @@ struct ForgetView: View {// by default it's empty
                     HStack {
                         
                         Spacer()
-                        Button("Confirm New passwod",role: .cancel, action: vm.confirmForgotPwd)
+                        Button(LocalizedStringKey("ConfirmNewPassword"),role: .cancel, action: vm.confirmForgotPwd)
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -88,12 +90,12 @@ struct ForgetView: View {// by default it's empty
                     .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
-                    Text("Forgot your password?")
+                    Text(LocalizedStringKey("ForgotYourPassword"))
                         .foregroundColor(.primary)
                         .font(.system(size: 30, design: .rounded))
-                    Text("Enter your email address ")
+                    Text(LocalizedStringKey("EnterYourEmailAddress"))
                         .font(.system(size: 24, design: .rounded))
-                    TextField("Email address", text: $vm.email)
+                    TextField(LocalizedStringKey("EmailAdress"), text: $vm.email)
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -106,7 +108,7 @@ struct ForgetView: View {// by default it's empty
                     }
                     HStack {
                         Spacer()
-                        Button("Reset passwod",role: .cancel, action: vm.forgotpwd)
+                        Button(LocalizedStringKey("ResetPassord"),role: .cancel, action: vm.forgotpwd)
                             .font(.title3)
                             .fontWeight(.bold)
                             .foregroundColor(.white)

@@ -6,24 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
 enum AuthenticationError: Error {
     case invalidCredentials
     case ivalidlogin
     case nodata
     case URLisnotcorrect
     case unknownError
-    var localizedDescription: String {
+    var localizedDescription: LocalizedStringKey {
         switch self {
         case .invalidCredentials:
-            return "invalidCredentials."
+            return LocalizedStringKey("InvalidCredentials")
         case .ivalidlogin:
-            return "username or passord incorrect."
+            return LocalizedStringKey("UsernameOrPassordIncorrect")
         case .nodata:
-            return "no Data."
+            return LocalizedStringKey("NoData")
         case .URLisnotcorrect :
-            return "URL is not correct."
+            return LocalizedStringKey("URLIsNotCorrect")
         case .unknownError:
-            return "An unknown error occurred while registering the user."
+            return LocalizedStringKey("AnUnknownErrorOccurredWhileRegisteringTheUser")
         }
         
     }
@@ -37,22 +38,22 @@ enum RegistrationResultError: Error {
     case unknownError
     case URLisnotcorrect
 
-    var localizedDescription: String {
+    var localizedDescription: LocalizedStringKey {
         switch self {
         case .emailAlreadyInUse:
-            return "The email address is already in use."
+            return LocalizedStringKey("TheEmailEddressIsAlreadyInUse")
         case .invalidPassword:
-            return "The password does not meet the required complexity rules."
+            return LocalizedStringKey("ThePasswordDoesNotMeetTheRequiredComplexityRules")
         case .lockedAccount:
-            return "The account has been locked due to suspicious activity."
+            return LocalizedStringKey("TheAccountHasBeenLockedDueToSuspiciousActivity")
         case .missingRequiredFields:
-            return "One or more required fields are missing or incomplete."
+            return LocalizedStringKey("OneOrMoreRequiredFieldsAreMissingOrIncomplete")
         case .networkError:
-            return "There was an error communicating with the registration service."
+            return LocalizedStringKey("ThereWasAnErrorCommunicatingWithTheRegistrationService")
         case .unknownError:
-            return "An unknown error occurred while registering the user."
+            return LocalizedStringKey("AnUnknownErrorOccurredWhileRegisteringTheUser")
         case .URLisnotcorrect:
-            return "URL is not correct."
+            return LocalizedStringKey("URLIsNotCorrect")
         }
     }
 }

@@ -22,7 +22,7 @@ struct RegisterView: View {
             .backgroundStyle(Color.black)
         ZStack {
             VStack {
-                Text("Sign Up")
+                Text(LocalizedStringKey("SignUp"))
                     .foregroundColor(.white)
                     .font(.system(size: 50, weight: .medium, design: .rounded))
                 Spacer()
@@ -32,7 +32,7 @@ struct RegisterView: View {
         VStack (alignment: .center) {
             Spacer()
             VStack(alignment: .center) {
-                TextField("Username", text: $vm.user.name)
+                TextField(LocalizedStringKey("UserName"), text: $vm.user.name)
                     .font(.title3)
                     .padding()
                     .background(Color.white)
@@ -70,7 +70,7 @@ struct RegisterView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
-                PasswordView(leftIcon: "lock", placeHolder: "Password", password: $vm.user.password)
+                PasswordView(leftIcon: "lock", placeHolder: LocalizedStringKey("Password"), password: $vm.user.password)
                     .onChange(of: vm.user.password) { value in
                         vm.validatePassword()
                     }
@@ -82,7 +82,7 @@ struct RegisterView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
-                PasswordView(leftIcon: "lock", placeHolder: "Confirm Password", password: $vm.confirmPassword)
+                PasswordView(leftIcon: "lock", placeHolder: LocalizedStringKey("ConfirmPassword"), password: $vm.confirmPassword)
                     .onChange(of: vm.confirmPassword) { value in
                         vm.validateConfirmPassword()
                     }
@@ -97,7 +97,7 @@ struct RegisterView: View {
                 HStack {
                     Spacer()
                     
-                    Button("Sign Up", role: .cancel, action: vm.signup)
+                    Button(LocalizedStringKey("SignUp"), role: .cancel, action: vm.signup)
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -117,14 +117,14 @@ struct RegisterView: View {
                 HStack {
                     Spacer()
                     
-                    Text("Already have an account?")
+                    Text(LocalizedStringKey("AlreadyHaveanAccount"))
                     
                     NavigationLink(
                         destination:
                             SignInScreenView().navigationBarHidden(true),
                                 label: {
                                     
-                                    PrimaryButton2(title: "Sign in ")
+                                    PrimaryButton2(title: LocalizedStringKey("SignUp"))
                                         .tint(.red.opacity(0.80))
                                     
                                 })

@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 class LogiVM:ObservableObject{
-    @Published  var EmailError: String? = nil
-    @Published  var passwordError: String? = nil
+    @Published  var EmailError: LocalizedStringKey? = nil
+    @Published  var passwordError: LocalizedStringKey? = nil
     @Published var credentials = Credentials()
     @Published var email:String=""
     @Published var password:String=""
-    @Published var message=""
+    @Published var message:LocalizedStringKey=""
     @Published var invalid: Bool = false
     @Published var rememberMe: Bool = false
     @Published var loginbut:Bool=false
@@ -28,10 +28,10 @@ var isFormValid: Bool {
     }
     func authenticate() {
         if(self.credentials.password.isEmpty||self.credentials.email.isEmpty){
-               self.message="all fields must be filled"
+               self.message=LocalizedStringKey("AllFieldsMustBeFilled")
                self.invalid=true
         }else if(!(self.credentials.email.isValidEmail)){
-               self.message="not valid email "
+               self.message=LocalizedStringKey("NotValidEmail")
                self.invalid=true
            }else{
                login()
@@ -42,11 +42,11 @@ var isFormValid: Bool {
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
 
         if credentials.email.isEmpty {
-            EmailError = "Email is required"
+            EmailError = LocalizedStringKey("EmailIsRequired")
 //            return EmailError
         } else if !emailPredicate.evaluate(with: email) {
         
-            EmailError = "Email is invalid"
+            EmailError = LocalizedStringKey("EmailIsInvalid")
 //            return EmailError
         } else {
             EmailError = nil
@@ -56,7 +56,7 @@ var isFormValid: Bool {
 
     func validatePassword() {
         if credentials.password.isEmpty {
-            passwordError = "Password is required"
+            passwordError = LocalizedStringKey("PasswordIsRequired")
         } else {
             passwordError = nil
         }

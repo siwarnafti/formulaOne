@@ -9,13 +9,13 @@ import SwiftUI
 
 import Foundation
 class EditProfileVM:ObservableObject{
-    @Published var message:String=""
+    @Published var message:LocalizedStringKey=""
     @Published var oldPassword:String=""
     @Published var newPassword:String=""
     @Published var ConfirmPassword:String=""
-    @Published var newpasswordError:String?=nil
-    @Published var confirmpasswordError:String?=nil
-    @Published var oldpasswordError:String?=nil
+    @Published var newpasswordError:LocalizedStringKey?=nil
+    @Published var confirmpasswordError:LocalizedStringKey?=nil
+    @Published var oldpasswordError:LocalizedStringKey?=nil
     @Published var invalid:Bool=false
     @Published var profilehaschanged:Bool=false
     @Published var isPresentingUpdated: Bool = false
@@ -33,18 +33,18 @@ class EditProfileVM:ObservableObject{
     }
     func validateoldPassword() {
         if oldPassword.isEmpty {
-            oldpasswordError = "Password is required"
+            oldpasswordError = LocalizedStringKey("PasswordIsRequired")
         } else if oldPassword.count < 8 {
-            oldpasswordError = "Password must be at least 8 characters"
+            oldpasswordError = LocalizedStringKey("PasswordMustBeAtLeast8characters")
         } else {
             oldpasswordError = nil
         }
     }
     func validatenewPassword() {
         if newPassword.isEmpty {
-            newpasswordError = "Password is required"
+            newpasswordError = LocalizedStringKey("PasswordIsRequired")
         } else if newPassword.count < 8 {
-            newpasswordError = "Password must be at least 8 characters"
+            newpasswordError = LocalizedStringKey("PasswordMustBeAtLeast8characters")
         } else {
             newpasswordError = nil
         }
@@ -52,9 +52,9 @@ class EditProfileVM:ObservableObject{
 
 func validateConfirmPassword() {
     if self.ConfirmPassword.isEmpty {
-        confirmpasswordError = "Password is required"
+        confirmpasswordError = LocalizedStringKey("PasswordIsRequired")
     } else if ConfirmPassword != self.newPassword {
-        confirmpasswordError = "Passwords must match"
+        confirmpasswordError = LocalizedStringKey("PasswordsMustMatch")
     } else {
         confirmpasswordError = nil
     }
@@ -74,7 +74,7 @@ func validateConfirmPassword() {
             }
         }else{
             DispatchQueue.main.async {
-                self.message="Email not valid"
+                self.message = LocalizedStringKey("EmailIsInvalid")
                 self.invalid=true
             }
         }
@@ -88,12 +88,12 @@ func validateConfirmPassword() {
                 switch result {
                 case .success:
                     DispatchQueue.main.async {
-                        self.message = "Password has changed ✅"
+                        self.message = LocalizedStringKey("PasswordHasChanged")
                         self.invalid = true}
                 case .failure(let error):
                     print(error.localizedDescription)
                     DispatchQueue.main.async {
-                        self.message = "Failed, please try again"
+                        self.message = LocalizedStringKey("FailedPleaseTryAgain")
                         self.invalid = true}
                 }
                 print(result)
