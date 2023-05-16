@@ -45,6 +45,7 @@ struct RealityKitView: UIViewRepresentable {
     
     func updateUIView(_ view: ARView, context: Context) {
         // No need to update the view in this example
+       
     }
     class MyEntity: Entity, HasAnchoring, HasModel, HasCollision {
 
@@ -61,8 +62,7 @@ struct RealityKitView: UIViewRepresentable {
             }
         
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-            guard let view = self.view
-            else { return }
+            guard let view = self.view else { return }
             debugPrint("Anchors added to the scene: ", anchors)
             self.focusEntity = FocusEntity(on: view, style: .classic(color: .yellow))
         }

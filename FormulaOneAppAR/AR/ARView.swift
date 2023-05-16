@@ -12,6 +12,7 @@ import RealityKit
 struct FormulaARView: View {
     var body: some View {
         RealityKitView(carname: "formulaEsprit")
+        
     .ignoresSafeArea()
     }
 }
