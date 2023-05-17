@@ -15,9 +15,9 @@ struct ForgetView: View {// by default it's empty
     var body: some View {
         if(vm.isSent){
             ZStack {
-                Color.gray
-                    .opacity(0.8)
-                    .ignoresSafeArea()
+//                Color.gray
+//                    .opacity(0.8)
+//                    .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
                     Text(LocalizedStringKey("NewPassword"))
@@ -128,7 +128,10 @@ struct ForgetView: View {// by default it's empty
                 .frame(width: 350)
                 .padding()
             }
-            
+            .background(Image("forgotbackground")
+            .resizable()
+            .frame(width: 450, height: 940)
+            .offset(x:0,y:0))
             .transition(.offset(x: 0, y: 850))
             .alert(vm.message, isPresented: $vm.invalid) {
                 Button("Ok", action: {})}

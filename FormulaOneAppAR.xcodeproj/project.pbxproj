@@ -55,7 +55,6 @@
 		7AA83DA529F92D4C00E4A9A7 /* ImportfARFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA83DA429F92D4C00E4A9A7 /* ImportfARFile.swift */; };
 		7ABEF71829F2BA9F000C4EDB /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71729F2BA9F000C4EDB /* CarView.swift */; };
 		7ABEF71A29F2C1D9000C4EDB /* TeamCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */; };
-		7ABEF71C29F2C36D000C4EDB /* TeamInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */; };
 		7ABEF71F29F2C4B5000C4EDB /* ConstructorInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF71E29F2C4B5000C4EDB /* ConstructorInformations.swift */; };
 		7ABEF72429F4710D000C4EDB /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEF72329F4710D000C4EDB /* SwiftUIView.swift */; };
 		7ABEF72F29F495CE000C4EDB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ABEF72D29F49475000C4EDB /* Info.plist */; };
@@ -189,7 +188,6 @@
 		7AA83DA429F92D4C00E4A9A7 /* ImportfARFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportfARFile.swift; sourceTree = "<group>"; };
 		7ABEF71729F2BA9F000C4EDB /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCardView.swift; sourceTree = "<group>"; };
-		7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInformationView.swift; sourceTree = "<group>"; };
 		7ABEF71E29F2C4B5000C4EDB /* ConstructorInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorInformations.swift; sourceTree = "<group>"; };
 		7ABEF72329F4710D000C4EDB /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		7ABEF72D29F49475000C4EDB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/siwarnafti/Desktop/formulaOne/FormulaOneAppAR/Info.plist; sourceTree = "<absolute>"; };
@@ -399,7 +397,6 @@
 			children = (
 				7ABEF71729F2BA9F000C4EDB /* CarView.swift */,
 				7ABEF71929F2C1D9000C4EDB /* TeamCardView.swift */,
-				7ABEF71B29F2C36D000C4EDB /* TeamInformationView.swift */,
 				2239F41529FB554F00ACA779 /* carteamview.swift */,
 				7AD2B6BC29FEFF9F00465EA2 /* localisationView.swift */,
 			);
@@ -840,7 +837,6 @@
 				7AD2B69A29FD724D00465EA2 /* KeychainStorage.swift in Sources */,
 				7A96A65329EFD8BB0004B760 /* DriverModel.swift in Sources */,
 				7AFEC36829E1066B007EAA5D /* LoginView.swift in Sources */,
-				7ABEF71C29F2C36D000C4EDB /* TeamInformationView.swift in Sources */,
 				7AD2B6BF29FF114800465EA2 /* SearchView.swift in Sources */,
 				7AA6998529E4D81C005FEA9F /* RoundedCorners.swift in Sources */,
 				7AFEC36329E105DC007EAA5D /* mainScreen.swift in Sources */,

@@ -25,14 +25,27 @@ struct SignInScreenView: View {
 //                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.black]), startPoint: .top, endPoint: .bottom)
 //
                     
-                    Color("backgroundcolor1")
-                        .edgesIgnoringSafeArea(.all)
+//                    Color("backgroundcolor1")
+//                        .edgesIgnoringSafeArea(.all)
 //                        .ignoresSafeArea()
+                    //Color.gray
+//                    Image("signin")
+//                        .resizable()
+//                        .frame(width: 500, height: 300 , alignment: .center)
+//                        .ignoresSafeArea()
+//                        .offset(y:100)
+//                Image("signup1")
+//                    .resizable()
+//                    .ignoresSafeArea()
+//                    .offset()
+//                    .backgroundStyle(Color.black)
+//                    .edgesIgnoringSafeArea(.all)
+
                     VStack(alignment: .center, spacing: 10) {
-                        Image("signin")
-                            .resizable()
-                            .frame(width: 500, height: 300 , alignment: .center)
-                            .offset(y:100)
+                        Spacer()
+//                            .background(Image("signin")
+//                            .backgroundStyle(Color.black)
+//                            .edgesIgnoringSafeArea(.all)
                         Text(LocalizedStringKey("SignIn"))
                             .foregroundColor(.black)
                             .font(.system(size: 40, weight: .medium, design: .rounded))
@@ -129,7 +142,7 @@ struct SignInScreenView: View {
                             .navigationBarHidden(true)
                             Spacer()
                         }
-                        Spacer()
+                        
                     }
                     .autocapitalization(.none)
 //                    .padding()
@@ -151,7 +164,10 @@ struct SignInScreenView: View {
                     
                     
                 }
-                
+                .background(Image("signin")
+                .resizable()
+                .frame(width: 450, height: 940)
+                .offset(x:0,y:0))
                 .transition(.offset(x: 0, y: 850))
                 .alert(loginVM.message, isPresented: $loginVM.invalid) {
                     Button("Ok", action: {})}
