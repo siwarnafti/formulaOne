@@ -85,9 +85,8 @@ struct ForgetView: View {// by default it's empty
             }
         }else{
             ZStack {
-                Color.gray
-                    .opacity(0.8)
-                    .ignoresSafeArea()
+                //Color.gray
+                   
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
                     Text(LocalizedStringKey("ForgotYourPassword"))
