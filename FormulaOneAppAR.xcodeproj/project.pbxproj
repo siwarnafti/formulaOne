@@ -158,7 +158,7 @@
 		7A408F7D29E2C671009B0304 /* ForgotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRequest.swift; sourceTree = "<group>"; };
 		7A408F7F29E2C68D009B0304 /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		7A408F8129E2CBC5009B0304 /* ConfirmResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResquest.swift; sourceTree = "<group>"; };
-		7A408F8429E2CFD6009B0304 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		7A408F8429E2CFD6009B0304 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; tabWidth = 5; };
 		7A408F8729E2D5B0009B0304 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		7A408F8929E2D8A6009B0304 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		7A408F8B29E2D8B9009B0304 /* ResgisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterVM.swift; sourceTree = "<group>"; };
