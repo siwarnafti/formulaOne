@@ -8,7 +8,7 @@ import SwiftUI
 
 struct Home: View {
    
-    @ObservedObject var evm = ErgastViewModel()
+    @StateObject var evm = ErgastViewModel()
     var body: some View {
         NavigationView{
             ZStack{
@@ -38,7 +38,7 @@ struct Home: View {
                                     }
                                 }                                     }             }
                             ScrollView(.vertical, showsIndicators: false) {
-                                ForEach(constructors, id: \.self){ constructor in
+                                ForEach(evm.construcators, id: \.self){ constructor in
                                     NavigationLink(
                                         destination: TeamCardView(constructor: constructor),
                                         label: {

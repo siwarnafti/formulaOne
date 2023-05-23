@@ -125,7 +125,7 @@ struct ProfileView: View {
             }
             .background(Image("backgroundcolor2")
             .resizable()
-            .frame(width: 450, height: 940)
+            .frame(width: 450, height: 890)
             .offset(x:0,y:0))
             .toolbar{
                 

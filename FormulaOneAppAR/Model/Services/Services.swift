@@ -42,12 +42,15 @@ struct APIServices : APIServiceProtocol{
             
             if let error = error as? URLError {
                 completion(Result.failure(APIError.url(error)))
-            }else if  let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
+            }else if  let response = response as? HTTPURLResponse, !(200...399).contains(response.statusCode) {
+                print("1")
                 completion(Result.failure(APIError.badResponse(statusCode: response.statusCode)))
             }else if let data = data {
                 let decoder = JSONDecoder()
                 do {
+                    print(data)
                     let teams = try decoder.decode([ConstructorModel].self, from: data)
+                    print("data \(teams)")
                     completion(Result.success(teams))
                     
                 }catch {

@@ -16,6 +16,7 @@
 		2271FEA52A04B3FB0027BF41 /* ergastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271FEA32A04B3FB0027BF41 /* ergastViewModel.swift */; };
 		22AD4BBC2A0C322C002CCF7D /* testnav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD4BBB2A0C322C002CCF7D /* testnav.swift */; };
 		22AD4BC02A0C4028002CCF7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22AD4BC22A0C4028002CCF7D /* Localizable.strings */; };
+		7A2DAD3B2A16DA1400775B92 /* ImageProfileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DAD3A2A16DA1400775B92 /* ImageProfileApp.swift */; };
 		7A2DFD842A08FF3D00CCE5C1 /* ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */; };
 		7A408F7429E2C4D2009B0304 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */; };
 		7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408F7729E2C600009B0304 /* LoginRequestBody.swift */; };
@@ -150,6 +151,7 @@
 		22AD4BBB2A0C322C002CCF7D /* testnav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testnav.swift; sourceTree = "<group>"; };
 		22AD4BC12A0C4028002CCF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22AD4BC32A0C4060002CCF7D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7A2DAD3A2A16DA1400775B92 /* ImageProfileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProfileApp.swift; sourceTree = "<group>"; };
 		7A2DFD832A08FF3D00CCE5C1 /* ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferrari.usdz; sourceTree = "<group>"; };
 		7A408F7329E2C4D2009B0304 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7A408F7729E2C600009B0304 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				7ABEF74929F74781000C4EDB /* uploadimg.swift */,
 				7ABEF74B29F7AD42000C4EDB /* downloadimage.swift */,
 				7AD2B6BE29FF114800465EA2 /* SearchView.swift */,
+				7A2DAD3A2A16DA1400775B92 /* ImageProfileApp.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				B0DB6F6F29E60D02007CABC6 /* forgotVM.swift in Sources */,
 				7A408F7E29E2C671009B0304 /* ForgotRequest.swift in Sources */,
 				7AA699A929E94710005FEA9F /* APIError.swift in Sources */,
+				7A2DAD3B2A16DA1400775B92 /* ImageProfileApp.swift in Sources */,
 				7ABEF74C29F7AD42000C4EDB /* downloadimage.swift in Sources */,
 				7AA699AE29E9500C005FEA9F /* TeamView.swift in Sources */,
 				7A408F7829E2C600009B0304 /* LoginRequestBody.swift in Sources */,

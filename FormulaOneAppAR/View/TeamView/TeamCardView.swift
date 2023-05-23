@@ -18,7 +18,7 @@ let constructor : ConstructorModel
                     VStack{
                         Image(constructor.modelname!)
                             .resizable()
-                                                .padding(10)
+                            .padding(10)
                             .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height/2.5)
                             .cornerRadius(50)
                             .shadow(radius: 10)
@@ -38,7 +38,7 @@ let constructor : ConstructorModel
                                 .fontWeight(.bold)
                         }.padding([.top, .leading, .trailing])
                         HStack{
-                            Text(constructor.rank)
+                            Text("\(constructor.rank)")
                                 .font(.custom("VastShadow-Regular", size: 54))
                                 .fontWeight(.bold)
                                 .padding(.horizontal, 20)
@@ -59,17 +59,17 @@ let constructor : ConstructorModel
                         Spacer(minLength: 30)
                         HStack{
                             VStack(alignment: .leading){
-                                Text("2").font(.system(size: 34)).fontWeight(.bold)
+                                Text(constructor.wins).font(.system(size: 34)).fontWeight(.bold)
                                 Text("Wins")
                             }
                             Spacer()
                             VStack{
-                                Text("2").font(.system(size: 34)).fontWeight(.bold)
+                                Text("0").font(.system(size: 34)).fontWeight(.bold)
                                 Text("Podiums")
                             }
                             Spacer()
                             VStack{
-                                Text("2").font(.system(size: 34)).fontWeight(.bold)
+                                Text("0").font(.system(size: 34)).fontWeight(.bold)
                                 Text("Poles")
                             }
                         }.padding(.horizontal)

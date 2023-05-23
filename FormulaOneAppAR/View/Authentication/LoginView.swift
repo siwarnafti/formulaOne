@@ -47,13 +47,14 @@ struct SignInScreenView: View {
 //                            .backgroundStyle(Color.black)
 //                            .edgesIgnoringSafeArea(.all)
                         Text(LocalizedStringKey("SignIn"))
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("PrimaryColor"))
                             .font(.system(size: 40, weight: .medium, design: .rounded))
                         TextField(LocalizedStringKey("Email"), text: $loginVM.credentials.email)
                             .font(.title3)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.white)
+                            .foregroundColor(.black)
                             .cornerRadius(10.0)
                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0.0, y: 16)
                             .padding(.vertical)
@@ -67,6 +68,7 @@ struct SignInScreenView: View {
                                 .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                         }
                         PasswordView(leftIcon : "lock", placeHolder:LocalizedStringKey("Password"), password: $loginVM.credentials.password)
+                            .foregroundColor(.black)
                             .onChange(of: loginVM.credentials.password) { value in
                                 loginVM.validatePassword()
                             }.padding(.vertical)
@@ -76,6 +78,9 @@ struct SignInScreenView: View {
                         if let passwordError = loginVM.passwordError{
                             Text(passwordError)
                                 .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
+                               
+
+                            
                         }
                         HStack {
                             Spacer()
@@ -100,6 +105,7 @@ struct SignInScreenView: View {
                                     .padding()
                                     .frame(maxWidth: .infinity)
                                     .background(Color("PrimaryColor"))
+                                    
                                     .cornerRadius(50.0)
                                     .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                                 .padding(.vertical)

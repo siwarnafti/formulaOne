@@ -17,7 +17,7 @@ struct RoundInformationView: View {
                 Color.gray
                     .ignoresSafeArea()
                     VStack{
-                        Image("TeameDetailViewMercedess")
+                        Image(race.city)
                             .resizable()
                                                 .padding(10)
                             .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height/2.5)
@@ -26,7 +26,7 @@ struct RoundInformationView: View {
                         
                         //                .padding()
                         
-                        Spacer()
+                        
                         HStack{
                             Text("Round").font(
                                 .custom(
@@ -46,12 +46,8 @@ struct RoundInformationView: View {
                             Spacer()
                             
                         }
-                        Spacer(minLength: 30)
-                        HStack{
-                            
-                            Spacer()
-                           
-                        }.padding(.horizontal)
+                        
+                        
                         HStack{
                             VStack(alignment:.leading){
                                 Text("Base").font(.custom("Sarpanch-Regular", size: 24))
@@ -85,10 +81,11 @@ struct RoundInformationView: View {
                                         }
                            
                         }.padding(.horizontal)
+                        
                       
                         
                 
-            }
+                    }.offset(y:-40)
                
         }
        

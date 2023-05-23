@@ -1,14 +1,15 @@
-//
+////
 //  EditProfil.swift
 //  login
 //
 //  Created by Siwar Nafti on 28/3/2023.
-//
+
+
 import PhotosUI
 import SwiftUI
 
 struct EditProfil: View {
-    
+
     @ObservedObject var editVM : EditProfileVM
     @ObservedObject var prfileVM : ProfileVM
     @State var username: String = ""
@@ -19,6 +20,7 @@ struct EditProfil: View {
     @State var image: UIImage?
     @State private var isPresentingConfirm: Bool = false
     @State private var isPresentingAlert: Bool = false
+
     func uploadImage() {
         guard let image = self.image else {
                return
@@ -85,12 +87,12 @@ struct EditProfil: View {
                                                .foregroundColor(Color(.label))
                                        }
                                    }
-                                   
+
                                .overlay(Circle()
                                            .stroke(Color.black, lineWidth: 3)
                                )
-                                   
-                                       
+
+
                                        Image(systemName:"camera.circle.fill")
                                               .foregroundColor(.black)
                                               .scaleEffect(2)
@@ -98,14 +100,14 @@ struct EditProfil: View {
                                               .offset(x:70,y: 70)
                                               .opacity(0.8)
                                }
-                               
+
                        }
                     }
-                
+
                 Spacer()
                     TextField(prfileVM.user.name, text: $username)
                     .padding()
-                    
+
                     TextField(prfileVM.user.email, text: $email)
                     .padding()
                     NavigationLink(
@@ -130,6 +132,7 @@ struct EditProfil: View {
                 .confirmationDialog(LocalizedStringKey("AreYouSure"),
                   isPresented: $isPresentingConfirm) {
                   Button(LocalizedStringKey("SaveUpdates"), role: .destructive) {
+                      editVM.uploadImage(image: image!, email: prfileVM.user.email, completion: {_ in })
                       if(!(username.isEmpty)){
                           prfileVM.user.name=username
                       }
@@ -137,13 +140,16 @@ struct EditProfil: View {
                           prfileVM.user.email=email
                       }
                       editVM.updateprofil(user:prfileVM.user )
-                      
+
                    }
                  }
             }
-            
+                .background(Image("backgroundcolor6")
+                .resizable()
+                .frame(width: 450, height: 940)
+                .offset(x:0,y:0))
             .padding()
-        
+
             .alert(isPresented: $editVM.profilehaschanged) {
                             Alert(
                                 title: Text("done"),
@@ -155,59 +161,77 @@ struct EditProfil: View {
                                 secondaryButton: .cancel()
                             )
                         }
-      
+
             .navigationTitle(LocalizedStringKey("EditProfile"))
-            .background(Image("backgroundcolor6")
-            .resizable()
-            .frame(width: 450, height: 940)
-            .offset(x:0,y:0))
+
             .navigationTitle("Edite Profile")
 //            .navigationViewStyle(StackNavigationViewStyle())
                     .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                         ImagePicker(image: $image)
                             .ignoresSafeArea()
                     }
+
+//               .sheet(isPresented: $isShowingImagePicker) {
+//                   ImagePickerView(selectedImage: $selectedImage)
+//               }
             }
     @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) private var presentationMode
+
         }
 
 struct ImagePicker: UIViewControllerRepresentable {
- 
+
     @Binding var image: UIImage?
- 
+
     private let controller = UIImagePickerController()
- 
+
     func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)
     }
- 
+
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
- 
+
         let parent: ImagePicker
- 
+
         init(parent: ImagePicker) {
             self.parent = parent
         }
- 
+
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             parent.image = info[.originalImage] as? UIImage
             picker.dismiss(animated: true)
         }
- 
+
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             picker.dismiss(animated: true)
         }
- 
+
     }
- 
+
     func makeUIViewController(context: Context) -> some UIViewController {
         controller.delegate = context.coordinator
+        controller.sourceType = .photoLibrary
         return controller
     }
- 
+
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
- 
+
     }
- 
+
 }
+
+
+// 
+//    func makeUIViewController(context: Context) -> some UIViewController {
+//        controller.delegate = context.coordinator
+//        controller.sourceType = .photoLibrary
+//        return controller
+//    }
+// 
+//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+// 
+//    }
+// 
+//}
 

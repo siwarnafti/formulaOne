@@ -23,7 +23,7 @@ struct RegisterView: View {
         ZStack {
             VStack {
                 Text(LocalizedStringKey("SignUp"))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("PrimaryColor"))
                     .font(.system(size: 50, weight: .medium, design: .rounded))
                 Spacer()
                 }

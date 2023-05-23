@@ -6,22 +6,24 @@
 //
 
 import Foundation
-struct ConstructorModel: Codable ,Hashable{
-    var constructorId: Int
+struct ConstructorModel: Decodable ,Hashable{
+    
     var logo: String
     var carImage : String
-    var rank :String
+    var rank :Int
     var point: String
+    var wins:String
     var teamname: String
     var modelname: String?
-    var base : String="flag"
+    var base : String
     
     enum CodingKeys: String, CodingKey {
-        case constructorId
+        
         case logo
         case carImage
         case rank
         case point
+        case wins
         case teamname
         case modelname
         case base
@@ -29,11 +31,11 @@ struct ConstructorModel: Codable ,Hashable{
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(constructorId, forKey: .constructorId)
         try container.encode(logo, forKey: .logo)
         try container.encode(carImage, forKey: .carImage)
         try container.encode(rank, forKey: .rank)
         try container.encode(point, forKey: .point)
+        try container.encode(wins, forKey: .wins)
         try container.encode(teamname, forKey: .teamname)
         try container.encode(modelname, forKey: .modelname)
         try container.encode(base, forKey: .base)

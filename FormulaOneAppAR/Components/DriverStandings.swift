@@ -15,7 +15,7 @@ struct DriverStandings: View {
             HStack(){
                 
                 Text("\(race.round)")//driverStandingsModel.position
-                    .foregroundColor(.red)
+                    .foregroundColor(Color.gray)
                     .font(.system(size: 40, design: .rounded).weight(.semibold))
                 
                 Image(race.country)
@@ -29,15 +29,16 @@ struct DriverStandings: View {
                     HStack{
                         Text("RaceName")
                            
-                            .foregroundColor(Color.black)
-                            .font(.headline)
+                            .foregroundColor(Color.red)
+                            .font(.system(size: 25, design: .rounded).weight(.semibold))
+//                            .font(.headline)
                         Text("\(race.city) Race")
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color("PrimaryColor"))
                             .font(.system(size: 18, design: .rounded).weight(.bold))
                         
                     }
                     Text(race.date)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                     //                .font(.headline)
                         .font(.system(size: 25, design: .rounded).weight(.semibold))
                     
@@ -45,9 +46,13 @@ struct DriverStandings: View {
                 Spacer()
                 
             }
+            .background(Image("backtemview")
+            .resizable()
+            .frame(height:100 ))
             .padding(.horizontal, 20)
-            .background(Color.gray)
-            .cornerRadius(20)
+            .cornerRadius(50)
+//            .shadow(radius: 10)
+            .cornerRadius(10)
             .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 4)
             
         }

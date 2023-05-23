@@ -92,7 +92,7 @@ struct Rrace : Codable,Hashable{
         try container.encode(country, forKey: .country)
     }
 }
-var racess=[Rrace(round: 1, date: "March 5", city: "Sakhir,Bahrain", country: "Bahrain"),
+var racess=[Rrace(round: 1, date: "March 5", city: "Sakhir", country: "Bahrain"),
     Rrace(round: 2, date: "March 19", city: "Jeddah", country: "Saudi Arabia"),
             Rrace(round: 6, date: "May 7", city: "Miami", country: "usa"),
             Rrace(round: 4, date: "April 16", city: "Shanghai", country: "China"),
@@ -116,12 +116,12 @@ var racess=[Rrace(round: 1, date: "March 5", city: "Sakhir,Bahrain", country: "B
             Rrace(round: 22, date: "November 5", city: "Sao Paolo", country: "Brazil"),
             Rrace(round: 23, date: "November 18", city: "Las Vegas", country: "USA"),
             Rrace(round: 24, date: "November 26", city: "Abu Dhabi", country: "UAE")]
-let constructors = [ConstructorModel(constructorId:0,logo: "logo_mercedes", carImage: "car_mercedes", rank: "1", point: "356", teamname: "Mercedess",modelname: "TeameDetailViewMercedess",base: "germany"),
-                    ConstructorModel(constructorId:1,logo: "ferrari_logo", carImage: "car_ferrari", rank: "2", point: "354", teamname: "Ferrari",modelname: "TeameDetailViewferrari",base: "italy"),
-                    ConstructorModel(constructorId:2,logo: "alpine", carImage: "alpine_car", rank: "4", point: "340", teamname: "Alpha",modelname: "TeameDetailViewAlpha"),
-                    ConstructorModel(constructorId:2,logo: "haas", carImage: "haas_car", rank: "5", point: "290", teamname: "Hass",modelname: "TeameDetailViewHass"),
-                    ConstructorModel(constructorId:2,logo: "mclaren", carImage: "Mclaren_car", rank: "6", point: "270", teamname: "Mclaren",modelname: "TeameDetailViewmclaren"),
-                    ConstructorModel(constructorId:2,logo: "renault", carImage: "renault_car", rank: "7", point: "210", teamname: "Renault",modelname: "TeameDetailViewrenault"),
-                    ConstructorModel(constructorId:2,logo: "williams", carImage: "williams_car", rank: "8", point: "180", teamname: "Williams",modelname: "TeameDetailViewwilliams"),
+/*let constructors = [ConstructorModel(logo: "logo_mercedes", carImage: "car_mercedes", rank: "1", point: "356", wins : "4",teamname: "Mercedess",modelname: "TeameDetailViewMercedess",base: "germany"),
+                    ConstructorModel(constructorId:"1",logo: "ferrari_logo", carImage: "car_ferrari", rank: "2", point: "354", wins: "3", teamname: "Ferrari",modelname: "TeameDetailViewferrari",base: "italy"),
+                    ConstructorModel(constructorId:"2",logo: "alpine", carImage: "alpine_car", rank: "4", point: "340",wins: "3" ,teamname: "Alpha",modelname: "TeameDetailViewAlpha", base: "Franch"),
+                    ConstructorModel(constructorId:"2",logo: "haas", carImage: "haas_car", rank: "5", point: "290", wins: "3",teamname: "Hass",modelname: "TeameDetailViewHass", base: "Britsih"),
+                    ConstructorModel(constructorId:"2",logo: "mclaren", carImage: "Mclaren_car", rank: "6", point: "270", wins: "3",teamname: "Mclaren",modelname: "TeameDetailViewmclaren", base: "British"),
+                    ConstructorModel(constructorId:"2",logo: "renault", carImage: "renault_car", rank: "7", point: "210", wins: "3",teamname: "Renault",modelname: "TeameDetailViewrenault", base: "French"),
+                    ConstructorModel(constructorId:"2",logo: "williams", carImage: "williams_car", rank: "8", point: "180", wins: "3",teamname: "Williams",modelname: "TeameDetailViewwilliams", base: "USA"),
 
-]
+]*/

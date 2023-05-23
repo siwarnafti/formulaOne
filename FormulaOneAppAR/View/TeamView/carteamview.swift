@@ -82,7 +82,7 @@ struct carteamview: View {
                     .padding(.leading, 12.0)
                 HStack{
                     VStack{
-                        if constructorModel.rank == "1"{
+                        if constructorModel.rank == 1{
                             Text("1"+"ST").font(
                                 .custom(
                                     "RacingSansOne-Regular",
@@ -90,7 +90,7 @@ struct carteamview: View {
                                 .weight(.black))
                             .foregroundColor(.white)
                         }
-                        else if constructorModel.rank == "2"{
+                        else if constructorModel.rank == 2{
                                 Text("2"+"ND").font(
                                     .custom(
                                         "RacingSansOne-Regular",
@@ -125,11 +125,11 @@ struct carteamview: View {
         }.padding(7)
     }
 }
-struct constructorModel: PreviewProvider {
+/*struct constructorModel: PreviewProvider {
     static var previews: some View {
-        carteamview(constructorModel: ConstructorModel(constructorId:1,logo: "alpha_logo", carImage: "Mclaren_car", rank: "2", point: "354", teamname: "ferrari"))
+        carteamview(constructorModel: ConstructorModel(constructorId:1,logo: "alpha_logo", carImage: "Mclaren_car", rank: "2", point: "354", wins: "0", teamname: "ferrari", base: "tunis"))
     }
-}
+}*/
 
 
 

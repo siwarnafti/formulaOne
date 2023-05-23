@@ -85,8 +85,7 @@ struct ForgetView: View {// by default it's empty
             }
         }else{
             ZStack {
-                //Color.gray
-                   
+
                 VStack(alignment: .leading, spacing: 20) {
                     Spacer()
                     Text(LocalizedStringKey("ForgotYourPassword"))
@@ -98,6 +97,7 @@ struct ForgetView: View {// by default it's empty
                         .font(.title3)
                         .padding()
                         .frame(maxWidth: .infinity)
+                        .foregroundColor(.black)
                         .background(Color.white)
                         .cornerRadius(10.0)
                         .shadow(color: Color.black.opacity(0.08), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
@@ -110,7 +110,7 @@ struct ForgetView: View {// by default it's empty
                         Button(LocalizedStringKey("ResetPassord"),role: .cancel, action: vm.forgotpwd)
                             .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color("PrimaryColor"))

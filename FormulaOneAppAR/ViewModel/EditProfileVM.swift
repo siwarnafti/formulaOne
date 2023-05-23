@@ -100,6 +100,67 @@ func validateConfirmPassword() {
             }
         
     }
+    func uploadImage(image: UIImage, email: String, completion: @escaping (Result<Void, AuthenticationError>) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
+            completion(.failure(AuthenticationError.unknownError))
+            return
+        }
+        
+        let url = URL(string: baseUrl + "api/user/UploadAvatarUser")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let boundary = "Boundary-\(UUID().uuidString)"
+        let contentType = "multipart/form-data; boundary=\(boundary)"
+        request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        
+        let body = NSMutableData()
+        
+        // Add image data
+        body.append(convertFormField(named: "image", value: imageData, using: boundary))
+        
+        // Add email parameter
+        body.append(convertFormField(named: "email", value: email.data(using: .utf8)!, using: boundary))
+        
+        request.httpBody = body as Data
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(AuthenticationError.nodata))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(AuthenticationError.nodata))
+                return
+            }
+            
+            if httpResponse.statusCode == 200 {
+                completion(.success(()))
+            } else {
+                //let statusCodeError = NetworkError.statusCode(httpResponse.statusCode)
+                completion(.failure(AuthenticationError.nodata))
+            }
+        }
+        
+        task.resume()
+    }
+
+    private func convertFormField(named name: String, value: Data, using boundary: String) -> Data {
+        let lineBreak = "\r\n"
+        var formData = "--\(boundary)\(lineBreak)"
+        formData += "Content-Disposition: form-data; name=\"\(name)\"; filename=\"image.jpg\"\(lineBreak)"
+        formData += "Content-Type: image/jpeg\(lineBreak)"
+        formData += lineBreak
+        let formDataEnd = "\(lineBreak)--\(boundary)--\(lineBreak)"
+        
+        let body = NSMutableData()
+        body.append(formData.data(using: .utf8)!)
+        body.append(value)
+        body.append(formDataEnd.data(using: .utf8)!)
+        
+        return body as Data
+    }
 
     func updateprofilApi(user:LogedInUser, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
         self.profilehaschanged=true

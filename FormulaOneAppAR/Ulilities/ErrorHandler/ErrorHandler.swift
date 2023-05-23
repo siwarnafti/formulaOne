@@ -37,6 +37,8 @@ enum RegistrationResultError: Error {
     case networkError
     case unknownError
     case URLisnotcorrect
+    case invalidImageData
+    case invalidResponse
 
     var localizedDescription: LocalizedStringKey {
         switch self {
@@ -54,6 +56,10 @@ enum RegistrationResultError: Error {
             return LocalizedStringKey("AnUnknownErrorOccurredWhileRegisteringTheUser")
         case .URLisnotcorrect:
             return LocalizedStringKey("URLIsNotCorrect")
+        case .invalidImageData :
+            return "invalidImageData"
+        case .invalidResponse :
+            return "invalidResponse"
         }
     }
 }
@@ -62,4 +68,6 @@ enum NetworkError: Error {
     case invalidURL
     case noData
     case decodingError
+    case invalidImageData
+    case invalidResponse
 }
